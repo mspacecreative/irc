@@ -1,0 +1,7 @@
+.wp-admin .editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper h1 {
+  font-size: 20px;
+  font-style: italic;
+  color: #999;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

@@ -1,0 +1,17 @@
+.bio-container,
+.modal-backdrop {
+    display: none;
+}
+
+.bio-container.show,
+.modal-backdrop.show {
+    display: block;
+}
+
+.bio-container {
+    position: relative;
+
+    .closeModalButton {
+        right: 1em;
+    }
+}

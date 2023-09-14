@@ -1,0 +1,263 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  line-height: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6,
+.light p,
+.light ol,
+.light ul,
+.light strong,
+.light .wpcf7 input,
+.light .wpcf7-submit {
+  color: #fff;
+}
+
+.light .revert-colour ul {
+  color: #000;
+}
+
+.light .wpcf7 input {
+  border-bottom-color: #fff;
+}
+
+.light .wpcf7-submit {
+  border-color: #fff;
+}
+
+.hero h2 {
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 28px;
+  //letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1em;
+  line-height: 1.25em;
+}
+
+ul {
+  padding: 0 0 0 20px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: .5em;
+  position: relative;
+}
+
+.big {
+  font-size: 22px;
+  line-height: 1.5em;
+}
+
+.bold {
+  font-weight: bold;
+
+  span {
+    font-weight: normal;
+  }
+}
+
+p,
+ol,
+ul,
+a {
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+}
+
+li::before {
+  font-family: fontAwesome;
+  content: "\f0da";
+  margin-right: 15px;
+  color: $royalBlue;
+  top: 1px;
+  position: relative;
+}
+
+a {
+  color: $royalBlue;
+  text-decoration: none;
+}
+
+a .boxed h3 {
+  color: #333;
+  transition: .25s ease-in-out;
+}
+
+a .boxed:hover h3 {
+  color: $royalBlue;
+  transition: .25s ease-in-out;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+// SOCIAL MEDIA
+.social_media {
+  padding: 0;
+  display: flex;
+  margin: 0 25px 0 0;
+}
+
+.social_media li {
+  text-indent: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.social_media li:last-of-type {
+  margin-right: 0;
+}
+
+.social_media li::before {
+  display: none;
+}
+
+.social_media a {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+  font-size: 15px;
+}
+
+.boxed:hover h3 {
+  color: $royalBlue;
+  transition: .25s ease-in-out;
+}
+
+.boxed h3 {
+  transition: .25s ease-in-out;
+}
+
+h3 a {
+  font-size: 20px;
+  color: #333;
+  transition: .25s ease-in-out;
+}
+
+h3 a:hover {
+  color: $royalBlue;
+  transition: .25s ease-in-out;
+}
+
+.footer_logo {
+  max-width: 160px;
+  margin: 2em 0;
+}
+
+.menuInner .social_media a {
+  background-color: #fff;
+}
+
+.menuInner .social_media a i {
+  color: #000;
+}
+
+.lg--text {
+  font-size: 20px;
+  line-height: 1.35em;
+}
+
+#cards h3 {
+  font-weight: bold;
+}
+
+hr {
+  margin-bottom: 15px;
+}
+
+.dark-text h2,
+.dark-text p {
+  color: #000;
+}
+
+@media (max-width: 48em) {
+  .bottomMarginMobile {
+    margin-bottom: 30px;
+  }
+
+  #contact .social_media {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .col~.col ul {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .col~.col ul {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  header .top-header .mailing-list {
+    padding-left: inherit;
+    padding-right: inherit;
+  }
+
+  .row.contact-info {
+    display: none;
+  }
+
+  .hero::before {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .jumbotron h1,
+  body h1 {
+    font-size: 40px;
+  }
+}
+
+#contact p,
+#contact a {
+  font-size: 15px;
+}
+
+@media (max-width: 980px) {
+  .has-x-large-font-size {
+    font-size: 35px !important;
+  }
+}

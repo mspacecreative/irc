@@ -1,0 +1,35 @@
+.tabAnswer {
+	display: none;
+	margin-top: 15px;
+}
+.tabRow {
+	padding: 25px 0;
+	border-bottom: 1px solid #c9c9c9;
+}
+.tabRow:first-of-type {
+	padding-top: 0;
+}
+.tabRow a {
+	display: block;
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+}
+.tabRow a ~ .tabAnswer a {
+	display: inline;
+}
+.tabRow a ~ .tabAnswer a:after {
+	display: none;
+}
+.tabRow a:after {
+	position: absolute;
+	content: "\f0d7";
+	font-family: fontAwesome;
+	right: 0;
+	top: 1px;
+	transition: 0.5s ease-in-out;
+}
+.tabRow a.rotate:after {
+	transform: rotate(180deg);
+	transition: 0.5s ease-in-out;
+}

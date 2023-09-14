@@ -1,0 +1,18 @@
+// :root {
+//   --wp--preset--font-family--system-font: 'Open Sans', sans-serif;
+// }
+
+.wp-admin .editor-styles-wrapper {
+  // font-family: var(--wp--preset--font-family--system-font);
+
+  .edit-post-visual-editor__post-title-wrapper {
+
+    h1 {
+      font-size: 20px;
+      font-style: italic;
+      color: #999;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}

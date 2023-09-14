@@ -1,0 +1,25 @@
+#graph {
+	animation: move 5s linear; 
+	animation-fill-mode: forwards;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+.full-width {
+	margin-top: 30px;
+}
+
+@keyframes move {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (max-width: 48em) {
+	#back-to-success .col {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,18 @@
+.headshot_container {
+	flex: 0 0 35%;
+}
+.headshot_container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.headshot_container ~ .boxed {
+	border: none;
+	flex: 0 0 65%;
+}
+.profile {
+	border: 2px solid #e9e9e9;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+}

@@ -26,7 +26,7 @@ function irc_styles() {
 	wp_enqueue_style( 'fontawesome' );
 
     // MAIN STYLESHEET
-	wp_register_style( 'main-styles', get_stylesheet_directory_uri() . '/assets/css/style.css', false, '1.0', 'all' );
+	wp_register_style( 'main-styles', get_stylesheet_directory_uri() . '/assets/css/style.css?ver=' . $rand_num, false, null, 'all' );
     wp_enqueue_style('main-styles');
 
     // MAIN SCRIPTS

@@ -10,10 +10,10 @@ $pagetitle = get_field('hide_page_title'); ?>
 		<div class="inner_container">
 
 			<div class="row between-lg between-md top-bottom-margin-2em bottom-padding">
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 					<?php breadcrumbs(); ?>
 				</div>
-				<div class="row col-lg-6 col-md-6 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
+				<div class="row col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
 					<a href="<?php echo home_url('news'); ?>" class="text__small">
 						All News <span class="arrow__right"></span>
 					</a>

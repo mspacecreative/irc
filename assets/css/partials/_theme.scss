@@ -7,6 +7,12 @@ body:not(.home).light__theme {
     fill: #686969;
   }
 
+  .hamburger-inner,
+  .hamburger--spin .hamburger-inner::before,
+  .hamburger--spin .hamburger-inner::after {
+    background-color: #000;
+  }
+
   .primary-menu-container li a {
     color: $royalBlue;
   }

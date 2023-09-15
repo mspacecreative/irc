@@ -2723,6 +2723,11 @@ body:not(.home).light__theme .logo .st0 {
 body:not(.home).light__theme .logo .st1 {
   fill: #686969;
 }
+body:not(.home).light__theme .hamburger-inner,
+body:not(.home).light__theme .hamburger--spin .hamburger-inner::before,
+body:not(.home).light__theme .hamburger--spin .hamburger-inner::after {
+  background-color: #000;
+}
 body:not(.home).light__theme .primary-menu-container li a {
   color: #0055a5;
 }

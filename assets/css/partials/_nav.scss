@@ -222,7 +222,7 @@ body.menuOpen {
 .hamburger-inner,
 .hamburger--spin .hamburger-inner::before,
 .hamburger--spin .hamburger-inner::after {
-  background-color: #000;
+  background-color: #fff;
   width: 25px;
   height: 2px;
   transition: 0.25s ease-in-out;
@@ -412,6 +412,16 @@ span.at-icon-wrapper {
 
     a {
       color: #fff;
+    }
+
+    @media (max-width: 1280px) {
+      & {
+        margin-right: 25px;
+      }
+
+      a {
+        font-size: 15px;
+      }
     }
 
     &:last-of-type {

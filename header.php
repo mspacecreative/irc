@@ -19,7 +19,8 @@
 		<?php wp_head(); ?>
 		
     </head>
-    <body <?php body_class(); ?>>
+	<?php $theme = get_field('theme_colour', 'options') == 'light' ? 'light__theme' : 'dark__theme'; ?>
+    <body <?php body_class($theme); ?>>
 		<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -32,14 +33,14 @@
 			<div class="main-header">
 				<div class="inner_container">
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-8 col-xs-8" style="display: flex; align-items: center;">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-8" style="display: flex; align-items: center;">
 							<div class="logo">
 								<a href="<?php echo home_url(); ?>">
 									<?php include 'assets/img/branding/irc-logo.svg'; ?>
 								</a>
 							</div>
 						</div>
-						<div class="row navigation end-lg end-md end-sm end-xs col-lg-8 col-md-8 col-sm-12 col-xs-12" style="margin-right: 0; margin-left: 0;">
+						<div class="row navigation end-lg end-md end-sm end-xs col-lg-8 col-md-8 col-sm-8 col-xs-12" style="margin-right: 0; margin-left: 0;">
 						
 							<!-- SOCIAL MEDIA -->
 							<!-- <?php echo do_shortcode('[social_media]'); ?> -->
@@ -51,7 +52,7 @@
 							
 						</div>
 						<!-- MENU TOGGLE -->
-						<div class="row col-lg-4 col-md-4 col-sm-4 col-xs-4 end-xs" style="padding-right: 0;">
+						<div class="row col-lg-4 col-md-4 col-sm-8 col-xs-4 end-sm end-xs middle-sm middle-xs" style="padding-right: 0;">
 							<button class="hamburger hamburger--spin" type="button">
 								<span class="hamburger-box">
 									<span class="hamburger-inner"></span>

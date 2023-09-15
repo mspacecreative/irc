@@ -8,4 +8,10 @@
             padding-right: 0;
         }
     }
+
+    .splash-cover {
+        min-height: auto !important;
+        height: 100vh;
+        max-height: 900px;
+    }
 }

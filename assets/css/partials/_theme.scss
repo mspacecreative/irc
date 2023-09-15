@@ -1,0 +1,17 @@
+body:not(.home).light__theme {
+  .logo .st0 {
+    fill: $royalBlue;
+  }
+
+  .logo .st1 {
+    fill: #686969;
+  }
+
+  .primary-menu-container li a {
+    color: $royalBlue;
+  }
+
+  header {
+    background-color: transparent;
+  }
+}

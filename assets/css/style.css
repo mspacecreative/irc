@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-block-post .wp-block-post-featured-image img {
+  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+}
+
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 article,
 aside,
@@ -317,7 +325,7 @@ body .container {
   padding-right: 2rem;
   padding-left: 2rem;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -666,8 +674,7 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 h1,
@@ -705,13 +712,18 @@ li {
 
 p,
 ol,
-ul,
-a {
+ul {
   font-size: 1.15rem;
-  line-height: 1.5rem;
 }
 
-li::before {
+.wp-block-latest-posts.wp-block-latest-posts__list {
+  padding-left: 25px;
+}
+
+li:not(.wp-block-post) {
+  text-indent: -20px;
+}
+li:not(.wp-block-post)::before {
   font-family: fontAwesome;
   content: "\f0da";
   margin-right: 15px;
@@ -757,6 +769,10 @@ p:last-of-type {
 
 .social_media li::before {
   display: none;
+}
+
+.text__small {
+  font-size: 14px;
 }
 
 .social_media a {
@@ -867,6 +883,45 @@ body h1 {
     font-size: 35px !important;
   }
 }
+.arrow__right {
+  position: relative;
+  width: 15px;
+  height: 1.5px;
+  display: inline-block;
+  background-color: #0055a5;
+  -webkit-margin-after: 3px;
+          margin-block-end: 3px;
+}
+.arrow__right::before, .arrow__right::after {
+  right: 0.5px;
+  top: 0;
+  transform-origin: right;
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 1.5px;
+  background-color: #0055a5;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.arrow__right::before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.arrow__right::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
 .container, .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -1815,7 +1870,7 @@ body.menuOpen {
 .hamburger-inner,
 .hamburger--spin .hamburger-inner::before,
 .hamburger--spin .hamburger-inner::after {
-  background-color: #000;
+  background-color: #fff;
   width: 25px;
   height: 2px;
   transition: 0.25s ease-in-out;
@@ -2000,6 +2055,14 @@ span.at-icon-wrapper {
 .primary-menu-container li a {
   color: #fff;
 }
+@media (max-width: 1280px) {
+  .primary-menu-container li {
+    margin-right: 25px;
+  }
+  .primary-menu-container li a {
+    font-size: 15px;
+  }
+}
 .primary-menu-container li:last-of-type {
   margin-right: 0;
 }
@@ -2058,6 +2121,11 @@ header .main-header {
   flex-basis: 100%;
   padding: 0.5em 0 1em;
 }
+@media (max-width: 980px) {
+  header .main-header {
+    padding: 15px 0;
+  }
+}
 header .col {
   padding-bottom: 0;
 }
@@ -2099,7 +2167,7 @@ body:not(.home) header {
 }
 
 .logo {
-  max-width: 280px;
+  max-width: 300px;
   width: 100%;
 }
 .logo svg {
@@ -2108,12 +2176,12 @@ body:not(.home) header {
 
 @media (min-width: 981px) {
   .logo {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 }
 @media (max-width: 980px) {
   .logo {
-    max-width: 120px;
+    max-width: 150px;
   }
 }
 header.down {
@@ -2140,12 +2208,6 @@ header.up {
 body:not(.home) .content-wrapper {
   padding-top: 145.36px;
 }
-body:not(.home) .content-wrapper > div > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 4rem;
-}
 
 body .is-layout-constrained > * {
   padding-left: 2rem;
@@ -2160,6 +2222,11 @@ body .is-layout-constrained > * {
   padding-right: 1.5em;
   padding-left: 1.5em;
   margin-bottom: 2em;
+}
+
+.row .row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #cards.section {
@@ -2191,6 +2258,10 @@ body .is-layout-constrained > * {
 
 .top-margin-2em {
   margin-top: 2em;
+}
+
+.top-bottom-margin-2em {
+  margin-block: 2em;
 }
 
 .top-margin-4em {
@@ -2230,6 +2301,11 @@ body .has-global-padding > * {
 
 main {
   flex-basis: calc(66.666% - 4rem);
+}
+@media (min-width: 1024px) {
+  main {
+    order: 1;
+  }
 }
 
 aside {
@@ -2560,4 +2636,96 @@ header:not(.white-bg) .logo--blue {
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
+}
+.home .splash-cover {
+  min-height: auto !important;
+  height: 100vh;
+  max-height: 900px;
+}
+
+.wp-block-post {
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px #2fbeb7;
+  border-radius: 10px;
+  border-bottom: 10px solid #2fbeb7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.wp-block-post time {
+  font-size: 14px;
+}
+.wp-block-post .wp-block-post-featured-image {
+  margin: -1.5rem -1.5rem 1.5rem;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+.wp-block-post .wp-block-post-featured-image > a:hover > img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.wp-block-post h2 {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+.wp-block-post a {
+  color: #000;
+}
+
+@media (min-width: 981px) {
+  .dynamic__contents {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3em;
+  }
+}
+.post__date {
+  margin-block: 1em;
+}
+@media (max-width: 1024px) {
+  .post__date {
+    order: -1;
+  }
+}
+
+.post__title {
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+}
+
+.breadcrumbs {
+  -webkit-margin-after: 2em;
+          margin-block-end: 2em;
+}
+.breadcrumbs p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+.breadcrumbs p,
+.breadcrumbs a {
+  font-size: 14px;
+}
+.breadcrumbs a {
+  text-decoration: underline;
+}
+
+body:not(.home).light__theme .logo .st0 {
+  fill: #0055a5;
+}
+body:not(.home).light__theme .logo .st1 {
+  fill: #686969;
+}
+body:not(.home).light__theme .primary-menu-container li a {
+  color: #0055a5;
+}
+body:not(.home).light__theme header {
+  background-color: transparent;
 }

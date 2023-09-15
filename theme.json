@@ -80,8 +80,8 @@
 			]
 		},
 		"layout": {
-			"contentSize": "1440px",
-			"wideSize": "1440px"
+			"contentSize": "1280px",
+			"wideSize": "1280px"
 		},
 		"spacing": {
 			"spacingScale": {

@@ -1,0 +1,13 @@
+.post__date {
+  margin-block: 1em;
+
+  @media (max-width: 1024px) {
+    & {
+      order: -1;
+    }
+  }
+}
+
+.post__title {
+  margin-block-end: 25px;
+}

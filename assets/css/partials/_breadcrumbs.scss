@@ -1,0 +1,16 @@
+.breadcrumbs {
+  margin-block-end: 2em;
+
+  p {
+    margin-block-start: 0;
+  }
+
+  p,
+  a {
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

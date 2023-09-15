@@ -2208,6 +2208,11 @@ header.up {
 body:not(.home) .content-wrapper {
   padding-top: 145.36px;
 }
+@media (max-width: 980px) {
+  body:not(.home) .content-wrapper {
+    padding-top: 80px;
+  }
+}
 
 body .is-layout-constrained > * {
   padding-left: 2rem;

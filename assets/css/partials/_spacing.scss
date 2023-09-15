@@ -2,6 +2,12 @@ body:not(.home) {
   .content-wrapper {
     padding-top: 145.36px;
 
+    @media (max-width: 980px) {
+      & {
+        padding-top: 80px;
+      }
+    }
+
     // >div>div {
     //   display: flex;
     //   flex-wrap: wrap;

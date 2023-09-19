@@ -46,6 +46,10 @@ a {
     text-decoration: underline;
   }
 
+  .has-base-color a {
+    color: inherit;
+  }
+
   .wp-element-button {
     text-decoration: none;
   }

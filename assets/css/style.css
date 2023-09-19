@@ -665,6 +665,9 @@ a {
   font-weight: 600;
   text-decoration: underline;
 }
+.main-content .has-base-color a {
+  color: inherit;
+}
 .main-content .wp-element-button {
   text-decoration: none;
 }

@@ -728,7 +728,7 @@ li:not(.wp-block-post)::before {
   position: relative;
 }
 
-a {
+.main-content a {
   color: #0055a5;
   font-weight: 600;
 }

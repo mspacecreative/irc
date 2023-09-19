@@ -2831,7 +2831,7 @@ header:not(.white-bg) .logo--blue {
   .page-template-page-sidebar .sidebar > div {
     position: -webkit-sticky;
     position: sticky;
-    top: 2em;
+    top: 6em;
   }
 }
 

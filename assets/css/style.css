@@ -656,17 +656,39 @@ body {
   border-color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
+.main-content a {
+  color: #0055a5;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.main-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.main-content h2 > a {
+  position: relative;
+  text-decoration: none;
+  padding-right: 25px;
+}
+.main-content h2 > a::after {
+  position: absolute;
+  content: "\f061";
+  right: 0;
+  top: 4px;
+  font-family: fontAwesome;
+  font-size: 20px;
+}
+
 .hero h2 {
   max-width: 500px;
 }
 
 h1 {
   font-size: 45px;
-}
-
-h2 {
-  font-size: 28px;
-  font-weight: 700;
 }
 
 h3 {
@@ -726,11 +748,6 @@ li:not(.wp-block-post)::before {
   color: #0055a5;
   top: 1px;
   position: relative;
-}
-
-.main-content a {
-  color: #0055a5;
-  font-weight: 600;
 }
 
 a .boxed h3 {

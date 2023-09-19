@@ -34,17 +34,44 @@ body {
   border-color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  a {
+    color: $royalBlue;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+
+    >a {
+      position: relative;
+      text-decoration: none;
+      padding-right: 25px;
+
+      &::after {
+        position: absolute;
+        content: "\f061";
+        right: 0;
+        top: 4px;
+        font-family: fontAwesome;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
 .hero h2 {
   max-width: 500px;
 }
 
 h1 {
   font-size: 45px;
-}
-
-h2 {
-  font-size: 28px;
-  font-weight: 700;
 }
 
 h3 {
@@ -106,11 +133,6 @@ li:not(.wp-block-post) {
     top: 1px;
     position: relative;
   }
-}
-
-.main-content a {
-  color: $royalBlue;
-  font-weight: 600;
 }
 
 a .boxed h3 {

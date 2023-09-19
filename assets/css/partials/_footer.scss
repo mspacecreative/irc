@@ -1,0 +1,13 @@
+footer {
+  li {
+    text-indent: unset;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}

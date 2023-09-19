@@ -48,6 +48,9 @@
   -webkit-margin-after: 0;
           margin-block-end: 0;
 }
+.wp-block-post h2 a::after {
+  display: none;
+}
 .wp-block-post a {
   color: #000;
 }

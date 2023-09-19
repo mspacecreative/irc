@@ -7,7 +7,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 
 <div class="content-wrapper">	
 	
-	<main id="main-content" class="main-content bottom-padding">
+	<main id="main-content" class="main-content bottom-padding top-padding-2em">
 
 		<div class="inner_container">
 			<?php 

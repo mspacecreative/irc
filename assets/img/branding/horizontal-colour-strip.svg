@@ -1,0 +1,9 @@
+<svg id="colour-strip" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 192.2 3.2" xml:space="preserve">
+<rect fill="#0B2544" width="32" height="3.2"/>
+<rect x="32" fill="#0456A4" width="32" height="3.2"/>
+<rect x="64.1" fill="#33BDB6" width="32" height="3.2"/>
+<rect x="96.1" fill="#24726D" width="32" height="3.2"/>
+<rect x="128.2" fill="#5C823A" width="32" height="3.2"/>
+<rect x="160.2" fill="#D6D6D6" width="32" height="3.2"/>
+</svg>

@@ -674,6 +674,7 @@ a {
 .main-content h2 {
   font-size: 28px;
   font-weight: 700;
+  letter-spacing: -0.02rem;
 }
 .main-content h2 > a {
   position: relative;
@@ -2151,6 +2152,16 @@ header {
 header .main-header {
   flex-basis: 100%;
   padding: 0.5em 0 1em;
+  position: relative;
+}
+header .main-header::after {
+  position: absolute;
+  top: 100%;
+  content: "";
+  background-image: url(../img/branding/horizontal-colour-strip.svg);
+  background-position: bottom left;
+  height: 10px;
+  width: 100%;
 }
 @media (max-width: 980px) {
   header .main-header {
@@ -2232,6 +2243,10 @@ header.up {
     display: none;
   }
 }
+.home .main-header::after {
+  display: none;
+}
+
 .wpcf7 {
   margin-top: 4em;
 }
@@ -2291,8 +2306,16 @@ body .is-layout-constrained > * {
   padding-top: 4em;
 }
 
+.top-padding-2em {
+  padding-top: 2em;
+}
+
 .bottom-padding {
   padding-bottom: 4em;
+}
+
+.bottom-padding-2em {
+  padding-bottom: 2em;
 }
 
 .top-bottom-padding {
@@ -2729,6 +2752,9 @@ header:not(.white-bg) .logo--blue {
 .wp-block-post h2 {
   -webkit-margin-after: 0;
           margin-block-end: 0;
+}
+.wp-block-post h2 a::after {
+  display: none;
 }
 .wp-block-post a {
   color: #000;

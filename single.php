@@ -5,7 +5,7 @@ $pagetitle = get_field('hide_page_title'); ?>
 
 <div class="content-wrapper">
 
-	<div id="main-content" class="main-content bottom-padding">
+	<div id="main-content" class="main-content bottom-padding top-padding-2em">
 
 		<div class="inner_container">
 

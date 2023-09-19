@@ -8,7 +8,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 
 <div class="content-wrapper">
 
-	<div class="inner_container bottom-padding">
+	<div class="inner_container bottom-padding top-padding-2em">
 
 		<div class="row gutter_space_2">
 	

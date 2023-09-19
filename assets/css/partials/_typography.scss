@@ -39,10 +39,15 @@ a {
 }
 
 .main-content {
+
   a {
     color: $royalBlue;
     font-weight: 600;
     text-decoration: underline;
+  }
+
+  .wp-element-button {
+    text-decoration: none;
   }
 
   h2 {
@@ -61,6 +66,12 @@ a {
         top: 4px;
         font-family: fontAwesome;
         font-size: 20px;
+        font-weight: 300;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
       }
     }
   }

@@ -665,6 +665,9 @@ a {
   font-weight: 600;
   text-decoration: underline;
 }
+.main-content .wp-element-button {
+  text-decoration: none;
+}
 .main-content h2 {
   font-size: 28px;
   font-weight: 700;
@@ -681,6 +684,12 @@ a {
   top: 4px;
   font-family: fontAwesome;
   font-size: 20px;
+  font-weight: 300;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 
 .hero h2 {

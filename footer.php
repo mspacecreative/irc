@@ -30,8 +30,8 @@
 				}
 				?>
 			</div>
-			<div class="light inner_container <?php echo $value ?>">
-				<p><?php echo __('&copy '); echo date('Y '); echo bloginfo('title'); echo __('. All rights reserved.'); ?></p>
+			<div class="light inner_container <?php echo $value ?>" style="padding-bottom: 1em;">
+				<p class="text__small"><?php echo __('&copy '); echo date('Y '); echo bloginfo('title'); echo __('. All rights reserved.'); ?></p>
 			</div>
 		</footer>
 

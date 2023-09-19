@@ -2262,6 +2262,14 @@ body .is-layout-constrained > * {
   margin-left: auto;
 }
 
+.top-padding {
+  padding-top: 4em;
+}
+
+.bottom-padding {
+  padding-bottom: 4em;
+}
+
 .top-bottom-padding {
   padding-top: 4em;
   padding-bottom: 4em;

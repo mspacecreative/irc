@@ -730,7 +730,7 @@ li:not(.wp-block-post)::before {
 
 a {
   color: #0055a5;
-  text-decoration: none;
+  font-weight: 600;
 }
 
 a .boxed h3 {

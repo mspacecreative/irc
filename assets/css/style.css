@@ -2648,7 +2648,7 @@ header:not(.white-bg) .logo--blue {
 }
 .home .splash-cover {
   min-height: auto !important;
-  height: 100vh;
+  height: calc(100vh - 120px);
   max-height: 900px;
 }
 

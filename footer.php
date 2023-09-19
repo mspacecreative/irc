@@ -12,7 +12,7 @@
 				<?php 
 				if ( is_active_sidebar('footer-area-1') || is_active_sidebar('footer-area-2') || is_active_sidebar('footer-area-3') || is_active_sidebar('footer-area-4') ) {
 					echo
-					'<div class="row gutter_space_2">';
+					'<div class="row gutter_space_2 between-lg between-md">';
 					if ( ! dynamic_sidebar( 'footer-area-1' ) && is_active_sidebar( 'footer-area-1' ) ) {
 						dynamic_sidebar( 'footer-area-1' );
 					}

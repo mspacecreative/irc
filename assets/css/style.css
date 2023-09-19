@@ -2783,3 +2783,13 @@ body:not(.home).light__theme header {
 .reverse {
   flex-direction: row-reverse;
 }
+
+footer li {
+  text-indent: unset;
+}
+footer li::before {
+  display: none;
+}
+footer a {
+  color: #fff;
+}

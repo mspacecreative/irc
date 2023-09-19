@@ -1,5 +1,5 @@
 		<footer>
-			<div class="inner_container top-padding">
+			<div class="inner_container top-padding light">
 				<?php 
 				$footerwidth = get_field('footer_content_width', 'options');
 				switch ( $footerwidth ) {

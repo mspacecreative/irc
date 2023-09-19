@@ -1,8 +1,6 @@
-// :root {
-//   --wp--preset--font-family--system-font: 'Open Sans', sans-serif;
-// }
-
+@import "partials/variables";
 @import "partials/columns";
+@import "partials/cards";
 
 .wp-admin .editor-styles-wrapper {
   // font-family: var(--wp--preset--font-family--system-font);

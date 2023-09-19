@@ -7,12 +7,12 @@ header {
   @extend %smooth-transition-25;
 
   &.scroll-down {
-    transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    @extend %smooth-transition-25;
+    transform: translateY(calc(-100% - 10px));
+    -webkit-transform: translateY(calc(-100% - 10px));
+    -moz-transform: translateY(calc(-100% - 10px));
+    -ms-transform: translateY(calc(-100% - 10px));
+    -o-transform: translateY(calc(-100% - 10px));
+    @extend%smooth-transition-25;
   }
 
   &.scroll-up {
@@ -49,8 +49,10 @@ header {
       .main-header {
         padding: 10px 0;
 
-        >.inner_container>.row {
-          align-items: center;
+        @media (min-width: 981px) {
+          >.inner_container>.row {
+            align-items: center;
+          }
         }
       }
     }
@@ -71,6 +73,7 @@ header {
   &::after {
     position: absolute;
     top: 100%;
+    left: 0;
     content: "";
     background-image: url(../img/branding/horizontal-colour-strip.svg);
     background-position: bottom left;

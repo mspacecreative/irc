@@ -2150,11 +2150,11 @@ header {
   left: 0;
 }
 header.scroll-down {
-  transform: translateY(-100%);
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
+  transform: translateY(calc(-100% - 10px));
+  -webkit-transform: translateY(calc(-100% - 10px));
+  -moz-transform: translateY(calc(-100% - 10px));
+  -ms-transform: translateY(calc(-100% - 10px));
+  -o-transform: translateY(calc(-100% - 10px));
 }
 header.scroll-up {
   transform: translateY(0);
@@ -2181,8 +2181,10 @@ header.scroll-up:not(.reset) .secondary-menu-container {
 header.scroll-up:not(.reset) .main-header {
   padding: 10px 0;
 }
-header.scroll-up:not(.reset) .main-header > .inner_container > .row {
-  align-items: center;
+@media (min-width: 981px) {
+  header.scroll-up:not(.reset) .main-header > .inner_container > .row {
+    align-items: center;
+  }
 }
 header.white-bg {
   background-color: #011b33;
@@ -2196,6 +2198,7 @@ header.white-bg {
 .main-header::after {
   position: absolute;
   top: 100%;
+  left: 0;
   content: "";
   background-image: url(../img/branding/horizontal-colour-strip.svg);
   background-position: bottom left;

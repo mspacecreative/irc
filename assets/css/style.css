@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-block-post .wp-block-post-featured-image img {
+.wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-block-post .wp-block-post-featured-image img, header.scroll-up:not(.reset) .primary-menu-container, header.scroll-up:not(.reset) .logo, header.scroll-up, header.scroll-down, header {
   transition: 0.25s ease-in-out;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
@@ -2145,16 +2145,55 @@ span.at-icon-wrapper {
 header {
   width: 100%;
   z-index: 999999;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
-header .main-header {
+header.scroll-down {
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+}
+header.scroll-up {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+header.scroll-up:not(.reset) .logo {
+  width: 150px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+header.scroll-up:not(.reset) .primary-menu-container .menu {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+header.scroll-up:not(.reset) .primary-menu-container a {
+  font-size: 16px;
+}
+header.scroll-up:not(.reset) .secondary-menu-container {
+  display: none;
+}
+header.scroll-up:not(.reset) .main-header {
+  padding: 10px 0;
+}
+header.scroll-up:not(.reset) .main-header > .inner_container > .row {
+  align-items: center;
+}
+header.white-bg {
+  background-color: #011b33;
+}
+
+.main-header {
   flex-basis: 100%;
   padding: 0.5em 0 1em;
   position: relative;
 }
-header .main-header::after {
+.main-header::after {
   position: absolute;
   top: 100%;
   content: "";
@@ -2164,24 +2203,26 @@ header .main-header::after {
   width: 100%;
 }
 @media (max-width: 980px) {
-  header .main-header {
+  .main-header {
     padding: 15px 0;
   }
 }
-header .col {
+
+.col {
   padding-bottom: 0;
 }
-header .top-header {
+
+.top-header {
   font-size: 13px;
 }
-header .top-header .btn {
+.top-header .btn {
   font-size: 14px;
   padding: 5px 20px;
 }
-header .top-header .fa {
+.top-header .fa {
   margin-right: 10px;
 }
-header .top-header .row.gutter_space_2 .col {
+.top-header .row.gutter_space_2 .col {
   margin-bottom: 0;
 }
 
@@ -2203,11 +2244,6 @@ body:not(.home) header {
   transition: 0.25s ease-in-out;
 }
 
-.white-bg {
-  transition: 0.25s ease-in-out;
-  background-color: #fff;
-}
-
 .logo {
   max-width: 300px;
   width: 100%;
@@ -2226,12 +2262,6 @@ body:not(.home) header {
     max-width: 150px;
   }
 }
-header.down {
-  transition: 0.25s ease-in-out;
-  transform: translate(0, -100%);
-  position: fixed;
-}
-
 header.up {
   transition: 0.25s ease-in-out;
   transform: translate(0, 0);

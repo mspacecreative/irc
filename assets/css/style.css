@@ -2705,6 +2705,14 @@ header:not(.white-bg) .logo--blue {
     top: 3em;
   }
 }
+@media (min-width: 1024px) {
+  body:not(.page-template-page-sidebar) .sidebar > div {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+  }
+}
+
 .post__date {
   margin-block: 1em;
 }

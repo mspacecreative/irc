@@ -4,3 +4,12 @@
     top: 3em;
   }
 }
+
+body:not(.page-template-page-sidebar) {
+  @media (min-width: 1024px) {
+    .sidebar>div {
+      position: sticky;
+      top: 2em;
+    }
+  }
+}

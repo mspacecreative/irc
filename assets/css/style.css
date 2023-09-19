@@ -521,10 +521,6 @@ html {
   background-color: #000;
 }
 
-footer {
-  background-color: #5b823a;
-}
-
 @media (max-width: 980px) {
   .boxed {
     padding: 2em;
@@ -2784,6 +2780,9 @@ body:not(.home).light__theme header {
   flex-direction: row-reverse;
 }
 
+footer {
+  background-color: #23726d;
+}
 footer li {
   text-indent: unset;
 }

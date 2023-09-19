@@ -52,7 +52,7 @@
 							
 						</div>
 						<!-- MENU TOGGLE -->
-						<div class="row col-lg-4 col-md-4 col-sm-8 col-xs-4 end-sm end-xs middle-sm middle-xs" style="padding-right: 0;">
+						<div class="row col-lg-4 col-md-4 col-sm-8 col-xs-4 end-sm end-xs" style="padding-right: 0;">
 							<button class="hamburger hamburger--spin" type="button">
 								<span class="hamburger-box">
 									<span class="hamburger-inner"></span>

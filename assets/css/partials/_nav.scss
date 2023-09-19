@@ -200,6 +200,7 @@ body.menuOpen {
   padding: 0;
   display: flex;
   flex-direction: column;
+  margin-block-start: 5px;
 }
 
 .menuOverlay .hamburger {

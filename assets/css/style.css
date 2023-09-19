@@ -2027,6 +2027,10 @@ span.at-icon-wrapper {
   display: none;
 }
 
+.sidebar .current_page_item {
+  font-weight: 600;
+}
+
 .navigation {
   position: relative;
 }

@@ -42,7 +42,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 
 			</main>
 
-			<aside class="top-bottom-margin-2em col col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<aside class="sidebar top-bottom-margin-2em col col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			<?php 
 			if ( ! dynamic_sidebar( 'pages-sidebar' ) ) {
 				dynamic_sidebar( 'pages-sidebar' );

@@ -14,32 +14,16 @@
 					echo
 					'<div class="row gutter_space_2">';
 					if ( ! dynamic_sidebar( 'footer-area-1' ) && is_active_sidebar( 'footer-area-1' ) ) {
-						echo
-						'<div class="col col-flex-auto">';
 						dynamic_sidebar( 'footer-area-1' );
-						echo
-						'</div>';
 					}
 					if ( ! dynamic_sidebar( 'footer-area-2' ) && is_active_sidebar( 'footer-area-2' ) ) {
-						echo
-						'<div class="col col-flex-auto">';
 						dynamic_sidebar( 'footer-area-2' );
-						echo
-						'</div>';
 					}
 					if ( ! dynamic_sidebar( 'footer-area-3' ) && is_active_sidebar( 'footer-area-3' ) ) {
-						echo
-						'<div class="col col-flex-auto">';
 						dynamic_sidebar( 'footer-area-3' );
-						echo
-						'</div>';
 					}
 					if ( ! dynamic_sidebar( 'footer-area-4' ) && is_active_sidebar( 'footer-area-4' ) ) {
-						echo
-						'<div class="col col-flex-auto">';
 						dynamic_sidebar( 'footer-area-4' );
-						echo
-						'</div>';
 					}
 					echo
 					'</div>';

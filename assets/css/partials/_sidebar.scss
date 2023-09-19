@@ -5,7 +5,7 @@
   }
 }
 
-body:not(.page-template-page-sidebar) {
+.page-template-page-sidebar {
   @media (min-width: 1024px) {
     .sidebar>div {
       position: sticky;

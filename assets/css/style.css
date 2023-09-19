@@ -2706,7 +2706,7 @@ header:not(.white-bg) .logo--blue {
   }
 }
 @media (min-width: 1024px) {
-  body:not(.page-template-page-sidebar) .sidebar > div {
+  .page-template-page-sidebar .sidebar > div {
     position: -webkit-sticky;
     position: sticky;
     top: 2em;

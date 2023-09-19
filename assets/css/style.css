@@ -2651,6 +2651,11 @@ header:not(.white-bg) .logo--blue {
   height: calc(100vh - 120px);
   max-height: 900px;
 }
+@media (max-device-width: 980px) and (orientation: landscape) {
+  .home .splash-cover {
+    height: 100vh;
+  }
+}
 
 .wp-block-post {
   padding: 1.5rem;

@@ -14,4 +14,10 @@
         height: calc(100vh - 120px);
         max-height: 900px;
     }
+
+    @media (max-device-width: 980px) and (orientation: landscape) {
+        .splash-cover {
+            height: 100vh;
+        }
+    }
 }

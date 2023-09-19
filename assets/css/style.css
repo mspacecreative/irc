@@ -2906,6 +2906,10 @@ footer li::before {
 footer a {
   color: #fff;
 }
+footer p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
 
 @media (max-width: 780px) {
   .wp-block-group.wp-block-group.flex-start-on-mobile {

@@ -1,0 +1,7 @@
+@media (max-width: 780px) {
+  .wp-block-group.wp-block-group {
+    &.flex-start-on-mobile {
+      justify-content: flex-start;
+    }
+  }
+}

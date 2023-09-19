@@ -684,7 +684,7 @@ a {
   position: absolute;
   content: "\f061";
   right: 0;
-  top: 4px;
+  bottom: 0;
   font-family: fontAwesome;
   font-size: 20px;
   font-weight: 300;
@@ -2820,4 +2820,10 @@ footer li::before {
 }
 footer a {
   color: #fff;
+}
+
+@media (max-width: 780px) {
+  .wp-block-group.wp-block-group.flex-start-on-mobile {
+    justify-content: flex-start;
+  }
 }

@@ -83,18 +83,6 @@
       header.removeClass("is-active");
     });
 
-    // $("body").on("click", "#cards .open-modal", function () {
-    //   $("body").prepend('<div class="modal"></div>').addClass("modal_open");
-    //   $(".modal_open").children(".modal").fadeIn();
-    //   //$('html').addClass('fixed');
-    //   $(this).parent().next().fadeIn();
-    //   $(this)
-    //     .parent()
-    //     .next(".modal_container")
-    //     .find(".modal_inner")
-    //     .addClass("visible");
-    // });
-
     var $document = $(document);
     //viewportHeight = $('.splash').height() / 2;
     $document.scroll(function () {
@@ -108,24 +96,6 @@
     $(".modal-content, .bio-container").click(function (e) {
       e.stopPropagation();
     });
-
-    // $("body").on("click", ".modal_inner .closeModalButton", function () {
-    //   $("html").removeClass("fixed");
-    //   $(this).parent().removeClass("visible");
-    //   $(this).parent().parent().parent().parent().fadeOut();
-    //   $(".modal").fadeOut("normal", function () {
-    //     $(this).remove();
-    //   });
-    // });
-
-    // $("body").on("click", ".modal_container", function () {
-    //   $("html").removeClass("fixed");
-    //   $(this).fadeOut();
-    //   $(".modal_inner").removeClass("visible");
-    //   $(".modal").fadeOut("normal", function () {
-    //     $(this).remove();
-    //   });
-    // });
 
     // ACCORDION FUNCTIONALITY
     $(".tabRow > a").click(function (e) {
@@ -160,20 +130,6 @@
           }
         }
       });
-
-    // // HIDE/SHOW HEADER ON SCROLL
-    // var lastScrollTop = 0;
-    // var delta = 5;
-    // $(window).on('scroll', function() {
-    //     var st = $(this).scrollTop();
-    //     if ( st < lastScrollTop )  {
-    //         $('header').addClass('up').removeClass('down');
-    //     }
-    //     else if( st > lastScrollTop && st > delta ) {
-    //         $('header').addClass('down').removeClass('up');
-    //     }
-    //     lastScrollTop = st;
-    // });
 
     // MOBILE MENU
     hamburgerIcon.click(function () {

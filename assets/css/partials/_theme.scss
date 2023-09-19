@@ -20,4 +20,8 @@ body:not(.home).light__theme {
   header {
     background-color: transparent;
   }
+
+  .white-bg {
+    background-color: $lightGrey;
+  }
 }

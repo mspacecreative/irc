@@ -13,6 +13,41 @@ header {
     -ms-transform: translateY(calc(-100% - 10px));
     -o-transform: translateY(calc(-100% - 10px));
     @extend%smooth-transition-25;
+
+    &:not(.reset) {
+      .logo {
+        width: 150px;
+        @extend %smooth-transition-25;
+        margin-block-start: 0;
+      }
+
+      .primary-menu-container {
+        @extend %smooth-transition-25;
+
+        .menu {
+          margin-block-start: 0;
+        }
+
+        a {
+          font-size: 16px;
+        }
+      }
+
+      .secondary-menu-container {
+        display: none;
+      }
+
+      .main-header {
+        padding: 10px 0;
+        @extend %smooth-transition-25;
+
+        @media (min-width: 981px) {
+          >.inner_container>.row {
+            align-items: center;
+          }
+        }
+      }
+    }
   }
 
   &.scroll-up {
@@ -48,6 +83,7 @@ header {
 
       .main-header {
         padding: 10px 0;
+        @extend %smooth-transition-25;
 
         @media (min-width: 981px) {
           >.inner_container>.row {
@@ -67,8 +103,7 @@ header {
   flex-basis: 100%;
   padding: .5em 0 1em;
   position: relative;
-  // border-top: 1px solid #fff;
-  // border-bottom: 1px solid #fff;
+  @extend %smooth-transition-25;
 
   &::after {
     position: absolute;

@@ -2304,11 +2304,11 @@ body .has-global-padding > * {
   padding-right: 2rem;
 }
 
-main {
+body:not(.page-template-page-sidebar) main {
   flex-basis: calc(66.666% - 4rem);
 }
 @media (min-width: 1024px) {
-  main {
+  body:not(.page-template-page-sidebar) main {
     order: 1;
   }
 }
@@ -2751,4 +2751,8 @@ body:not(.home).light__theme header {
 
 .drop-shadow {
   box-shadow: 0 5px 10px #9c9b9b;
+}
+
+.reverse {
+  flex-direction: row-reverse;
 }

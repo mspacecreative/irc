@@ -118,7 +118,7 @@ body .has-global-padding {
   }
 }
 
-main {
+body:not(.page-template-page-sidebar) main {
   flex-basis: calc(66.666% - 4rem);
 
   @media (min-width: 1024px) {

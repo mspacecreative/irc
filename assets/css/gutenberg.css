@@ -67,10 +67,6 @@
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-.wp-block-post .wp-block-post-title {
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-}
 .wp-block-post h2 a::after {
   display: none;
 }

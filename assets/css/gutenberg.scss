@@ -5,6 +5,13 @@
 .wp-admin .editor-styles-wrapper {
   // font-family: var(--wp--preset--font-family--system-font);
 
+  .is-root-container {
+    >* {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
   .edit-post-visual-editor__post-title-wrapper {
 
     h1 {

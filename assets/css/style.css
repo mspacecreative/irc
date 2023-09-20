@@ -2787,6 +2787,9 @@ header:not(.white-bg) .logo--blue {
   box-shadow: 0 5px 15px #cacaca;
   border-radius: 10px;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   background-color: #fff;
   overflow: hidden;
   -webkit-border-radius: 10px;
@@ -2821,7 +2824,7 @@ header:not(.white-bg) .logo--blue {
   font-size: 14px;
 }
 .wp-block-post .wp-block-post-featured-image {
-  margin: -1.5rem -1.5rem 1.5rem;
+  margin: -1.5rem -1.5rem 0;
   border-radius: 10px 10px 0 0;
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;

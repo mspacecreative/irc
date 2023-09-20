@@ -25,6 +25,9 @@ function irc_styles() {
 	wp_register_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), null );
 	wp_enqueue_style( 'fontawesome' );
 
+    wp_register_style( 'material', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0', array(), null );
+	wp_enqueue_style( 'material' );
+
     // MAIN STYLESHEET
 	wp_register_style( 'main-styles', get_stylesheet_directory_uri() . '/assets/css/style.css?ver=' . $rand_num, false, null, 'all' );
     wp_enqueue_style('main-styles');

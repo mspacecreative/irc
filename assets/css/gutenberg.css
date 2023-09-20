@@ -76,6 +76,7 @@
 }
 .wp-block-post a {
   color: #000;
+  text-decoration: none;
 }
 
 .has-midnight-blue-background-color ~ div .wp-block-post {

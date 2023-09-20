@@ -12,14 +12,32 @@
 
 .wp-block-post {
   padding: 1.5rem;
-  box-shadow: 0 5px 15px #2fbeb7;
   border-radius: 10px;
-  border-bottom: 10px solid #2fbeb7;
+  position: relative;
+  background-color: #f3f3f3;
+  overflow: hidden;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  background-color: #fff;
+}
+.wp-block-post::after {
+  content: "";
+  position: absolute;
+  top: 56.25%;
+  right: 0;
+  background-image: url(../img/overlays/arrow__left.svg);
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 3.3 7'%3E%3Cg%3E%3Cpolygon fill='%232fbeb7' points='3.3,0 0,3.5 3.3,7 3.3,6.5 0.5,3.5 3.3,0.6 '/%3E%3Cpolygon fill='%232fbeb7' points='3.3,1.1 1,3.5 3.3,6 '/%3E%3C/g%3E%3C/svg%3E");
+  background-position: bottom right;
+  background-size: contain;
+  height: 43.75%;
+  width: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+}
+.wp-block-post > * {
+  position: relative;
+  z-index: 1;
 }
 .wp-block-post time {
   font-size: 14px;

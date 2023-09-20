@@ -605,6 +605,10 @@ html {
   }
 }
 
+.duotone__bg {
+  background: linear-gradient(90deg, #23726d 50%, #e8e8e8 50%);
+}
+
 .btn {
   padding: 10px 20px;
   display: inline-block;

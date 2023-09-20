@@ -598,6 +598,13 @@ html {
   align-items: center;
 }
 
+@media (min-width: 981px) {
+  .splash-cover h1 {
+    -webkit-margin-before: 100px;
+            margin-block-start: 100px;
+  }
+}
+
 .btn {
   padding: 10px 20px;
   display: inline-block;

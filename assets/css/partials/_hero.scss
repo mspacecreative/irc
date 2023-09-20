@@ -1,70 +1,78 @@
 .hero {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	overflow: hidden;
-	// padding-bottom: 20em;
-	// margin-bottom: -20em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  // padding-bottom: 20em;
+  // margin-bottom: -20em;
 
-	&::before {
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: top -80px center;
-	}
+  &::before {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top -80px center;
+  }
 
-	// &::after {
-	// 	position: absolute;
-	// 	content: "";
-	// 	left: 0;
-	// 	bottom: 0;
-	// 	height: 150px;
-	// 	width: 100%;
-	// 	background: linear-gradient(0deg, #f9f9f9, transparent);
-	// }
+  // &::after {
+  // 	position: absolute;
+  // 	content: "";
+  // 	left: 0;
+  // 	bottom: 0;
+  // 	height: 150px;
+  // 	width: 100%;
+  // 	background: linear-gradient(0deg, #f9f9f9, transparent);
+  // }
 
-	&::after {
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		background-color: rgba($color: #000000, $alpha: .5);
-	}
+  &::after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .5);
+  }
 
-	&.section {
-		padding-bottom: 4em;
-	}
+  &.section {
+    padding-bottom: 4em;
+  }
 
-	//margin-top: 92.77px;
-	.inner_container {
-		position: relative;
-		z-index: 1;
-		padding-bottom: 0;
-	}
+  //margin-top: 92.77px;
+  .inner_container {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 0;
+  }
 }
 
 // GRAPH
 .graph {
-	position: absolute;
-	width: 100%;
-	opacity: .25;
+  position: absolute;
+  width: 100%;
+  opacity: .25;
 }
 
 @media (max-width: 980px) {
-	.graph {
-		width: 200%;
-		bottom: 4em;
-	}
+  .graph {
+    width: 200%;
+    bottom: 4em;
+  }
 }
 
 .social_and_toggle {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.splash-cover {
+  @media (min-width: 981px) {
+    h1 {
+      margin-block-start: 100px;
+    }
+  }
 }

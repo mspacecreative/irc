@@ -2799,7 +2799,7 @@ header:not(.white-bg) .logo--blue {
 }
 .wp-block-post .wp-block-post-date {
   margin-top: auto;
-  padding-top: 1em;
+  padding-top: 10px;
   border-top: 1px solid #2fbeb7;
 }
 .wp-block-post::after {
@@ -2840,10 +2840,6 @@ header:not(.white-bg) .logo--blue {
   -o-transform: scale(1.1);
 }
 .wp-block-post .wp-block-post-title {
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-}
-.wp-block-post h2 {
   -webkit-margin-after: 0;
           margin-block-end: 0;
 }

@@ -22,6 +22,11 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+.wp-block-post .wp-block-post-date {
+  margin-top: auto;
+  padding-top: 1em;
+  border-top: 1px solid #2fbeb7;
+}
 .wp-block-post::after {
   content: "";
   position: absolute;

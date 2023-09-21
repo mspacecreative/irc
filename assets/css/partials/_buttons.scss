@@ -19,4 +19,10 @@
       content: "\f1c1";
     }
   }
+
+  &.external-link {
+    >*::after {
+      content: "\f08e";
+    }
+  }
 }

@@ -623,6 +623,9 @@ html {
 .link__custom.pdf-download > *::after {
   content: "\f1c1";
 }
+.link__custom.external-link > *::after {
+  content: "\f08e";
+}
 
 body {
   -webkit-font-smoothing: antialiased;

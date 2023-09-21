@@ -14,8 +14,10 @@ $pagetitle = get_field('hide_page_title'); ?>
 					<?php breadcrumbs(); ?>
 				</div>
 				<div class="row col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
-					<a href="<?php echo home_url('news'); ?>" class="text__small">
-						<?php printf( __( 'All %ss', 'irc' ), get_post_type( get_the_ID() ) ); ?> <span class="arrow__right"></span>
+					<?php
+					$post_type = get_post_type(); ?>
+					<a href="<?php echo get_post_type_archive_link($post_type); ?>" class="text__small">
+						<?php echo __('All '), ucfirst($post_type), __('s'); ?> <span class="arrow__right"></span>
 					</a>
 				</div>
 			</div>

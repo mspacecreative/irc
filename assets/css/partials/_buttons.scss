@@ -23,18 +23,18 @@ header .top-header .mailing-list {
 // CUSTOM LINK OPTIONS
 .link__custom {
   a {
-    padding-right: 25px;
+    padding-inline-end: calc(2.666em + 2px);
     position: relative;
 
     &::after {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 1.333em;
+      top: 14px;
       font-family: fontAwesome;
     }
   }
 
-  .pdf-download::before {
+  &.pdf-download a::after {
     content: "\f1c1";
   }
 }

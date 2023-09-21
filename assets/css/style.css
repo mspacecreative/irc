@@ -2866,6 +2866,15 @@ header:not(.white-bg) .logo--blue {
   }
 }
 
+.contact-information {
+  -webkit-margin-before: 3em;
+          margin-block-start: 3em;
+}
+.contact-information p {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
 .post__date {
   margin-block: 1em;
 }

@@ -27,7 +27,7 @@
   }
 
   li {
-    ::before {
+    &::before {
       display: none;
     }
   }

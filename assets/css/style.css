@@ -2879,7 +2879,7 @@ header:not(.white-bg) .logo--blue {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
-.contact-information li ::before {
+.contact-information li::before {
   display: none;
 }
 

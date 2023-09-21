@@ -609,14 +609,12 @@ html {
   background: linear-gradient(90deg, #23726d 50%, #e8e8e8 50%);
 }
 
-.link__custom > *,
-.link__custom > a {
+.link__custom > *, .link__custom.wp-block-button.is-style-outline > .wp-block-button__link {
   -webkit-padding-end: calc(2.666em + 2px);
           padding-inline-end: calc(2.666em + 2px);
   position: relative;
 }
-.link__custom > *::after,
-.link__custom > a::after {
+.link__custom > *::after, .link__custom.wp-block-button.is-style-outline > .wp-block-button__link::after {
   position: absolute;
   right: 1.333em;
   top: 14px;

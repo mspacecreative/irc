@@ -37,7 +37,7 @@ $pagetitle = get_field('hide_page_title'); ?>
 						<?php if (have_rows('contact_information')) : ?>
 						<div class="contact-information">
 							<?php while (have_rows('contact_information')) : the_row();
-							$position = get_sub_field('title__position');
+							$position = get_sub_field('position__title');
 							$name = get_sub_field('name');
 							$emailaddress = get_sub_field('email_address');
 							

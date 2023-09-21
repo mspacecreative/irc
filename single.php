@@ -51,7 +51,7 @@ $pagetitle = get_field('hide_page_title'); ?>
 							<?php endif; ?>
 
 							<?php if ($emailaddress) : ?>
-							<p><?php echo $emailaddress ?></p>
+							<p><?php echo __('Email Address: ') . '<a href="mailto:' . $emailaddress . '">' . $emailaddress . '</a>'; ?></p>
 							<?php endif; ?>
 
 							<?php if (have_rows('phone_numbers')) : ?>

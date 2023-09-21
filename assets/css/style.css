@@ -631,6 +631,20 @@ header .top-header .mailing-list {
   padding-left: 50px;
 }
 
+.link__custom a {
+  padding-right: 25px;
+  position: relative;
+}
+.link__custom a::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: fontAwesome;
+}
+.link__custom .pdf-download::before {
+  content: "\f1c1";
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   color: #333;

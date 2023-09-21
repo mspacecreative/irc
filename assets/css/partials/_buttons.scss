@@ -19,3 +19,22 @@ header .top-header .mailing-list {
   padding-right: 50px;
   padding-left: 50px;
 }
+
+// CUSTOM LINK OPTIONS
+.link__custom {
+  a {
+    padding-right: 25px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-family: fontAwesome;
+    }
+  }
+
+  .pdf-download::before {
+    content: "\f1c1";
+  }
+}

@@ -609,16 +609,9 @@ html {
   background: linear-gradient(90deg, #23726d 50%, #e8e8e8 50%);
 }
 
-.link__custom > *, .link__custom.wp-block-button.is-style-outline > * {
-  -webkit-padding-end: calc(2.666em + 2px);
-          padding-inline-end: calc(2.666em + 2px);
-  position: relative;
-}
 .link__custom > *::after, .link__custom.wp-block-button.is-style-outline > *::after {
-  position: absolute;
-  right: 1.333em;
-  top: 13px;
   font-family: fontAwesome;
+  margin-left: 1rem;
 }
 .link__custom.pdf-download > *::after {
   content: "\f1c1";

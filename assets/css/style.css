@@ -2859,7 +2859,10 @@ header:not(.white-bg) .logo--blue {
   }
 }
 @media (min-width: 1024px) {
-  .page-template-page-sidebar .sidebar > div {
+  .page-template-page-sidebar .sidebar > div,
+.page-template-page-sidebar .contact-information,
+.single .sidebar > div,
+.single .contact-information {
     position: -webkit-sticky;
     position: sticky;
     top: 6em;

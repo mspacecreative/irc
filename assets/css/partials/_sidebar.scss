@@ -5,9 +5,12 @@
   }
 }
 
-.page-template-page-sidebar {
+.page-template-page-sidebar,
+.single {
   @media (min-width: 1024px) {
-    .sidebar>div {
+
+    .sidebar>div,
+    .contact-information {
       position: sticky;
       top: 6em;
     }

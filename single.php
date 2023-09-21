@@ -33,6 +33,38 @@ $pagetitle = get_field('hide_page_title'); ?>
 
 					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
 						<?php echo the_date(); ?>
+						
+						<?php if (have_rows('contact_information')) : ?>
+						<div class="contact-information">
+							<?php while (have_rows('contact_information')) : the_row();
+							$position = get_sub_field('title__position');
+							$name = get_sub_field('name');
+							$emailaddress = get_sub_field('email_address');
+							
+							if ($position) : ?>
+							<p><?php echo $position ?></p>
+							<?php endif; ?>
+
+							<?php if ($name) : ?>
+							<p><?php echo $name ?></p>
+							<?php endif; ?>
+
+							<?php if ($emailaddress) : ?>
+							<p><?php echo $emailaddress ?></p>
+							<?php endif; ?>
+
+							<?php if (have_rows('phone_numbers')) : ?>
+							<ul class="phone-numbers">
+							<?php while (have_rows('phone_numbers')) : the_row(); ?>
+								<li><?php echo get_sub_field('phone_number'); ?></li>
+							<?php endwhile; ?>
+							</ul>
+							<?php endif; ?>
+
+							<?php endwhile; ?>
+
+						</div>
+						<?php endif; ?>
 					</div>
 
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">

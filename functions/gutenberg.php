@@ -7,3 +7,9 @@ function gutenberg_editor_assets() {
     wp_enqueue_style('my-gutenberg-editor-styles');
 }
 add_action('enqueue_block_editor_assets', 'gutenberg_editor_assets');
+
+function fontawesome_dashboard() {
+    wp_enqueue_style('fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', '', null, 'all');
+ }
+ 
+ add_action('admin_init', 'fontawesome_dashboard');

@@ -2876,8 +2876,10 @@ header:not(.white-bg) .logo--blue {
 .contact-information .phone-numbers {
   -webkit-margin-before: 0;
           margin-block-start: 0;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+}
+.contact-information li {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 .contact-information li::before {
   display: none;

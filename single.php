@@ -51,10 +51,11 @@ $pagetitle = get_field('hide_page_title'); ?>
 							<?php endif; ?>
 
 							<?php if ($emailaddress) : ?>
-							<p><?php echo __('Email Address: ') . '<a href="mailto:' . $emailaddress . '">' . $emailaddress . '</a>'; ?></p>
+							<p><?php echo __('Email: ') . '<a href="mailto:' . $emailaddress . '">' . $emailaddress . '</a>'; ?></p>
 							<?php endif; ?>
 
 							<?php if (have_rows('phone_numbers')) : ?>
+							<p><?php echo __('Phone:'); ?>
 							<ul class="phone-numbers">
 							<?php while (have_rows('phone_numbers')) : the_row(); ?>
 								<li><?php echo get_sub_field('phone_number'); ?></li>

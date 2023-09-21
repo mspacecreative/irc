@@ -611,7 +611,7 @@ html {
 
 .link__custom > *::after, .link__custom.wp-block-button.is-style-outline > *::after {
   font-family: fontAwesome;
-  margin-left: 1rem;
+  margin-left: 10px;
 }
 .link__custom.pdf-download > *::after {
   content: "\f1c1";

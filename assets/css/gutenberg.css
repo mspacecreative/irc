@@ -79,6 +79,21 @@
   box-shadow: none;
 }
 
+.link__custom a {
+  -webkit-padding-end: calc(2.666em + 2px);
+          padding-inline-end: calc(2.666em + 2px);
+  position: relative;
+}
+.link__custom a::after {
+  position: absolute;
+  right: 1.333em;
+  top: 14px;
+  font-family: fontAwesome;
+}
+.link__custom.pdf-download a::after {
+  content: "\f1c1";
+}
+
 .wp-admin .editor-styles-wrapper .is-root-container {
   max-width: 1280px;
   margin-left: auto;

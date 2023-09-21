@@ -609,12 +609,14 @@ html {
   background: linear-gradient(90deg, #23726d 50%, #e8e8e8 50%);
 }
 
-.link__custom > * {
+.link__custom > *,
+.link__custom > a {
   -webkit-padding-end: calc(2.666em + 2px);
           padding-inline-end: calc(2.666em + 2px);
   position: relative;
 }
-.link__custom > *::after {
+.link__custom > *::after,
+.link__custom > a::after {
   position: absolute;
   right: 1.333em;
   top: 14px;

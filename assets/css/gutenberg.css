@@ -76,12 +76,14 @@
 .wp-admin .editor-styles-wrapper .has-midnight-blue-background-color ~ div .wp-block-post {
   box-shadow: none;
 }
-.wp-admin .editor-styles-wrapper .link__custom > * {
+.wp-admin .editor-styles-wrapper .link__custom > *,
+.wp-admin .editor-styles-wrapper .link__custom > a {
   -webkit-padding-end: calc(2.666em + 2px);
           padding-inline-end: calc(2.666em + 2px);
   position: relative;
 }
-.wp-admin .editor-styles-wrapper .link__custom > *::after {
+.wp-admin .editor-styles-wrapper .link__custom > *::after,
+.wp-admin .editor-styles-wrapper .link__custom > a::after {
   position: absolute;
   right: 1.333em;
   top: 14px;

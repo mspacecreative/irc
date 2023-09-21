@@ -87,7 +87,7 @@
   top: 14px;
   font-family: fontAwesome;
 }
-.wp-admin .editor-styles-wrapper .link__custom.pdf-download a::after {
+.wp-admin .editor-styles-wrapper .link__custom.pdf-download > *::after {
   content: "\f1c1";
 }
 .wp-admin .editor-styles-wrapper .is-root-container {

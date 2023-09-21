@@ -12,7 +12,9 @@
     }
   }
 
-  &.pdf-download a::after {
-    content: "\f1c1";
+  &.pdf-download {
+    >*::after {
+      content: "\f1c1";
+    }
   }
 }

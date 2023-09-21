@@ -620,7 +620,7 @@ html {
   top: 14px;
   font-family: fontAwesome;
 }
-.link__custom.pdf-download a::after {
+.link__custom.pdf-download > *::after {
   content: "\f1c1";
 }
 

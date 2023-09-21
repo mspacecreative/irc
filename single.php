@@ -15,7 +15,7 @@ $pagetitle = get_field('hide_page_title'); ?>
 				</div>
 				<div class="row col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
 					<a href="<?php echo home_url('news'); ?>" class="text__small">
-						All News <span class="arrow__right"></span>
+						<?php printf( __( 'All %ss', 'irc' ), get_post_type( get_the_ID() ) ); ?> <span class="arrow__right"></span>
 					</a>
 				</div>
 			</div>

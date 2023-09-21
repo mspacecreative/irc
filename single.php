@@ -47,7 +47,7 @@ $pagetitle = get_field('hide_page_title'); ?>
 							<?php endif; ?>
 
 							<?php if ($name) : ?>
-							<p><?php echo $name ?></p>
+							<p style="font-weight: 600;"><?php echo $name ?></p>
 							<?php endif; ?>
 
 							<?php if ($emailaddress) : ?>

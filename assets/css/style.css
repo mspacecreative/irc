@@ -2800,7 +2800,7 @@ header:not(.white-bg) .logo--blue {
 .wp-block-post .wp-block-post-date {
   margin-top: auto;
   padding-top: 10px;
-  border-top: 1px solid #2fbeb7;
+  border-top: 1px solid #d9d9d9;
 }
 .wp-block-post::after {
   content: "";

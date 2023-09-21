@@ -41,13 +41,13 @@ $pagetitle = get_field('hide_page_title'); ?>
 							$position = get_sub_field('position__title');
 							$name = get_sub_field('name');
 							$emailaddress = get_sub_field('email_address');
-							
+
+							if ($name) : ?>
+							<p style="font-weight: 600;"><?php echo $name ?></p>
+							<?php endif;
+
 							if ($position) : ?>
 							<p><?php echo $position ?></p>
-							<?php endif; ?>
-
-							<?php if ($name) : ?>
-							<p style="font-weight: 600;"><?php echo $name ?></p>
 							<?php endif; ?>
 
 							<?php if ($emailaddress) : ?>

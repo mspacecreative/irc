@@ -2331,11 +2331,6 @@ body .is-layout-constrained > * {
   margin-bottom: 2em;
 }
 
-.row .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 #cards.section {
   margin-top: -6em;
   padding-bottom: calc(6em - 1rem);

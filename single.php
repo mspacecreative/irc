@@ -45,7 +45,7 @@ $post_type = get_post_type(); ?>
 					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
 					
 					<?php if ($post_type == 'post') : ?>	
-					<div class="hide-on-mobile">
+					<div class="hide-on-mobile" style="margin-block-end: 3em;">
 						<?php echo $date; ?>
 					</div>
 					<?php endif; ?>

@@ -2858,10 +2858,6 @@ header:not(.white-bg) .logo--blue {
   }
 }
 
-.contact-information {
-  -webkit-margin-before: 3em;
-          margin-block-start: 3em;
-}
 .contact-information p {
   margin-block: 0;
 }

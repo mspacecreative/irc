@@ -29,6 +29,23 @@ function my_acf_init() {
 			]
 		));
 
+		// register loop block
+		acf_register_block(array(
+			'name'				=> 'post-object',
+			'title'				=> __('Posts Grid Block'),
+			'description'		=> __('Displays a variety of content type posts in a grid format'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'object', 'loop', 'list', 'content types' ),
+			'supports'			=> [
+				'align' => false,
+				'anchor' => true,
+				'customClassName' => true,
+                'mode' => true,
+			]
+		));
+
 	}
 }
 add_action('acf/init', 'my_acf_init');

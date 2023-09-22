@@ -2904,8 +2904,6 @@ header:not(.white-bg) .logo--blue {
 .single .row .row {
   margin-left: 0;
   margin-right: 0;
-}
-.single .row .row > div {
   padding-right: 0;
   padding-left: 0;
 }

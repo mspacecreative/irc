@@ -34,7 +34,9 @@ $pagetitle = get_field('hide_page_title'); ?>
 				<main class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="hide-on-mobile">
 						<?php echo the_date(); ?>
+						</div>
 						
 						<?php if (have_rows('contact_information')) : ?>
 						<div class="contact-information">
@@ -75,9 +77,13 @@ $pagetitle = get_field('hide_page_title'); ?>
 
 						<?php 
 						if ( have_posts() ):
-						while ( have_posts() ): the_post();
+						while ( have_posts() ): the_post(); ?>
+
+						<div class="hide-on-desktop">
+						<?php echo the_date(); ?>
+						</div>
 						
-						the_content(); ?>
+						<?php the_content(); ?>
 							
 						<?php endwhile;
 							

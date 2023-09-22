@@ -5,3 +5,23 @@
     }
   }
 }
+
+@media (max-width: 1023px) {
+  .hide-on-desktop {
+    display: block;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-on-desktop {
+    display: none;
+  }
+
+  .hide-on-mobile {
+    display: block;
+  }
+}

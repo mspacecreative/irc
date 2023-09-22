@@ -3,7 +3,15 @@ get_header();
 
 $pagetitle = get_field('hide_page_title');
 $date = get_the_date(__('F j, Y', 'irc'));
-$post_type = get_post_type(); ?>
+$post_type = get_post_type();
+
+function post_type_slug($post_type) {
+	if ($post_type == 'post') {
+		$post_type = 'news';
+	}
+	$slug = $post_type;
+	return $slug;
+} ?>
 
 <div class="content-wrapper">
 
@@ -16,7 +24,7 @@ $post_type = get_post_type(); ?>
 					<?php breadcrumbs(); ?>
 				</div>
 				<div class="row col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
-					<a href="<?php echo get_the_permalink($post_type); ?>" class="text__small">
+					<a href="<?php echo home_url(post_type_slug($post_type)); ?>" class="text__small">
 						<?php echo __('All '), ucfirst($post_type), __('s'); ?> <span class="arrow__right"></span>
 					</a>
 				</div>

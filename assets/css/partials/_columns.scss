@@ -1,3 +1,10 @@
 .reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.editorskit-block-link {
+  &:hover {
+    opacity: .5;
+    @extend %smooth-transition-25;
+  }
 }

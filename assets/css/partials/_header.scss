@@ -128,10 +128,7 @@ header {
 }
 
 .top-header {
-  // margin-bottom: 15px;
   font-size: 13px;
-  // padding-left: 0.5rem;
-  // padding-right: 0.5rem;
 
   .btn {
     font-size: 14px;
@@ -141,10 +138,6 @@ header {
   .fa {
     margin-right: 10px;
   }
-
-  // a {
-  //   color: #fff;
-  // }
 
   .row.gutter_space_2 .col {
     margin-bottom: 0;
@@ -169,7 +162,6 @@ body:not(.home) {
 
 .white-bg .logo .st0 {
   transition: .25s ease-in-out;
-  // fill: $royalBlue;
 }
 
 .logo {

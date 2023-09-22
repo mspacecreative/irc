@@ -2762,7 +2762,7 @@ header:not(.white-bg) .logo--blue {
 }
 .home .splash-cover {
   min-height: auto !important;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 91px);
   max-height: 900px;
 }
 @media (max-device-width: 980px) and (orientation: landscape) {

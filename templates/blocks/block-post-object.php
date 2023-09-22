@@ -1,7 +1,7 @@
 <?php
 $postobject = get_field('post_object');
 $cols = get_field('columns');
-$showimg = get_field('display_featured_iamge');
+$showimg = get_field('display_featured_image');
 
 switch($cols) {
     case '1':

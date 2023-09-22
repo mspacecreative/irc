@@ -77,7 +77,7 @@ function post_type_slug($post_type) {
 							<?php endif;
 
 							if ($address) : ?>
-							<p><?php echo $address ?></p>
+							<p style="margin-block-start: 1rem;"><?php echo $address ?></p>
 							<?php endif; ?>
 
 							<?php if ($emailaddress) : ?>

@@ -10,7 +10,7 @@
   flex-direction: row-reverse;
 }
 .wp-admin .editor-styles-wrapper .ek-linked-block:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 .wp-admin .editor-styles-wrapper :where(body .is-layout-flow) > .editorskit-block-link {
   -webkit-margin-before: 0;

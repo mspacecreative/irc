@@ -2937,7 +2937,7 @@ body:not(.home).light__theme .white-bg {
 }
 
 .ek-linked-block:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 :where(body .is-layout-flow) > .editorskit-block-link {

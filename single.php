@@ -32,7 +32,7 @@ $date = wp_date(__('F j, Y', 'irc')); ?>
 					<?php endif; ?>
 
 					<div class="hide-on-desktop bottom-margin-2em">
-						<p class="text__small"><?php $date ?></p>
+						<p class="text__small"><?php echo $date ?></p>
 					</div>
 				</div>
 
@@ -40,7 +40,7 @@ $date = wp_date(__('F j, Y', 'irc')); ?>
 
 					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
 						<div class="hide-on-mobile">
-						<?php $date ?>
+						<?php echo $date ?>
 						</div>
 						
 						<?php if (have_rows('contact_information')) : ?>

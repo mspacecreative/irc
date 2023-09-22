@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.editorskit-block-link:hover, .wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-block-post .wp-block-post-featured-image img, .main-header, header.scroll-up:not(.reset) .main-header, header.scroll-up:not(.reset) .primary-menu-container, header.scroll-up:not(.reset) .logo, header.scroll-up, header.scroll-down:not(.reset) .main-header, header.scroll-down:not(.reset) .primary-menu-container, header.scroll-down:not(.reset) .logo, header.scroll-down, header {
+.wp-block-column:hover .editorskit-block-link, .wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-block-post .wp-block-post-featured-image img, .main-header, header.scroll-up:not(.reset) .main-header, header.scroll-up:not(.reset) .primary-menu-container, header.scroll-up:not(.reset) .logo, header.scroll-up, header.scroll-down:not(.reset) .main-header, header.scroll-down:not(.reset) .primary-menu-container, header.scroll-down:not(.reset) .logo, header.scroll-down, header {
   transition: 0.25s ease-in-out;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
@@ -2936,7 +2936,7 @@ body:not(.home).light__theme .white-bg {
   flex-direction: row-reverse;
 }
 
-.editorskit-block-link:hover {
+.wp-block-column:hover .editorskit-block-link {
   opacity: 0.5;
 }
 

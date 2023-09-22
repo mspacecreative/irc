@@ -2,8 +2,8 @@
   flex-direction: row-reverse;
 }
 
-.editorskit-block-link {
-  &:hover {
+.wp-block-column:hover {
+  .editorskit-block-link {
     opacity: .5;
     @extend %smooth-transition-25;
   }

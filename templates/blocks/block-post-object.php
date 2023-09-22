@@ -29,7 +29,7 @@ if( !empty($block['className']) ) {
 
 if ($postobject) {
 echo
-'<ul class="is-flex-container columns-' . $cols . ' wp-block-post-template-container wp-block-post-template wp-block-terms' . esc_attr($className) . '">';
+'<ul class="is-flex-container columns-' . $cols . ' wp-block-post-template-container wp-block-post-template wp-block-post-object' . esc_attr($className) . '">';
     
     foreach ($postobject as $object) {
     setup_postdata($object);
@@ -39,18 +39,17 @@ echo
 
     echo
     '<li class="wp-block-post">
-        <a href="' . $permalink . '">';
-            if ($showimg) {
-            echo
-            '<figure class="wp-block-post-featured-image">
-                <a href="' . $permalink . '">'
-                    . $featured_img . 
-                '</a>
-            </figure>';
-            }
-            echo
-            '<h3 class="wp-block-post-title has-medium-font-size">' . esc_html__($title) . '</h3>
-        </a>
+        <a href="' . $permalink . '"></a>';
+        if ($showimg) {
+        echo
+        '<figure class="wp-block-post-featured-image">
+            <a href="' . $permalink . '">'
+                . $featured_img . 
+            '</a>
+        </figure>';
+        }
+        echo
+        '<h3 class="wp-block-post-title has-medium-font-size">' . esc_html__($title) . '</h3>
     </li>';
     }
 echo

@@ -97,3 +97,17 @@
     margin-block-end: 1rem;
   }
 }
+
+.wp-block-post-object {
+  .wp-block-post {
+    position: relative;
+
+    >a {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+}

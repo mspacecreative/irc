@@ -2843,6 +2843,17 @@ header:not(.white-bg) .logo--blue {
           margin-block-end: 1rem;
 }
 
+.wp-block-post-object .wp-block-post {
+  position: relative;
+}
+.wp-block-post-object .wp-block-post > a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
 @media (min-width: 981px) {
   .dynamic__contents {
     position: -webkit-sticky;

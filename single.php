@@ -8,6 +8,7 @@ $post_type = get_post_type();
 function post_type_slug($post_type) {
 	if ($post_type == 'post') {
 		$post_type = 'news';
+		$slug = $post_type;
 	}
 	$slug = $post_type;
 	return $slug;

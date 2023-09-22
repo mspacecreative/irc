@@ -2378,6 +2378,11 @@ body .is-layout-constrained > * {
   margin-top: 2em;
 }
 
+.bottom-margin-2em {
+  -webkit-margin-after: 2em;
+          margin-block-end: 2em;
+}
+
 .top-bottom-margin-2em {
   margin-block: 2em;
 }
@@ -2877,7 +2882,7 @@ header:not(.white-bg) .logo--blue {
 }
 @media (max-width: 1024px) {
   .post__date {
-    order: 1;
+    order: -1;
   }
 }
 

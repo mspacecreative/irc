@@ -38,17 +38,19 @@ echo
     $permalink = get_the_permalink($object->ID);
 
     echo
-    '<li class="wp-block-post">';
-        if ($showimg) {
-        echo
-        '<figure class="wp-block-post-featured-image">
-            <a href="' . $permalink . '">'
-                . $featured_img . 
-            '</a>
-        </figure>';
-        }
-        echo
-        '<h3 class="wp-block-post-title has-large-font-size">' . esc_html__($title) . '</h3>
+    '<li class="wp-block-post">
+        <a href="' . $permalink . '">';
+            if ($showimg) {
+            echo
+            '<figure class="wp-block-post-featured-image">
+                <a href="' . $permalink . '">'
+                    . $featured_img . 
+                '</a>
+            </figure>';
+            }
+            echo
+            '<h3 class="wp-block-post-title has-medium-font-size">' . esc_html__($title) . '</h3>
+        </a>
     </li>';
     }
 echo

@@ -2965,6 +2965,12 @@ footer .row.gutter_space_2 > .col {
           margin-block-end: 4rem;
 }
 
+@media (max-width: 480px) {
+  #footer-nav_menu-5 {
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+  }
+}
 @media (max-width: 780px) {
   .wp-block-group.wp-block-group.flex-start-on-mobile {
     justify-content: flex-start;

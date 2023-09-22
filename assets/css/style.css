@@ -2882,7 +2882,7 @@ header:not(.white-bg) .logo--blue {
 }
 @media (max-width: 1024px) {
   .post__date {
-    order: -1;
+    order: 1;
   }
 }
 

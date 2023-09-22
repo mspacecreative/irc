@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.ek-linked-block:hover, .ek-linked-block, .wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-block-post .wp-block-post-featured-image img, .main-header, header.scroll-up:not(.reset) .main-header, header.scroll-up:not(.reset) .primary-menu-container, header.scroll-up:not(.reset) .logo, header.scroll-up, header.scroll-down:not(.reset) .main-header, header.scroll-down:not(.reset) .primary-menu-container, header.scroll-down:not(.reset) .logo, header.scroll-down, header {
+.ek-linked-block:hover, .ek-linked-block, .main-header, header.scroll-up:not(.reset) .main-header, header.scroll-up:not(.reset) .primary-menu-container, header.scroll-up:not(.reset) .logo, header.scroll-up, header.scroll-down:not(.reset) .main-header, header.scroll-down:not(.reset) .primary-menu-container, header.scroll-down:not(.reset) .logo, header.scroll-down, header {
   transition: 0.25s ease-in-out;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
@@ -2818,14 +2818,6 @@ header:not(.white-bg) .logo--blue {
   -moz-border-radius: 10px 10px 0 0;
   -ms-border-radius: 10px 10px 0 0;
   -o-border-radius: 10px 10px 0 0;
-  overflow: hidden;
-}
-.wp-block-post .wp-block-post-featured-image > a:hover > img {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
 }
 .wp-block-post h2 {
   margin-block: 0;

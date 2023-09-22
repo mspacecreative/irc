@@ -51,20 +51,20 @@
     -moz-border-radius: 10px 10px 0 0;
     -ms-border-radius: 10px 10px 0 0;
     -o-border-radius: 10px 10px 0 0;
-    overflow: hidden;
+    // overflow: hidden;
 
-    img {
-      @extend %smooth-transition-25;
-    }
+    // img {
+    //   @extend %smooth-transition-25;
+    // }
 
-    >a:hover>img {
-      transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      @extend %smooth-transition-25;
-    }
+    // >a:hover>img {
+    //   transform: scale(1.1);
+    //   -webkit-transform: scale(1.1);
+    //   -moz-transform: scale(1.1);
+    //   -ms-transform: scale(1.1);
+    //   -o-transform: scale(1.1);
+    //   @extend %smooth-transition-25;
+    // }
   }
 
   h2 {

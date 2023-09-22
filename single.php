@@ -8,11 +8,12 @@ $post_type = get_post_type();
 function post_type_slug($post_type) {
 	if ($post_type == 'post') {
 		$post_type = 'news';
-		$slug = $post_type;
 	}
 	$slug = $post_type;
 	return $slug;
-} ?>
+}
+
+$slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 <div class="content-wrapper">
 
@@ -26,7 +27,7 @@ function post_type_slug($post_type) {
 				</div>
 				<div class="row col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
 					<a href="<?php echo home_url(post_type_slug($post_type)); ?>" class="text__small">
-						<?php echo __('All '), ucfirst($post_type); ?> <span class="arrow__right"></span>
+						<?php echo __('All '), ucfirst($slug); ?> <span class="arrow__right"></span>
 					</a>
 				</div>
 			</div>

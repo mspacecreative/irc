@@ -54,29 +54,32 @@ a {
     text-decoration: none;
   }
 
-  h2 {
-    font-size: 28px;
-    // font-weight: 700;
-    letter-spacing: -0.02rem;
+  :not(.wp-block-post) {
 
-    >a {
-      position: relative;
-      text-decoration: none;
-      padding-right: 30px;
+    h2 {
+      font-size: 28px;
+      // font-weight: 700;
+      letter-spacing: -0.02rem;
 
-      &::after {
-        position: absolute;
-        content: "\f1e1";
-        right: 0;
-        bottom: -2px;
-        font-family: 'Material Symbols Outlined';
-        font-weight: 600;
-        font-size: 25px;
-      }
+      >a {
+        position: relative;
+        text-decoration: none;
+        padding-right: 30px;
 
-      @media (max-width: 980px) {
         &::after {
-          font-size: 22px;
+          position: absolute;
+          content: "\f1e1";
+          right: 0;
+          bottom: -2px;
+          font-family: 'Material Symbols Outlined';
+          font-weight: 600;
+          font-size: 25px;
+        }
+
+        @media (max-width: 980px) {
+          &::after {
+            font-size: 22px;
+          }
         }
       }
     }

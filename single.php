@@ -57,6 +57,7 @@ $post_type = get_post_type(); ?>
 							$position = get_sub_field('position__title');
 							$name = get_sub_field('name');
 							$emailaddress = get_sub_field('email_address');
+							$address = get_sub_field('address');
 							$fax = get_sub_field('fax_number');
 
 							if ($name) : ?>
@@ -65,6 +66,10 @@ $post_type = get_post_type(); ?>
 
 							if ($position) : ?>
 							<p><?php echo $position ?></p>
+							<?php endif;
+
+							if ($address) : ?>
+							<p><?php echo $address ?></p>
 							<?php endif; ?>
 
 							<?php if ($emailaddress) : ?>

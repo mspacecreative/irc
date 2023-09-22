@@ -77,6 +77,12 @@
     }
   }
 
+  &.news-card {
+    h2 {
+      margin-block-end: 1rem;
+    }
+  }
+
   a {
     color: #000;
     text-decoration: none;

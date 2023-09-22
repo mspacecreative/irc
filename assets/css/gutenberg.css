@@ -79,6 +79,10 @@
 .wp-admin .editor-styles-wrapper .wp-block-post h2 a::after {
   display: none;
 }
+.wp-admin .editor-styles-wrapper .wp-block-post.news-card h2 {
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
 .wp-admin .editor-styles-wrapper .wp-block-post a {
   color: #000;
   text-decoration: none;

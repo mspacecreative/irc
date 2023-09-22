@@ -4,6 +4,7 @@ get_header();
 $pagetitle = get_field('hide_page_title');
 $date = get_the_date(__('F j, Y', 'irc'));
 $post_type = get_post_type();
+$layout = get_field('layout');
 
 function post_type_slug($post_type) {
 	if ($post_type == 'post') {

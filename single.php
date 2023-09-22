@@ -2,7 +2,8 @@
 get_header();
 
 $pagetitle = get_field('hide_page_title');
-$date = get_the_date(__('F j, Y', 'irc')); ?>
+$date = get_the_date(__('F j, Y', 'irc'));
+$post_type = get_post_type(); ?>
 
 <div class="content-wrapper">
 
@@ -15,8 +16,6 @@ $date = get_the_date(__('F j, Y', 'irc')); ?>
 					<?php breadcrumbs(); ?>
 				</div>
 				<div class="row col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
-					<?php
-					$post_type = get_post_type(); ?>
 					<a href="<?php echo get_post_type_archive_link($post_type); ?>" class="text__small">
 						<?php echo __('All '), ucfirst($post_type), __('s'); ?> <span class="arrow__right"></span>
 					</a>
@@ -32,7 +31,12 @@ $date = get_the_date(__('F j, Y', 'irc')); ?>
 					<?php endif; ?>
 
 					<div class="hide-on-desktop bottom-margin-2em">
-						<p class="text__small"><?php echo $date ?></p>
+						<p class="text__small">
+							<?php 
+							if ($post_type == 'post') {
+							echo $date
+							} ?>
+						</p>
 					</div>
 				</div>
 
@@ -40,7 +44,10 @@ $date = get_the_date(__('F j, Y', 'irc')); ?>
 
 					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
 						<div class="hide-on-mobile">
-						<?php echo $date ?>
+							<?php 
+							if ($post_type == 'post') {
+							echo $date
+							} ?>
 						</div>
 						
 						<?php if (have_rows('contact_information')) : ?>

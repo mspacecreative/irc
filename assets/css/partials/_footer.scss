@@ -20,4 +20,10 @@ footer {
   p {
     margin-block-start: 0;
   }
+
+  .row.gutter_space_2 {
+    >.col {
+      margin-block-end: 4rem;
+    }
+  }
 }

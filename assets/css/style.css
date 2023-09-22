@@ -2965,6 +2965,10 @@ footer p {
   -webkit-margin-before: 0;
           margin-block-start: 0;
 }
+footer .row.gutter_space_2 > .col {
+  -webkit-margin-after: 4rem;
+          margin-block-end: 4rem;
+}
 
 @media (max-width: 780px) {
   .wp-block-group.wp-block-group.flex-start-on-mobile {

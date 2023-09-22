@@ -75,13 +75,13 @@ $pagetitle = get_field('hide_page_title'); ?>
 
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
+						<div class="hide-on-desktop">
+						<p><?php echo the_date(); ?></p>
+						</div>
+
 						<?php 
 						if ( have_posts() ):
 						while ( have_posts() ): the_post(); ?>
-
-						<div class="hide-on-desktop">
-						<?php echo the_date(); ?>
-						</div>
 						
 						<?php the_content(); ?>
 							

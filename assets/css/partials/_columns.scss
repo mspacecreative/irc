@@ -4,6 +4,7 @@
 
 .wp-block-column:hover {
   .editorskit-block-link {
+    margin-block-start: 0;
     opacity: .5;
     @extend %smooth-transition-25;
   }

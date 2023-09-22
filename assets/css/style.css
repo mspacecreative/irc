@@ -2937,6 +2937,8 @@ body:not(.home).light__theme .white-bg {
 }
 
 .wp-block-column:hover .editorskit-block-link {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
   opacity: 0.5;
 }
 

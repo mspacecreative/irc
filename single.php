@@ -76,7 +76,7 @@ $pagetitle = get_field('hide_page_title'); ?>
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
 						<div class="hide-on-desktop">
-						<p><?php echo the_date(); ?></p>
+						<p><?php echo the_date(get_the_ID()); ?></p>
 						</div>
 
 						<?php 

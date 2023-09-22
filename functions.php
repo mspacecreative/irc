@@ -19,3 +19,6 @@ include 'functions/thumbnails.php';
 
 // BREADCRUMBS
 include 'functions/breadcrumbs.php';
+
+// ACF
+include 'functions/acf.php';

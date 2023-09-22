@@ -2,12 +2,9 @@
   flex-direction: row-reverse;
 }
 
-.wp-block-column:hover {
-  .editorskit-block-link {
-    margin-block-start: 0;
-    opacity: .5;
-    @extend %smooth-transition-25;
-  }
+.ek-linked-block:hover {
+  opacity: .5;
+  @extend %smooth-transition-25;
 }
 
 :where(body .is-layout-flow)>.editorskit-block-link {

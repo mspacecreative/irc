@@ -1,4 +1,4 @@
-.wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image img, .wp-admin .editor-styles-wrapper .wp-block-column:hover .editorskit-block-link {
+.wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image img, .wp-admin .editor-styles-wrapper .ek-linked-block:hover {
   transition: 0.25s ease-in-out;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
@@ -9,9 +9,7 @@
 .wp-admin .editor-styles-wrapper .reverse {
   flex-direction: row-reverse;
 }
-.wp-admin .editor-styles-wrapper .wp-block-column:hover .editorskit-block-link {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
+.wp-admin .editor-styles-wrapper .ek-linked-block:hover {
   opacity: 0.5;
 }
 .wp-admin .editor-styles-wrapper :where(body .is-layout-flow) > .editorskit-block-link {

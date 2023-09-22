@@ -2833,10 +2833,6 @@ header:not(.white-bg) .logo--blue {
 .wp-block-post h2 a::after {
   display: none;
 }
-.wp-block-post.news-card h2 {
-  -webkit-margin-after: 1rem;
-          margin-block-end: 1rem;
-}
 .wp-block-post a {
   color: #000;
   text-decoration: none;
@@ -2844,6 +2840,11 @@ header:not(.white-bg) .logo--blue {
 
 .has-midnight-blue-background-color ~ div .wp-block-post {
   box-shadow: none;
+}
+
+.news-card h2 {
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
 }
 
 @media (min-width: 981px) {

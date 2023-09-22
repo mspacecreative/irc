@@ -16,7 +16,7 @@ $post_type = get_post_type(); ?>
 					<?php breadcrumbs(); ?>
 				</div>
 				<div class="row col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
-					<a href="<?php echo get_post_type_archive_link($post_type); ?>" class="text__small">
+					<a href="<?php echo get_the_permalink($post_type); ?>" class="text__small">
 						<?php echo __('All '), ucfirst($post_type), __('s'); ?> <span class="arrow__right"></span>
 					</a>
 				</div>

@@ -57,6 +57,7 @@ $post_type = get_post_type(); ?>
 							$position = get_sub_field('position__title');
 							$name = get_sub_field('name');
 							$emailaddress = get_sub_field('email_address');
+							$fax = get_sub_field('fax_number');
 
 							if ($name) : ?>
 							<p style="font-weight: 600;"><?php echo $name ?></p>
@@ -77,6 +78,11 @@ $post_type = get_post_type(); ?>
 								<li><?php echo get_sub_field('phone_number'); ?></li>
 							<?php endwhile; ?>
 							</ul>
+							<?php endif;
+
+							if ($fax) : ?>
+							<p style="margin-block-start: 1rem;"><?php echo __('Fax:'); ?>
+							<p><?php echo $fax ?></p>
 							<?php endif; ?>
 
 							<?php endwhile; ?>

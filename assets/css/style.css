@@ -2942,6 +2942,11 @@ body:not(.home).light__theme .white-bg {
   opacity: 0.5;
 }
 
+:where(body .is-layout-flow) > .editorskit-block-link {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
 footer {
   background-color: #23726d;
 }

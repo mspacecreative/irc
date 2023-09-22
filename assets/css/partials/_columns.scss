@@ -9,3 +9,7 @@
     @extend %smooth-transition-25;
   }
 }
+
+:where(body .is-layout-flow)>.editorskit-block-link {
+  margin-block-start: 0;
+}

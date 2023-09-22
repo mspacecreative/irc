@@ -30,8 +30,8 @@ $pagetitle = get_field('hide_page_title'); ?>
 					<h1 class="post__title"><?php the_title(); ?></h1>
 					<?php endif; ?>
 
-					<div class="hide-on-desktop">
-						<p><?php the_date('F j, Y'); ?></p>
+					<div class="hide-on-desktop bottom-margin-2em">
+						<p class="text__small"><?php the_date('F j, Y'); ?></p>
 					</div>
 				</div>
 

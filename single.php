@@ -34,7 +34,7 @@ $post_type = get_post_type(); ?>
 						<p class="text__small">
 							<?php 
 							if ($post_type == 'post') {
-							echo $date
+							echo $date;
 							} ?>
 						</p>
 					</div>
@@ -46,7 +46,7 @@ $post_type = get_post_type(); ?>
 						<div class="hide-on-mobile">
 							<?php 
 							if ($post_type == 'post') {
-							echo $date
+							echo $date;
 							} ?>
 						</div>
 						

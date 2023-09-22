@@ -13,6 +13,9 @@ switch($cols) {
     case '3':
         $cols = '3';
         break;
+    case '4':
+        $cols = '4';
+        break;
     default:
         $cols = '3';
         break;

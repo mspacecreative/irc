@@ -1,4 +1,4 @@
-.wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image img, .wp-admin .editor-styles-wrapper .ek-linked-block:hover {
+.wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image > a:hover > img, .wp-admin .editor-styles-wrapper .wp-block-post .wp-block-post-featured-image img, .wp-admin .editor-styles-wrapper .ek-linked-block:hover, .wp-admin .editor-styles-wrapper .ek-linked-block {
   transition: 0.25s ease-in-out;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;

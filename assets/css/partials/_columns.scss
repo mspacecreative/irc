@@ -2,9 +2,13 @@
   flex-direction: row-reverse;
 }
 
-.ek-linked-block:hover {
-  opacity: .75;
+.ek-linked-block {
   @extend %smooth-transition-25;
+
+  &:hover {
+    opacity: .75;
+    @extend %smooth-transition-25;
+  }
 }
 
 :where(body .is-layout-flow)>.editorskit-block-link {

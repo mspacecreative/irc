@@ -31,7 +31,7 @@ $pagetitle = get_field('hide_page_title'); ?>
 					<?php endif; ?>
 
 					<div class="hide-on-desktop">
-						<p><?php the_date(); ?></p>
+						<p><?php the_date('F j, Y'); ?></p>
 					</div>
 				</div>
 

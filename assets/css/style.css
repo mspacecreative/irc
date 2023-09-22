@@ -2550,6 +2550,9 @@ header:not(.white-bg) .logo--blue {
 .wp-block-post-featured-image {
   height: 100%;
 }
+.wp-block-post-featured-image img {
+  height: 100%;
+}
 
 .bio-container,
 .modal-backdrop {

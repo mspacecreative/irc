@@ -2886,6 +2886,11 @@ header:not(.white-bg) .logo--blue {
           margin-block-end: 25px;
 }
 
+.single .row .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .breadcrumbs {
   -webkit-margin-after: 2em;
           margin-block-end: 2em;

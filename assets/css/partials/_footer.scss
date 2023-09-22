@@ -1,6 +1,10 @@
 footer {
   background-color: $emerald;
 
+  .menu {
+    margin-block-start: 0;
+  }
+
   li {
     text-indent: unset;
 

@@ -2948,6 +2948,10 @@ body:not(.home).light__theme .white-bg {
 footer {
   background-color: #23726d;
 }
+footer .menu {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
 footer li {
   text-indent: unset;
 }

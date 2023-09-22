@@ -2819,6 +2819,9 @@ header:not(.white-bg) .logo--blue {
   -ms-border-radius: 10px 10px 0 0;
   -o-border-radius: 10px 10px 0 0;
 }
+.wp-block-post .wp-block-post-featured-image a {
+  height: auto;
+}
 .wp-block-post h2 {
   margin-block: 0;
 }

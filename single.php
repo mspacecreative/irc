@@ -2,7 +2,7 @@
 get_header();
 
 $pagetitle = get_field('hide_page_title');
-$date = wp_date(the_date(__('F j, Y', 'irc'))); ?>
+$date = get_the_date(__('F j, Y', 'irc')); ?>
 
 <div class="content-wrapper">
 

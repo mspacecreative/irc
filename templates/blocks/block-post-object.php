@@ -49,7 +49,7 @@ echo
         </figure>';
         }
         echo
-        '<h3 class="wp-block-post-title has-medium-font-size" style="margin-block: 0;"><strong>' . esc_html__($title) . '</strong></h3>
+        '<h3 class="wp-block-post-title has-medium-font-size" style="margin-block: 0; font-weight: 600;">' . esc_html__($title) . '</h3>
     </li>';
     }
 echo

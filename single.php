@@ -29,6 +29,10 @@ $pagetitle = get_field('hide_page_title'); ?>
 					if ( !$pagetitle ) : ?>
 					<h1 class="post__title"><?php the_title(); ?></h1>
 					<?php endif; ?>
+
+					<div class="hide-on-desktop">
+						<p><?php echo the_date(get_the_ID()); ?></p>
+					</div>
 				</div>
 
 				<main class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -75,15 +79,11 @@ $pagetitle = get_field('hide_page_title'); ?>
 
 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
-						<div class="hide-on-desktop">
-						<p><?php echo the_date(get_the_ID()); ?></p>
-						</div>
-
 						<?php 
 						if ( have_posts() ):
-						while ( have_posts() ): the_post(); ?>
+						while ( have_posts() ): the_post();
 						
-						<?php the_content(); ?>
+						the_content(); ?>
 							
 						<?php endwhile;
 							

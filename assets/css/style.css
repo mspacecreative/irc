@@ -2056,7 +2056,7 @@ span.at-icon-wrapper {
 .primary-menu-container .sub-menu {
   display: none;
   margin: 0;
-  padding: 1rem;
+  padding: 1.5rem;
   position: absolute;
   top: 100%;
   left: 0;
@@ -2073,6 +2073,9 @@ span.at-icon-wrapper {
 }
 .primary-menu-container li a {
   color: #fff;
+}
+.primary-menu-container li .sub-menu {
+  justify-content: flex-start;
 }
 .primary-menu-container li .sub-menu li {
   margin: 0 0 0.5em;

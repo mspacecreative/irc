@@ -363,7 +363,7 @@ span.at-icon-wrapper {
   .sub-menu {
     display: none;
     margin: 0;
-    padding: 1rem;
+    padding: 1.5rem;
     position: absolute;
     top: 100%;
     left: 0;
@@ -385,6 +385,8 @@ span.at-icon-wrapper {
     }
 
     .sub-menu {
+      justify-content: flex-start;
+
       li {
         margin: 0 0 .5em;
         padding: 0;

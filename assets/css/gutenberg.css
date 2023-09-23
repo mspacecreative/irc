@@ -16,6 +16,13 @@
   -webkit-margin-before: 0;
           margin-block-start: 0;
 }
+@media (min-width: 781px) {
+  .wp-admin .editor-styles-wrapper .column__border-left {
+    -webkit-padding-start: 1rem;
+            padding-inline-start: 1rem;
+    border-left: 1px solid #e8e8e8;
+  }
+}
 .wp-admin .editor-styles-wrapper .wp-block-post {
   padding: 1.5rem;
   box-shadow: 0 5px 15px #cacaca;

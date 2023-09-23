@@ -2924,34 +2924,6 @@ header:not(.white-bg) .logo--blue {
   text-decoration: underline;
 }
 
-body:not(.home).light__theme .logo .st0 {
-  fill: #0055a5;
-}
-body:not(.home).light__theme .logo .st1 {
-  fill: #686969;
-}
-body:not(.home).light__theme .hamburger-inner,
-body:not(.home).light__theme .hamburger--spin .hamburger-inner::before,
-body:not(.home).light__theme .hamburger--spin .hamburger-inner::after {
-  background-color: #000;
-}
-body:not(.home).light__theme .primary-menu-container li a {
-  color: #0055a5;
-}
-body:not(.home).light__theme header {
-  background-color: transparent;
-}
-body:not(.home).light__theme .white-bg {
-  background-color: #e8e8e8;
-}
-
-body:not(.home).dark__theme .menu-item-has-children::after {
-  color: #fff;
-}
-body:not(.home).dark__theme .primary-menu-container li .submenu a {
-  color: #0055a5;
-}
-
 .drop-shadow {
   box-shadow: 0 5px 10px #9c9b9b;
 }
@@ -3020,4 +2992,31 @@ footer .row.gutter_space_2 > .col {
   .hide-on-mobile {
     display: block;
   }
+}
+body:not(.home).light__theme .logo .st0 {
+  fill: #0055a5;
+}
+body:not(.home).light__theme .logo .st1 {
+  fill: #686969;
+}
+body:not(.home).light__theme .hamburger-inner,
+body:not(.home).light__theme .hamburger--spin .hamburger-inner::before,
+body:not(.home).light__theme .hamburger--spin .hamburger-inner::after {
+  background-color: #000;
+}
+body:not(.home).light__theme .primary-menu-container li a {
+  color: #0055a5;
+}
+body:not(.home).light__theme header {
+  background-color: transparent;
+}
+body:not(.home).light__theme .white-bg {
+  background-color: #e8e8e8;
+}
+
+body:not(.home).dark__theme .menu-item-has-children::after {
+  color: #fff;
+}
+body:not(.home).dark__theme .primary-menu-container li .submenu a {
+  color: #0055a5;
 }

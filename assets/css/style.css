@@ -1715,19 +1715,6 @@ body h1 {
   transition: 0.25s ease-in-out;
 }
 
-.menuContainer li {
-  position: relative;
-}
-
-.menuToggle a {
-  padding-right: 25px;
-  display: block;
-}
-
-.home.page #main-content {
-  margin-top: 0;
-}
-
 .closeModalButton,
 .closeSearchButton {
   border: none;
@@ -1981,46 +1968,6 @@ body.menuOpen {
   top: 18px;
 }
 
-.sub-menu {
-  display: none;
-  margin: 0;
-  padding: 1em 0 0 2em;
-}
-
-.menuContents .nav ul {
-  padding: 0;
-}
-
-.menuContents .nav > ul {
-  -moz-columns: 2 200px;
-  columns: 2 200px;
-  -moz-column-gap: calc(15% + 35px);
-       column-gap: calc(15% + 35px);
-}
-
-.menuContents .nav li {
-  display: block;
-  margin-left: 0;
-}
-
-.menuContents .nav a {
-  font-size: 40px;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.menuContents .nav li {
-  margin-bottom: 1em;
-}
-
-.menuContents .nav .sub-menu {
-  margin-bottom: 30px;
-}
-
-.menuInner li {
-  text-indent: 0;
-}
-
 .at-style-responsive .at-share-btn {
   border-radius: 50px !important;
   background-color: #0055a5 !important;
@@ -2095,10 +2042,34 @@ span.at-icon-wrapper {
   -webkit-margin-before: 15px;
           margin-block-start: 15px;
 }
+.primary-menu-container .menu-item-has-children {
+  position: relative;
+}
+.primary-menu-container .menu-item-has-children::after {
+  font-family: fontAwesome;
+  content: "\f107";
+  margin-left: 3px;
+}
+.primary-menu-container .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+.primary-menu-container .sub-menu {
+  display: none;
+  margin: 0;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+  white-space: nowrap;
+  border: 1px solid #2fbeb7;
+}
 .primary-menu-container li {
   margin-right: 40px;
   text-indent: 0;
-  margin-bottom: 0;
+  margin-bottom: -0.5rem;
+  padding-bottom: 0.5rem;
 }
 .primary-menu-container li a {
   color: #fff;

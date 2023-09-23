@@ -33,8 +33,8 @@ body:not(.home).dark__theme {
     }
   }
 
-  .primary-menu-container {
-    .submenu a {
+  .primary-menu-container li .submenu {
+    a {
       color: $royalBlue;
     }
   }

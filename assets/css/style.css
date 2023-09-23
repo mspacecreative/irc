@@ -2948,7 +2948,7 @@ body:not(.home).light__theme .white-bg {
 body:not(.home).dark__theme .menu-item-has-children::after {
   color: #fff;
 }
-body:not(.home).dark__theme .primary-menu-container li .submenu a {
+body:not(.home).dark__theme .primary-menu-container .submenu a {
   color: #0055a5;
 }
 

@@ -25,3 +25,15 @@ body:not(.home).light__theme {
     background-color: $lightGrey;
   }
 }
+
+body:not(.home).dark__theme {
+  .menu-item-has-children {
+    &::after {
+      color: #fff;
+    }
+  }
+
+  .submenu a {
+    color: $royalBlue;
+  }
+}

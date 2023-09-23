@@ -2945,6 +2945,13 @@ body:not(.home).light__theme .white-bg {
   background-color: #e8e8e8;
 }
 
+body:not(.home).dark__theme .menu-item-has-children::after {
+  color: #fff;
+}
+body:not(.home).dark__theme .submenu a {
+  color: #0055a5;
+}
+
 .drop-shadow {
   box-shadow: 0 5px 10px #9c9b9b;
 }

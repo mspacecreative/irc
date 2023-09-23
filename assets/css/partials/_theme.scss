@@ -33,7 +33,9 @@ body:not(.home).dark__theme {
     }
   }
 
-  .submenu a {
-    color: $royalBlue;
+  .primary-menu-container li {
+    .submenu a {
+      color: $royalBlue;
+    }
   }
 }

@@ -385,6 +385,11 @@ span.at-icon-wrapper {
     }
 
     .sub-menu {
+      li {
+        margin: 0 0 .5em;
+        padding: 0;
+      }
+
       a {
         color: $royalBlue;
       }

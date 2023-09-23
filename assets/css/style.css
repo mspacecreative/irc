@@ -2074,6 +2074,10 @@ span.at-icon-wrapper {
 .primary-menu-container li a {
   color: #fff;
 }
+.primary-menu-container li .sub-menu li {
+  margin: 0 0 0.5em;
+  padding: 0;
+}
 .primary-menu-container li .sub-menu a {
   color: #0055a5;
 }

@@ -2051,7 +2051,8 @@ span.at-icon-wrapper {
   margin-left: 3px;
 }
 .primary-menu-container .menu-item-has-children:hover .sub-menu {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
 }
 .primary-menu-container .sub-menu {
   display: none;
@@ -2074,12 +2075,12 @@ span.at-icon-wrapper {
 .primary-menu-container li a {
   color: #fff;
 }
-.primary-menu-container li .sub-menu {
-  justify-content: flex-start;
-}
 .primary-menu-container li .sub-menu li {
-  margin: 0 0 0.5em;
+  margin: 0;
   padding: 0;
+}
+.primary-menu-container li .sub-menu li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
 }
 .primary-menu-container li .sub-menu a {
   color: #0055a5;

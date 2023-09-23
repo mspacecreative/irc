@@ -354,7 +354,8 @@ span.at-icon-wrapper {
 
     &:hover {
       .sub-menu {
-        display: block;
+        display: flex;
+        justify-content: flex-start;
       }
     }
   }
@@ -385,11 +386,14 @@ span.at-icon-wrapper {
     }
 
     .sub-menu {
-      justify-content: flex-start;
 
       li {
-        margin: 0 0 .5em;
+        margin: 0;
         padding: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: 0.5rem;
+        }
       }
 
       a {

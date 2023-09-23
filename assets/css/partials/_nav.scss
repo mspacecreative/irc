@@ -384,6 +384,12 @@ span.at-icon-wrapper {
       color: #fff;
     }
 
+    .sub-menu {
+      a {
+        color: $royalBlue;
+      }
+    }
+
     @media (max-width: 1280px) {
       & {
         margin-right: 25px;

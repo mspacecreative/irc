@@ -2074,6 +2074,9 @@ span.at-icon-wrapper {
 .primary-menu-container li a {
   color: #fff;
 }
+.primary-menu-container li .sub-menu a {
+  color: #0055a5;
+}
 @media (max-width: 1280px) {
   .primary-menu-container li {
     margin-right: 25px;
@@ -3016,7 +3019,4 @@ body:not(.home).light__theme .white-bg {
 
 body:not(.home).dark__theme .menu-item-has-children::after {
   color: #fff;
-}
-body:not(.home).dark__theme .primary-menu-container li .submenu a {
-  color: #0055a5;
 }

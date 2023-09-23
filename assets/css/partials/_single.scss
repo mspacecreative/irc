@@ -13,12 +13,14 @@
 }
 
 .single {
-  .row {
+  .main-content {
     .row {
-      margin-left: 0;
-      margin-right: 0;
-      padding-right: 0;
-      padding-left: 0;
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+      }
     }
   }
 }

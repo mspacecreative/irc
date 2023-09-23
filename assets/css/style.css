@@ -620,6 +620,23 @@ html {
   content: "\f08e";
 }
 
+.main-content .link__arrow-right {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-decoration: none;
+  background-color: #0055a5;
+  padding: 5px 10px;
+  color: #fff;
+}
+.main-content .link__arrow-right::after {
+  content: "\f105";
+  font-family: fontAwesome;
+  margin-left: 5px;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   color: #333;
@@ -2547,10 +2564,10 @@ header:not(.white-bg) .logo--blue {
   -o-transform: translate(0, -50%);
 }
 
-.wp-block-post-featured-image {
+.page-header .wp-block-post-featured-image {
   height: 100%;
 }
-.wp-block-post-featured-image img {
+.page-header .wp-block-post-featured-image img {
   height: 100%;
 }
 
@@ -2908,7 +2925,7 @@ header:not(.white-bg) .logo--blue {
           margin-block-end: 25px;
 }
 
-.single .row .row {
+.single .main-content .row .row {
   margin-left: 0;
   margin-right: 0;
   padding-right: 0;

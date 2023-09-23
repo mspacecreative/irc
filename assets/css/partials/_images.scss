@@ -56,10 +56,12 @@ header:not(.white-bg) {
     }
 }
 
-.wp-block-post-featured-image {
-    height: 100%;
-
-    img {
+.page-header {
+    .wp-block-post-featured-image {
         height: 100%;
+
+        img {
+            height: 100%;
+        }
     }
 }

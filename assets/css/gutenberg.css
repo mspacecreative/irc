@@ -106,6 +106,22 @@
 .wp-admin .editor-styles-wrapper .link__custom.external-link > *::after {
   content: "\f08e";
 }
+.wp-admin .editor-styles-wrapper .main-content .link__arrow-right {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-decoration: none;
+  background-color: #0055a5;
+  padding: 5px 10px;
+  color: #fff;
+}
+.wp-admin .editor-styles-wrapper .main-content .link__arrow-right::after {
+  content: "\f105";
+  font-family: fontAwesome;
+  margin-left: 5px;
+}
 .wp-admin .editor-styles-wrapper .is-root-container {
   max-width: 1280px;
   margin-left: auto;

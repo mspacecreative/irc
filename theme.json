@@ -644,7 +644,7 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontWeight": "normal",
 					"lineHeight": "1.4"
 				}
@@ -658,6 +658,9 @@
 			"button": {
 				"border": {
 					"radius": "7px"
+				},
+				"typography": {
+					"fontSize": "1.15rem"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--contrast)",

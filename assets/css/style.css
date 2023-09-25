@@ -1774,6 +1774,13 @@ body.menuOpen {
 .menuOverlay .menu a {
   color: #fff;
 }
+.menuOverlay .menu ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.menuOverlay .menu ul li {
+  text-indent: 0;
+}
 
 .menuOverlay.show {
   transform: translate(0, 0);

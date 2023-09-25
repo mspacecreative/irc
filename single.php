@@ -55,7 +55,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 					 	if ($featuredimg) {
 						echo 
 						'<div class="hide-on-desktop">'
-						. get_the_post_thumbnail(get_the_ID(), 'large') . 
+							. get_the_post_thumbnail(get_the_ID(), 'large') . 
 						'</div>';
 						} ?>
 					</div>
@@ -63,7 +63,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 				</div>
 
-				<main class="row gutter_space_2 col">
+				<main class="row gutter_space_2">
 
 					<div class="post__date col col-lg-4 col-md-4 col-sm-12 col-xs-12">
 

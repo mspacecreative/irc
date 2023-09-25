@@ -436,6 +436,7 @@
 }
 .wp-admin .editor-styles-wrapper li:not(.wp-block-post) {
   text-indent: 0;
+  display: flex;
 }
 .wp-admin .editor-styles-wrapper li:not(.wp-block-post) > div {
   display: inline-block;

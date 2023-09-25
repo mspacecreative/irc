@@ -37,6 +37,7 @@
   // STYLE LIST ITEM
   li:not(.wp-block-post) {
     text-indent: 0;
+    display: flex;
 
     >div {
       display: inline-block;

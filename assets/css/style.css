@@ -2066,25 +2066,20 @@ span.at-icon-wrapper {
 .menuOverlay .primary-menu-container .menu-item-has-children::after {
   display: none;
 }
-.menuOverlay .primary-menu-container ul {
-  flex-direction: column;
-  align-items: stretch;
-}
-.menuOverlay .primary-menu-container ul li {
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
-}
-.menuOverlay .sub-menu {
+.menuOverlay .primary-menu-container ul .sub-menu {
   position: static;
   background-color: transparent;
   border: none;
   -webkit-padding-start: 1rem;
           padding-inline-start: 1rem;
   white-space: normal;
-  display: none;
 }
-.menuOverlay .sub-menu li a {
+.menuOverlay .primary-menu-container ul .sub-menu li a {
   color: #fff;
+}
+.menuOverlay .primary-menu-container ul li {
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
 }
 .menuOverlay .menu {
   -webkit-padding-start: 0;

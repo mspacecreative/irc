@@ -204,7 +204,7 @@ let subToggle = document.querySelectorAll(".sub-toggle");
 for (i = 0; i < subToggle.length; i++) {
   subToggle[i].addEventListener("click", function () {
     slideToggle(this.parentNode.children[2], 200);
-    this.classList.toggle("is-active");
+    this.children[0].classList.toggle("is-active");
   });
 }
 

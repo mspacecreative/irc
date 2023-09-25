@@ -39,7 +39,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 				<div class="col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<?php 
 					if ($featuredimg) {
-						get_the_post_thumbnail(get_the_ID());
+						get_the_post_thumbnail(get_the_ID(), 'large');
 					}
 					if ( !$pagetitle ) : ?>
 					<h1 class="post__title"><?php the_title(); ?></h1>

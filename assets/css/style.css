@@ -2563,7 +2563,7 @@ aside {
 
 img {
   max-width: 100%;
-  width: auto;
+  height: auto;
 }
 
 .img__grayscale img {

@@ -2149,8 +2149,6 @@ span.at-icon-wrapper {
 }
 .children {
   display: none;
-  -webkit-padding-start: none;
-          padding-inline-start: none;
 }
 .children.reveal {
   display: block;

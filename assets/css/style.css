@@ -2066,9 +2066,11 @@ span.at-icon-wrapper {
   white-space: nowrap;
   border: 1px solid #2fbeb7;
 }
+.primary-menu-container .children li {
+  text-indent: 0;
+}
 .primary-menu-container li {
   margin-right: 40px;
-  text-indent: 0;
   margin-bottom: -0.5rem;
   padding-bottom: 0.5rem;
 }

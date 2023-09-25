@@ -376,9 +376,14 @@ span.at-icon-wrapper {
     // box-shadow: 0 3px 3px #999;
   }
 
+  .children {
+    li {
+      text-indent: 0;
+    }
+  }
+
   li {
     margin-right: 40px;
-    text-indent: 0;
     margin-bottom: -.5rem;
     padding-bottom: .5rem;
 

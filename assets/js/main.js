@@ -194,5 +194,5 @@ window.onscroll = function () {
 
 let parentItem = document.querySelectorAll(".page_item_has_children");
 for (i = 0; i <= parentItem; i++) {
-  this.children[0].classList.add("block");
+  parentItem[i].children[0].classList.add("block");
 }

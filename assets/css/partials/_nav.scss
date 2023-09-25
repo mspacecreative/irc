@@ -399,6 +399,9 @@ span.at-icon-wrapper {
   .sub-menu {
     position: static;
     background-color: transparent;
+    border: none;
+    padding-inline-start: 1rem;
+    white-space: normal;
 
     li a {
       color: #fff;

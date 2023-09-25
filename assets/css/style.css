@@ -2077,6 +2077,10 @@ span.at-icon-wrapper {
 .menuOverlay .sub-menu {
   position: static;
   background-color: transparent;
+  border: none;
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem;
+  white-space: normal;
 }
 .menuOverlay .sub-menu li a {
   color: #fff;

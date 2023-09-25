@@ -23,7 +23,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 		<div class="inner_container">
 
-			<div class="row between-lg between-md top-bottom-margin-2em middle-lg middle-md">
+			<div class="row between-lg between-md top-bottom-margin-2em middle-lg middle-md" style="gap:1rem;">
 				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 					<?php breadcrumbs(); ?>
 				</div>

@@ -191,3 +191,8 @@ window.onscroll = function () {
     header.classList.add("reset");
   }
 };
+
+let parentItem = document.querySelectorAll(".page_item_has_children");
+for (i = 0; i <= parentItem; i++) {
+  this.children[0].style.attribute.display = "block";
+}

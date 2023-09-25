@@ -2140,6 +2140,11 @@ span.at-icon-wrapper {
     display: none;
   }
 }
+.children {
+  display: none;
+  -webkit-padding-start: none;
+          padding-inline-start: none;
+}
 .children li:not(.wp-block-post) {
   text-indent: 0;
 }

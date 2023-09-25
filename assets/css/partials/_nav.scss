@@ -469,6 +469,9 @@ span.at-icon-wrapper {
 }
 
 .children {
+  display: none;
+  padding-inline-start: none;
+
   li:not(.wp-block-post) {
     text-indent: 0;
   }

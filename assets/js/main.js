@@ -195,7 +195,7 @@ window.onscroll = function () {
 let parentItem = document.querySelectorAll(".page_item_has_children");
 for (i = 0; i <= parentItem.length; i++) {
   let childToggle = document.createElement("span");
-  childToggle.classList.add("child-toggle");
-  parentItem[i].append(childToggle);
+  childToggle.classList.add("sub-toggle");
+  parentItem[i].prepend(childToggle);
   parentItem[i].children[0].classList.add("block");
 }

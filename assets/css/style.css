@@ -2076,6 +2076,10 @@ span.at-icon-wrapper {
 }
 .menuOverlay .sub-menu {
   position: static;
+  background-color: transparent;
+}
+.menuOverlay .sub-menu li a {
+  color: #fff;
 }
 .menuOverlay .menu {
   -webkit-padding-start: 0;

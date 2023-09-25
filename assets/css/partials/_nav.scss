@@ -398,6 +398,11 @@ span.at-icon-wrapper {
 
   .sub-menu {
     position: static;
+    background-color: transparent;
+
+    li a {
+      color: #fff;
+    }
   }
 
   .menu {

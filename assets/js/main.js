@@ -196,7 +196,7 @@ let parentItem = document.querySelectorAll(".page_item_has_children");
 for (i = 0; i < parentItem.length; i++) {
   let childToggle = document.createElement("span");
   childToggle.classList.add("sub-toggle");
-  childToggle.innerHTML("<i class='fa fa-angle-down'></i>");
+  childToggle.innerHTML = "<i class='fa fa-angle-down'></i>";
   parentItem[i].prepend(childToggle);
 }
 

@@ -377,7 +377,7 @@ span.at-icon-wrapper {
   }
 
   .children {
-    li {
+    li:not(.wp-block-post) {
       text-indent: 0;
     }
   }

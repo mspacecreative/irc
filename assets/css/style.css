@@ -2066,7 +2066,7 @@ span.at-icon-wrapper {
   white-space: nowrap;
   border: 1px solid #2fbeb7;
 }
-.primary-menu-container .children li {
+.primary-menu-container .children li:not(.wp-block-post) {
   text-indent: 0;
 }
 .primary-menu-container li {

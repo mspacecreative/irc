@@ -63,7 +63,6 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 						
 						<?php if (have_rows('contact_information')) : ?>
 						<div class="contact-information">
-							<h3><?php echo __('Contact Information'); ?></h3>
 							<?php while (have_rows('contact_information')) : the_row();
 							$position = get_sub_field('position__title');
 							$name = get_sub_field('name');
@@ -71,7 +70,10 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 							$address = get_sub_field('address');
 							$fax = get_sub_field('fax_number');
 
-							if ($name) : ?>
+							if ($position || $name || $emailaddress || $address || $fax) : ?>
+							<h3><?php echo __('Contact Information'); ?></h3>
+
+							<?php if ($name) : ?>
 							<p style="font-weight: 600;"><?php echo $name ?></p>
 							<?php endif;
 

@@ -319,9 +319,9 @@
 				{
 					"fluid": {
 						"min": "1rem",
-						"max": "1.35rem"
+						"max": "1.5rem"
 					},
-					"size": "1.35rem",
+					"size": "1.5rem",
 					"slug": "medium"
 				},
 				{

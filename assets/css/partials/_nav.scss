@@ -376,14 +376,9 @@ span.at-icon-wrapper {
     // box-shadow: 0 3px 3px #999;
   }
 
-  .children {
-    li:not(.wp-block-post) {
-      text-indent: 0;
-    }
-  }
-
   li {
     margin-right: 40px;
+    text-indent: 0;
     margin-bottom: -.5rem;
     padding-bottom: .5rem;
 
@@ -470,5 +465,11 @@ span.at-icon-wrapper {
 @media (min-width: 981px) {
   .hamburger {
     display: none;
+  }
+}
+
+.children {
+  li:not(.wp-block-post) {
+    text-indent: 0;
   }
 }

@@ -2066,11 +2066,9 @@ span.at-icon-wrapper {
   white-space: nowrap;
   border: 1px solid #2fbeb7;
 }
-.primary-menu-container .children li:not(.wp-block-post) {
-  text-indent: 0;
-}
 .primary-menu-container li {
   margin-right: 40px;
+  text-indent: 0;
   margin-bottom: -0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -2142,6 +2140,10 @@ span.at-icon-wrapper {
     display: none;
   }
 }
+.children li:not(.wp-block-post) {
+  text-indent: 0;
+}
+
 header {
   width: 100%;
   z-index: 999999;

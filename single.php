@@ -59,7 +59,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 						if ($featuredimg) {
 							echo 
 							'<div class="bottom-margin-2em">'
-							 . get_the_post_thumbnail(get_the_ID(), 'medium') . 
+							 . get_the_post_thumbnail(get_the_ID(), 'large') . 
 							'</div>';
 						}
 						

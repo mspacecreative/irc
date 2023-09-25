@@ -51,7 +51,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 				</div>
 
-				<main class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<main class="row gutter_space_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
 

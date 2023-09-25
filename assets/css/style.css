@@ -2382,8 +2382,7 @@ body .is-layout-constrained > * {
 }
 
 .row.gutter_space_2 {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-inline: 0;
 }
 .row.gutter_space_2 > .col {
   padding-right: 1.5rem;
@@ -2460,6 +2459,10 @@ div.flex-basis-auto {
   flex-basis: auto;
   max-width: 100%;
   margin-left: 25px;
+}
+
+.row.no-margin-inline {
+  margin-inline: 0;
 }
 
 @media (max-device-width: 880px) and (orientation: landscape) {

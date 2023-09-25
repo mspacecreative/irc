@@ -193,6 +193,6 @@ window.onscroll = function () {
 };
 
 let parentItem = document.querySelectorAll(".page_item_has_children");
-for (i = 0; i <= parentItem; i++) {
+for (i = 0; i <= parentItem.length; i++) {
   parentItem[i].children[0].classList.add("block");
 }

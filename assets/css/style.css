@@ -2089,8 +2089,8 @@ span.at-icon-wrapper {
 .menuOverlay .primary-menu-container li {
   -webkit-margin-end: 0;
           margin-inline-end: 0;
-  -webkit-margin-after: inherit;
-          margin-block-end: inherit;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
 }
 .menuOverlay .menu {
   -webkit-padding-start: 0;

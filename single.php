@@ -43,16 +43,21 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 					
 					if ($post_type == 'post') : ?>
 					<div class="hide-on-desktop bottom-margin-2em">
-						<?php 
-						if ($featuredimg) {
-							echo 
-							'<div class="hide-on-desktop bottom-margin-2em">'
-							. get_the_post_thumbnail(get_the_ID(), 'large') . 
-							'</div>';
-						} ?>
 						<p class="text__small">
 							<?php echo $date; ?>
 						</p>
+					</div>
+					<?php endif;
+
+					if ($post_type == 'services') : ?>
+					<div class="hide-on-desktop bottom-margin-2em">
+					 <?php 
+					 	if ($featuredimg) {
+						echo 
+						'<div class="hide-on-desktop bottom-margin-2em">'
+						. get_the_post_thumbnail(get_the_ID(), 'large') . 
+						'</div>';
+						} ?>
 					</div>
 					<?php endif; ?>
 

@@ -2081,6 +2081,7 @@ span.at-icon-wrapper {
   -webkit-padding-start: 1rem;
           padding-inline-start: 1rem;
   white-space: normal;
+  display: block;
 }
 .menuOverlay .sub-menu li a {
   color: #fff;

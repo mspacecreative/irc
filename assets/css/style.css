@@ -2074,6 +2074,9 @@ span.at-icon-wrapper {
   -webkit-margin-end: 0;
           margin-inline-end: 0;
 }
+.menuOverlay .sub-menu {
+  position: static;
+}
 .menuOverlay .menu {
   -webkit-padding-start: 0;
           padding-inline-start: 0;

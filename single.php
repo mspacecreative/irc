@@ -43,6 +43,13 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 					
 					if ($post_type == 'post') : ?>
 					<div class="hide-on-desktop bottom-margin-2em">
+						<?php 
+						if ($featuredimg) {
+							echo 
+							'<div class="hide-on-desktop bottom-margin-2em">'
+							. get_the_post_thumbnail(get_the_ID(), 'large') . 
+							'</div>';
+						} ?>
 						<p class="text__small">
 							<?php echo $date; ?>
 						</p>
@@ -65,13 +72,6 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 						
 						if ($post_type == 'post') : ?>	
 						<div class="hide-on-mobile" style="margin-block-end: 3em;">
-							<?php 
-							if ($featuredimg) {
-								echo 
-								'<div class="bottom-margin-2em">'
-								. get_the_post_thumbnail(get_the_ID(), 'large') . 
-								'</div>';
-							} ?>
 							<p class="text__small" style="margin-block-start: 0;">
 								<?php echo $date; ?>
 							</p>

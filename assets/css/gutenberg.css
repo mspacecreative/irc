@@ -434,3 +434,9 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.wp-admin .editor-styles-wrapper li:not(.wp-block-post) {
+  text-indent: 0;
+}
+.wp-admin .editor-styles-wrapper li:not(.wp-block-post) > div {
+  display: inline-block;
+}

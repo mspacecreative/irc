@@ -201,7 +201,7 @@ for (i = 0; i < parentItem.length; i++) {
 
 let subToggle = document.querySelectorAll(".sub-toggle");
 for (i = 0; i < subToggle.length; i++) {
-  subToggle.addEventListener("click", function () {
+  subToggle[i].addEventListener("click", function () {
     this.siblings(".children").style.display = "block";
   });
 }

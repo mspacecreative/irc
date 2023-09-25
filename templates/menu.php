@@ -8,7 +8,7 @@
 				<span>&nbsp;</span>
 			</button>
 			<!-- / MENU TOGGLE -->
-			<?php combined_navs(); ?>
+			<?php theme_nav(); ?>
 		</div>
 	</div>
 </div>

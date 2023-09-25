@@ -5,6 +5,7 @@ $pagetitle = get_field('hide_page_title');
 $date = get_the_date(__('F j, Y', 'irc'));
 $post_type = get_post_type();
 $layout = get_field('layout');
+$featuredimg = get_field('featured_image') ? get_post_thumbnail() : '';
 
 function post_type_slug($post_type) {
 	if ($post_type == 'post') {
@@ -37,6 +38,9 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 				<div class="col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<?php 
+					if ($featuredimg) {
+						get_the_post_thumbnail();
+					}
 					if ( !$pagetitle ) : ?>
 					<h1 class="post__title"><?php the_title(); ?></h1>
 					<?php endif;

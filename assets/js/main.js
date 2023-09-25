@@ -197,5 +197,12 @@ for (i = 0; i <= parentItem.length; i++) {
   let childToggle = document.createElement("span");
   childToggle.classList.add("sub-toggle");
   parentItem[i].prepend(childToggle);
-  parentItem[i].children[0].classList.add("block");
+}
+
+let subToggle = document.querySelectorAll(".sub-toggle");
+for (i = 0; i <= subToggle.length; i++) {
+  childToggle.addEventListener("click", function () {
+    this.siblings(".children").style.display = "block";
+  });
+  parentItem[i].prepend(childToggle);
 }

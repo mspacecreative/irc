@@ -19,7 +19,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 <div class="content-wrapper">
 
-	<div id="main-content" class="main-content bottom-padding top-padding-2em">
+	<div id="main-content" class="main-content bottom-padding">
 
 		<div class="inner_container">
 

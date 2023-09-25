@@ -22,8 +22,8 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
  }
 
  // ADDING SERVICES INDEX LINK TO BREADCRUMBS
-add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' );
-function unbox_yoast_seo_breadcrumb_append_link( $links ) {
+add_filter( 'wpseo_breadcrumb_links', 'add_service_index_link' );
+function add_service_index_link( $links ) {
     global $post;
     if( is_singular('services')){
         $breadcrumb = array(

@@ -204,5 +204,4 @@ for (i = 0; i <= subToggle.length; i++) {
   childToggle.addEventListener("click", function () {
     this.siblings(".children").style.display = "block";
   });
-  parentItem[i].prepend(childToggle);
 }

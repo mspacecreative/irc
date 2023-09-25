@@ -17,15 +17,7 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
             )
         );
        array_splice($links, -1, 0, $breadcrumb); 
-     }
-     return $links;
- }
-
- // ADDING SERVICES INDEX LINK TO BREADCRUMBS
-add_filter( 'wpseo_breadcrumb_links', 'add_service_index_link' );
-function add_service_index_link( $links ) {
-    global $post;
-    if( is_singular('services')){
+     } elseif( is_singular('services')){
         $breadcrumb = array(
            array(
            'url' => site_url( '/services/' ),
@@ -34,5 +26,21 @@ function add_service_index_link( $links ) {
        );
       array_splice($links, -1, 0, $breadcrumb); 
     }
-    return $links;
-}
+     return $links;
+ }
+
+//  // ADDING SERVICES INDEX LINK TO BREADCRUMBS
+// add_filter( 'wpseo_breadcrumb_links', 'add_service_index_link' );
+// function add_service_index_link( $links ) {
+//     global $post;
+//     if( is_singular('services')){
+//         $breadcrumb = array(
+//            array(
+//            'url' => site_url( '/services/' ),
+//            'text' => 'Services',
+//            )
+//        );
+//       array_splice($links, -1, 0, $breadcrumb); 
+//     }
+//     return $links;
+// }

@@ -644,7 +644,7 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontSize": "var(--wp--preset--font-size--small)",
 					"fontWeight": "normal",
 					"lineHeight": "1.4"
 				}

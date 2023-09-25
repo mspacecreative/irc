@@ -383,14 +383,25 @@ span.at-icon-wrapper {
   overflow: auto;
   transition: .25s ease-in-out;
 
+  .primary-menu-container .menu-item-has-children::after {
+    display: none;
+  }
+
   .primary-menu-container ul {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+
+    li {
+      margin-inline-end: 0;
+    }
   }
 
   .menu {
+    padding-inline-start: 0;
+
     a {
       color: #fff;
+      font-size: 18px;
     }
 
     ul {

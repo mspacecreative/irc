@@ -2063,12 +2063,24 @@ span.at-icon-wrapper {
   overflow: auto;
   transition: 0.25s ease-in-out;
 }
+.menuOverlay .primary-menu-container .menu-item-has-children::after {
+  display: none;
+}
 .menuOverlay .primary-menu-container ul {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+}
+.menuOverlay .primary-menu-container ul li {
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+.menuOverlay .menu {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 .menuOverlay .menu a {
   color: #fff;
+  font-size: 18px;
 }
 .menuOverlay .menu ul {
   -webkit-padding-start: 0;

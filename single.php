@@ -57,7 +57,9 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 					
 					<?php if ($post_type == 'post') : ?>	
 					<div class="hide-on-mobile" style="margin-block-end: 3em;">
-						<?php echo $date; ?>
+						<p class="text__small">
+							<?php echo $date; ?>
+						</p>
 					</div>
 					<?php endif; ?>
 						

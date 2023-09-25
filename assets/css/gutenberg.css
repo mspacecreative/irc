@@ -211,7 +211,7 @@
 .wp-admin .editor-styles-wrapper h4,
 .wp-admin .editor-styles-wrapper h5,
 .wp-admin .editor-styles-wrapper h6 {
-  margin: 0 0 1em;
+  margin: 0 0 1rem;
   line-height: 1.35em;
 }
 .wp-admin .editor-styles-wrapper ul {

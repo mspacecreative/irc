@@ -192,7 +192,9 @@ window.onscroll = function () {
   }
 };
 
-let parentItem = document.querySelectorAll(".page_item_has_children");
+let parentItem = document.querySelectorAll(
+  ".menuOverlay .menu-item-has-children"
+);
 for (i = 0; i < parentItem.length; i++) {
   let childToggle = document.createElement("span");
   childToggle.classList.add("sub-toggle");

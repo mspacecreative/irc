@@ -1758,89 +1758,6 @@ body.menuOpen {
   width: 100%;
 }
 
-.menuOverlay {
-  top: 0;
-  right: 0;
-  transform: translate(300px, 0);
-  height: 100%;
-  width: 100%;
-  max-width: 300px;
-  position: fixed;
-  z-index: 9999999;
-  background-color: #0055a5;
-  overflow: auto;
-  transition: 0.25s ease-in-out;
-}
-.menuOverlay .menu a {
-  color: #fff;
-}
-.menuOverlay .menu ul {
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
-}
-.menuOverlay .menu ul li {
-  text-indent: 0;
-}
-
-.menuOverlay.show {
-  transform: translate(0, 0);
-  transition: 0.25s ease-in-out;
-}
-
-.menuInner {
-  padding: 5em 2em;
-  width: 100%;
-}
-
-.menuInner > ul:first-of-type {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.menuInner > ul:first-of-type li {
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-}
-
-.menuInner > ul:first-of-type ul.sub-menu li {
-  margin-bottom: 10px;
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.menuInner li::before {
-  display: none;
-}
-
-.menuInner span.sub-toggle {
-  position: absolute;
-  right: 0;
-  top: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 0 10px;
-  z-index: 10;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 20px;
-}
-
-.sub-toggle > .fa-angle-down {
-  color: #0055a5;
-  transition: 0.25s ease-in-out;
-}
-
-.sub-toggle > .fa-angle-down.is-active {
-  transform: rotate(180deg);
-  transition: 0.25s ease-in-out;
-}
-
 .socialButtons {
   display: flex;
   padding: 0;
@@ -1962,10 +1879,6 @@ body.menuOpen {
 .nav a:hover .downArrow::before {
   background-color: #0055a5;
   transition: 0.25s ease-in-out;
-}
-
-.menuContainer .downloadFinancials a {
-  padding-right: 30px;
 }
 
 .menuContainer .downloadFinancials a::after {
@@ -2135,6 +2048,93 @@ span.at-icon-wrapper {
   font-size: 15px;
   color: #2fbeb7;
   text-transform: uppercase;
+}
+
+.menuOverlay {
+  top: 0;
+  right: 0;
+  transform: translate(300px, 0);
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  position: fixed;
+  z-index: 9999999;
+  background-color: #0055a5;
+  overflow: auto;
+  transition: 0.25s ease-in-out;
+}
+.menuOverlay .primary-menu-container ul {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menuOverlay .menu a {
+  color: #fff;
+}
+.menuOverlay .menu ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.menuOverlay .menu ul li {
+  text-indent: 0;
+}
+
+.menuOverlay.show {
+  transform: translate(0, 0);
+  transition: 0.25s ease-in-out;
+}
+
+.menuInner {
+  padding: 5em 2em;
+  width: 100%;
+}
+
+.menuInner > ul:first-of-type {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuInner > ul:first-of-type li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.menuInner > ul:first-of-type ul.sub-menu li {
+  margin-bottom: 10px;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.menuInner li::before {
+  display: none;
+}
+
+.menuInner span.sub-toggle {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0 10px;
+  z-index: 10;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+}
+
+.sub-toggle > .fa-angle-down {
+  color: #0055a5;
+  transition: 0.25s ease-in-out;
+}
+
+.sub-toggle > .fa-angle-down.is-active {
+  transform: rotate(180deg);
+  transition: 0.25s ease-in-out;
 }
 
 @media (max-width: 981px) {

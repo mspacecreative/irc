@@ -72,8 +72,9 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 							if ($position || $name || $emailaddress || $address || $fax) : ?>
 							<h3><?php echo __('Contact Information'); ?></h3>
+							<?php endif;
 
-							<?php if ($name) : ?>
+							if ($name) : ?>
 							<p style="font-weight: 600;"><?php echo $name ?></p>
 							<?php endif;
 

@@ -2961,10 +2961,6 @@ header:not(.white-bg) .logo--blue {
           margin-block-end: 25px;
 }
 
-.breadcrumbs {
-  -webkit-margin-after: 2em;
-          margin-block-end: 2em;
-}
 .breadcrumbs p {
   -webkit-margin-before: 0;
           margin-block-start: 0;

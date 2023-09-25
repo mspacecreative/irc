@@ -34,9 +34,9 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row gutter_space_2">
 
-				<div class="col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="col col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<?php if ( !$pagetitle ) : ?>
 					<h1 class="post__title"><?php the_title(); ?></h1>
 					<?php endif;
@@ -51,7 +51,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 				</div>
 
-				<main class="row gutter_space_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<main class="row gutter_space_2 col">
 
 					<div class="post__date col col-lg-4 col-md-4 col-sm-12 col-xs-12">
 

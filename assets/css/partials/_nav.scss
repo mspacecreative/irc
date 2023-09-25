@@ -393,6 +393,9 @@ span.at-icon-wrapper {
     }
 
     ul {
+      flex-direction: column;
+      align-items: stretch;
+
       .sub-menu {
         position: static;
         background-color: transparent;

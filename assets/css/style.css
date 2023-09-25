@@ -2152,6 +2152,9 @@ span.at-icon-wrapper {
   -webkit-padding-start: none;
           padding-inline-start: none;
 }
+.children.reveal {
+  display: block;
+}
 .children li:not(.wp-block-post) {
   text-indent: 0;
 }

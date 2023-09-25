@@ -480,6 +480,10 @@ span.at-icon-wrapper {
   display: none;
   padding-inline-start: none;
 
+  &.reveal {
+    display: block;
+  }
+
   li:not(.wp-block-post) {
     text-indent: 0;
   }

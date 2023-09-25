@@ -70,7 +70,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 						<?php 
 						if ($featuredimg) {
 							echo 
-							'<div class="hide-on-mobile bottom-margin-2em">'
+							'<div class="hide-on-mobile">'
 							 . get_the_post_thumbnail(get_the_ID(), 'large') . 
 							'</div>';
 						}

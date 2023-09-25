@@ -102,6 +102,7 @@
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 10;
 }
 .wp-admin .editor-styles-wrapper .link__custom > *::after, .wp-admin .editor-styles-wrapper .link__custom.wp-block-button.is-style-outline > *::after {
   font-family: fontAwesome;

@@ -37,11 +37,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 			<div class="row">
 
 				<div class="col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<?php 
-					if ($featuredimg) {
-						echo get_the_post_thumbnail(get_the_ID(), 'large');
-					}
-					if ( !$pagetitle ) : ?>
+					<?php if ( !$pagetitle ) : ?>
 					<h1 class="post__title"><?php the_title(); ?></h1>
 					<?php endif;
 					
@@ -58,14 +54,19 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 				<main class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
-					
-					<?php if ($post_type == 'post') : ?>	
-					<div class="hide-on-mobile" style="margin-block-end: 3em;">
-						<p class="text__small" style="margin-block-start: 0;">
-							<?php echo $date; ?>
-						</p>
-					</div>
-					<?php endif; ?>
+
+						<?php 
+						if ($featuredimg) {
+							echo get_the_post_thumbnail(get_the_ID(), 'medium');
+						}
+						
+						if ($post_type == 'post') : ?>	
+						<div class="hide-on-mobile" style="margin-block-end: 3em;">
+							<p class="text__small" style="margin-block-start: 0;">
+								<?php echo $date; ?>
+							</p>
+						</div>
+						<?php endif; ?>
 						
 						<?php if (have_rows('contact_information')) : ?>
 						<div class="contact-information">

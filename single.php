@@ -23,11 +23,11 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 		<div class="inner_container">
 
-			<div class="row between-lg between-md top-bottom-margin-2em">
+			<div class="row between-lg between-md top-bottom-margin-2em middle-lg middle-md">
 				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 					<?php breadcrumbs(); ?>
 				</div>
-				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 end-lg end-md" style="margin-left:0; margin-right: 0;">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 row end-lg end-md" style="margin-left:0; margin-right: 0;">
 					<a href="<?php echo home_url(post_type_slug($post_type)); ?>" class="text__small link__arrow-right">
 						<?php echo __('All '), ucfirst($slug); ?> <!-- <span class="arrow__right"></span> -->
 					</a>

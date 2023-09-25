@@ -387,18 +387,24 @@ span.at-icon-wrapper {
     display: none;
   }
 
-  .primary-menu-container ul {
-    .sub-menu {
-      position: static;
-      background-color: transparent;
-      border: none;
-      padding-inline-start: 1rem;
-      white-space: normal;
-      display: block;
+  .primary-menu-container {
+    .menu-item-has-children:hover .sub-menu {
       display: none;
+    }
 
-      li a {
-        color: #fff;
+    ul {
+      .sub-menu {
+        position: static;
+        background-color: transparent;
+        border: none;
+        padding-inline-start: 1rem;
+        white-space: normal;
+        display: block;
+        display: none;
+
+        li a {
+          color: #fff;
+        }
       }
     }
 

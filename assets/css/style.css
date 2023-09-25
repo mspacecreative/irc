@@ -2066,6 +2066,9 @@ span.at-icon-wrapper {
 .menuOverlay .primary-menu-container .menu-item-has-children::after {
   display: none;
 }
+.menuOverlay .primary-menu-container .menu-item-has-children:hover .sub-menu {
+  display: none;
+}
 .menuOverlay .primary-menu-container ul .sub-menu {
   position: static;
   background-color: transparent;
@@ -2079,7 +2082,7 @@ span.at-icon-wrapper {
 .menuOverlay .primary-menu-container ul .sub-menu li a {
   color: #fff;
 }
-.menuOverlay .primary-menu-container ul li {
+.menuOverlay .primary-menu-container li {
   -webkit-margin-end: 0;
           margin-inline-end: 0;
 }

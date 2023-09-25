@@ -53,7 +53,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 				<main class="row gutter_space_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-					<div class="post__date col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<div class="post__date col col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
 						<?php 
 						if ($featuredimg) {
@@ -120,7 +120,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 						<?php endif; ?>
 					</div>
 
-					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
 						<?php 
 						if ( have_posts() ):

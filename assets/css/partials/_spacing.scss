@@ -26,7 +26,12 @@ body .is-layout-constrained {
 }
 
 .row.gutter_space_2 {
-  margin-inline: 0;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  &.no-margin-inline {
+    margin-inline: 0;
+  }
 
   >.col {
     padding-right: 1.5rem;

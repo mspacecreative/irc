@@ -2382,6 +2382,10 @@ body .is-layout-constrained > * {
 }
 
 .row.gutter_space_2 {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+.row.gutter_space_2.no-margin-inline {
   margin-inline: 0;
 }
 .row.gutter_space_2 > .col {

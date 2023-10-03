@@ -49,7 +49,7 @@ $loop = new WP_Query( array(
             '</figure>
             <h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
 
-        $department = get_the_terms($loop->ID, $posttype);
+        $department = wp_get_post_terms($loop->ID, $posttype);
 
         if ($department) {
             echo

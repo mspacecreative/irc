@@ -83,31 +83,18 @@ $loop = new WP_Query( array(
                         '<li>' . $value . '</li>';
                     }
                 }
+                foreach (array_slice($data,2) as $key => $value) {
+                    if (!empty($value) ) { 
+                        $field = get_sub_field_object( $key );
+                        echo
+                        '<li><strong>' . $field['label'] . ':</strong> ' . $value . '</li>';
+                    }
+                }
             }
         }
         echo 
         '</ul>';
         }
-        
-        // if ($job_title) {
-        //     echo
-        //     '<div class="job-title">' . $job_title . '</div>';
-        // }
-
-        // if ($mailing_address) {
-        //     echo
-        //     '<div class="job-title">' . $mailing_address . '</div>';
-        // }
-
-        // if ($phone_number) {
-        //     echo
-        //     '<div class="job-title">' . $phone_number . '</div>';
-        // }
-
-        // if ($email_address) {
-        //     echo
-        //     '<div class="job-title">' . $email_address . '</div>';
-        // }
 
         if ($posttype == 'post') {
             echo

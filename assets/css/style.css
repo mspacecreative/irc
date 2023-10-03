@@ -2923,7 +2923,7 @@ header:not(.white-bg) .logo--blue {
   z-index: 10;
 }
 
-.wp-block-post-template.wp-block-cards .wp-block-post {
+.wp-block-post-template.wp-block-cards {
   gap: 2em;
 }
 @media (min-width: 981px) {

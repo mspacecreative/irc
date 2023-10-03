@@ -41,7 +41,7 @@ $loop = new WP_Query( array(
                 . $featured_img . 
             '</a>
         </figure>
-        <h3 class="wp-block-post-title has-large-font-size">' . esc_html__($title) . '</h3>';
+        <h2 class="wp-block-post-title has-large-font-size">' . esc_html__($title) . '</h2>';
     if ($posttype == 'post') {
         echo
         '<div class="wp-block-post-date">'

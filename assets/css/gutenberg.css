@@ -260,10 +260,10 @@
 .wp-admin .editor-styles-wrapper .wp-block-latest-posts.wp-block-latest-posts__list {
   padding-left: 25px;
 }
-.wp-admin .editor-styles-wrapper ul li:not(.wp-block-post) {
+.wp-admin .editor-styles-wrapper ul li:not(.wp-block-post, .menu-item) {
   text-indent: -20px;
 }
-.wp-admin .editor-styles-wrapper ul li:not(.wp-block-post)::before {
+.wp-admin .editor-styles-wrapper ul li:not(.wp-block-post, .menu-item)::before {
   font-family: fontAwesome;
   content: "\f0da";
   margin-right: 15px;

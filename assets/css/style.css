@@ -766,10 +766,10 @@ ul {
   padding-left: 25px;
 }
 
-ul li:not(.wp-block-post) {
+ul li:not(.wp-block-post, .menu-item) {
   text-indent: -20px;
 }
-ul li:not(.wp-block-post)::before {
+ul li:not(.wp-block-post, .menu-item)::before {
   font-family: fontAwesome;
   content: "\f0da";
   margin-right: 15px;

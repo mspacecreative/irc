@@ -3,6 +3,7 @@ $posttype = get_field('post_type');
 $cols = get_field('columns');
 $posts_per_page = get_field('number_of_posts');
 $bottom_margin = $posttype == 'post' ? ' style="margin-block-end: 1rem;"' : '';
+$link_to_post = get_field('link_to_post');
 
 switch($cols) {
     case '1':
@@ -42,11 +43,17 @@ $loop = new WP_Query( array(
     $mailing_address = get_field('mailing_address');
 
     echo
-    '<li class="wp-block-post">
-        <a href="' . $permalink . '">
-            <figure class="wp-block-post-featured-image">'
-                . $featured_img .
-            '</figure>';
+    '<li class="wp-block-post">';
+
+        if ($link_to_post) {
+        echo
+        '<a href="' . $permalink . '">';
+        }
+
+        echo   
+        '<figure class="wp-block-post-featured-image">'
+            . $featured_img .
+        '</figure>';
             
             $departments = get_the_terms($loop->ID, 'department');
 
@@ -73,9 +80,12 @@ $loop = new WP_Query( array(
                 . get_the_date(__('F j, Y', 'irc')) .
             '</div>';
         }
+        if ($link_to_post) {
         echo
-        '</a>
-    </li>';
+        '</a>';
+        }
+    echo
+    '</li>';
 endwhile; ?>
 </ul>
 

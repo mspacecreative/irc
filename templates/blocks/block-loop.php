@@ -83,7 +83,7 @@ $loop = new WP_Query( array(
                         '<li>' . $value . '</li>';
                     }
                 }
-                foreach (array_slice($data,2) as $key => $value) {
+                foreach (array_slice($data,1) as $key => $value) {
                     if (!empty($value) ) { 
                         $field = get_sub_field_object( $key );
                         echo

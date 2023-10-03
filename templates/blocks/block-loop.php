@@ -52,7 +52,7 @@ $loop = new WP_Query( array(
 
             if ($departments) {
                 echo
-                '<div class="text__small">';
+                '<div class="text__small bottom-margin-1em">';
                 foreach ($departments as $department) { 
                     echo $department->name;
                 }

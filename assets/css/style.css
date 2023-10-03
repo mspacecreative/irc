@@ -3029,6 +3029,12 @@ header:not(.white-bg) .logo--blue {
     border-left: 1px solid #d3d1d1;
   }
 }
+@media (max-width: 780px) {
+  .mobile-spacing {
+    -webkit-margin-after: 2rem;
+            margin-block-end: 2rem;
+  }
+}
 footer {
   background-color: #23726d;
 }

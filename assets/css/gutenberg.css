@@ -23,6 +23,12 @@
     border-left: 1px solid #d3d1d1;
   }
 }
+@media (max-width: 780px) {
+  .wp-admin .editor-styles-wrapper .mobile-spacing {
+    -webkit-margin-after: 2rem;
+            margin-block-end: 2rem;
+  }
+}
 .wp-admin .editor-styles-wrapper .wp-block-post {
   padding: 1.5rem;
   box-shadow: 0 5px 15px #cacaca;

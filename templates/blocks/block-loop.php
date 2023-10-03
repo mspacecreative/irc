@@ -80,7 +80,7 @@ $loop = new WP_Query( array(
                     if (!empty($value) ) { 
                         $field = get_sub_field_object( $key );
                         echo
-                        '<li>' . '<strong>' . $field['label'] . ':</strong> ' . $value . '</li>';
+                        '<li>' . $value . '</li>';
                     }
                 }
             }

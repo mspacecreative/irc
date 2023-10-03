@@ -37,7 +37,7 @@ $loop = new WP_Query( array(
     $featured_img = get_the_post_thumbnail(get_the_ID(), 'card-image');
     $title = get_the_title();
     $permalink = get_the_permalink();
-    $job_title = get_field('job_title', $loop->ID);
+    $job_title = get_field('job_title', $loop);
     $phone_number = get_field('phone_number');
     $email_address = get_field('email_address');
     $mailing_address = get_field('mailing_address');
@@ -81,7 +81,7 @@ $loop = new WP_Query( array(
                 . get_the_date(__('F j, Y', 'irc')) .
             '</div>';
         }
-        
+
         if ($link_to_post) {
         echo
         '</a>';

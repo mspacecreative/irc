@@ -41,8 +41,15 @@ $loop = new WP_Query( array(
                 . $featured_img . 
             '</a>
         </figure>
-        <h3 class="wp-block-post-title has-large-font-size">' . esc_html__($title) . '</h3>
-    </li>';
+        <h3 class="wp-block-post-title has-large-font-size">' . esc_html__($title) . '</h3>';
+    if ($posttype == 'post') {
+        echo
+        '<div class="wp-block-post-date">'
+            . get_the_date(__('F j, Y', 'irc')) .
+        '</div>';
+    }
+    echo
+    '</li>';
 endwhile; ?>
 </ul>
 

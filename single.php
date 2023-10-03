@@ -49,15 +49,9 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 					</div>
 					<?php endif;
 
-					if ($post_type == 'services') : ?>
+					if ($featuredimg) : ?>
 					<div class="hide-on-desktop">
-					 <?php 
-					 	if ($featuredimg) {
-						echo 
-						'<div class="hide-on-desktop">'
-							. get_the_post_thumbnail(get_the_ID(), 'large') . 
-						'</div>';
-						} ?>
+						<?php echo get_the_post_thumbnail(get_the_ID(), 'large') ?>
 					</div>
 					<?php endif; ?>
 

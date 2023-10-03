@@ -2,6 +2,7 @@
 $posttype = get_field('post_type');
 $cols = get_field('columns');
 $posts_per_page = get_field('number_of_posts');
+$bottom_margin = $posttype == 'post' ? ' style="margin-block-end: 1rem;"' : '';
 
 switch($cols) {
     case '1':
@@ -42,7 +43,7 @@ $loop = new WP_Query( array(
             <figure class="wp-block-post-featured-image">'
                 . $featured_img .
             '</figure>
-            <h2 class="wp-block-post-title has-medium-font-size">' . esc_html__($title) . '</h2>';
+            <h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
         if ($posttype == 'post') {
             echo
             '<div class="wp-block-post-date">'

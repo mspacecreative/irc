@@ -4,13 +4,13 @@ ul.staff-data {
 
   li {
     text-indent: 0;
-  }
 
-  li:not(:last-of-type) {
-    margin-block-end: 10px;
-  }
+    &:not(:last-of-type) {
+      margin-block-end: 10px;
+    }
 
-  li::before {
-    display: none;
+    &::before {
+      display: none;
+    }
   }
 }

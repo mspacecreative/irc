@@ -53,14 +53,14 @@ $loop = new WP_Query( array(
 
         if ($department) {
             echo
-            '<div class="category">' . $department . '</div>';
+            '<div class="category">' . $department->name . '</div>';
         }
         
         if ($job_title) {
             echo
             '<div class="job-title">' . $job_title . '</div>';
         }
-        
+
         if ($posttype == 'post') {
             echo
             '<div class="wp-block-post-date">'

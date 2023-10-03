@@ -55,19 +55,20 @@ $loop = new WP_Query( array(
             . $featured_img .
         '</figure>';
             
-            $departments = get_the_terms($loop->ID, 'department');
+        $departments = get_the_terms($loop->ID, 'department');
 
-            if ($departments) {
-                echo
-                '<div class="text__small bottom-margin-1em">';
-                foreach ($departments as $department) { 
-                    echo $department->name;
-                }
-                echo 
-                '</div>';
-            }
+        if ($departments) {
             echo
-            '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
+            '<div class="text__small bottom-margin-1em">';
+            foreach ($departments as $department) { 
+                echo $department->name;
+            }
+            echo 
+            '</div>';
+        }
+
+        echo
+        '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
         
         if ($job_title) {
             echo
@@ -80,6 +81,7 @@ $loop = new WP_Query( array(
                 . get_the_date(__('F j, Y', 'irc')) .
             '</div>';
         }
+        
         if ($link_to_post) {
         echo
         '</a>';

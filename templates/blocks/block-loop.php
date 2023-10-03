@@ -69,26 +69,45 @@ $loop = new WP_Query( array(
 
         echo
         '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
+
+        if ( have_rows('staff_data', get_the_ID()) ) {
+        echo
+        '<ul class="staff-data">';
+        while ( have_rows('staff_data', get_the_ID()) ) {
+            the_row();
+            if ( $data = get_row() ) {
+                foreach ($data as $key => $value) {
+                    if (!empty($value) ) { 
+                        $field = get_sub_field_object( $key );
+                        echo
+                        '<li>' . '<strong>' . $field['label'] . ':</strong> ' . $value . '</li>';
+                    }
+                }
+            }
+        }
+        echo 
+        '</ul>';
+        }
         
-        if ($job_title) {
-            echo
-            '<div class="job-title">' . $job_title . '</div>';
-        }
+        // if ($job_title) {
+        //     echo
+        //     '<div class="job-title">' . $job_title . '</div>';
+        // }
 
-        if ($mailing_address) {
-            echo
-            '<div class="job-title">' . $mailing_address . '</div>';
-        }
+        // if ($mailing_address) {
+        //     echo
+        //     '<div class="job-title">' . $mailing_address . '</div>';
+        // }
 
-        if ($phone_number) {
-            echo
-            '<div class="job-title">' . $phone_number . '</div>';
-        }
+        // if ($phone_number) {
+        //     echo
+        //     '<div class="job-title">' . $phone_number . '</div>';
+        // }
 
-        if ($email_address) {
-            echo
-            '<div class="job-title">' . $email_address . '</div>';
-        }
+        // if ($email_address) {
+        //     echo
+        //     '<div class="job-title">' . $email_address . '</div>';
+        // }
 
         if ($posttype == 'post') {
             echo

@@ -76,7 +76,7 @@ $loop = new WP_Query( array(
         while ( have_rows('staff_data', get_the_ID()) ) {
             the_row();
             if ( $data = get_row() ) {
-                foreach ($data as $key => $value) {
+                foreach (array_slice($data,1,1) as $key => $value) {
                     if (!empty($value) ) { 
                         $field = get_sub_field_object( $key );
                         echo

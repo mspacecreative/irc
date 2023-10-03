@@ -107,7 +107,7 @@ h6 {
   line-height: 1.35em;
 }
 
-ul {
+ul:not(.is-flex-container) {
   padding: 0 0 0 22px;
   list-style: none;
   margin-bottom: 0;

@@ -233,7 +233,7 @@
   margin: 0 0 1rem;
   line-height: 1.35em;
 }
-.wp-admin .editor-styles-wrapper ul {
+.wp-admin .editor-styles-wrapper ul:not(.is-flex-container) {
   padding: 0 0 0 22px;
   list-style: none;
   margin-bottom: 0;

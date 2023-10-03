@@ -46,20 +46,21 @@ $loop = new WP_Query( array(
         <a href="' . $permalink . '">
             <figure class="wp-block-post-featured-image">'
                 . $featured_img .
-            '</figure>
-            <h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
+            '</figure>';
+            
+            $departments = get_the_terms($loop->ID, 'department');
 
-        $departments = get_the_terms($loop->ID, 'department');
-
-        if ($departments) {
-            echo
-            '<div class="text__small">';
-            foreach ($departments as $department) { 
-                echo $department->name;
+            if ($departments) {
+                echo
+                '<div class="text__small">';
+                foreach ($departments as $department) { 
+                    echo $department->name;
+                }
+                echo 
+                '</div>';
             }
-            echo 
-            '</div>';
-        }
+            echo
+            '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
         
         if ($job_title) {
             echo

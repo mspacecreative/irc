@@ -38,20 +38,20 @@ $loop = new WP_Query( array(
 
     echo
     '<li class="wp-block-post">
-        <figure class="wp-block-post-featured-image">
-            <a href="' . $permalink . '">'
-                . $featured_img . 
-            '</a>
-        </figure>
-        <h2 class="wp-block-post-title has-medium-font-size">' . esc_html__($title) . '</h2>';
-    if ($posttype == 'post') {
+        <a href="' . $permalink . '">
+            <figure class="wp-block-post-featured-image">'
+                . $featured_img .
+            '</figure>
+            <h2 class="wp-block-post-title has-medium-font-size">' . esc_html__($title) . '</h2>';
+        if ($posttype == 'post') {
+            echo
+            '<div class="wp-block-post-date">'
+                . get_the_date(__('F j, Y', 'irc')) .
+            '</div>';
+        }
         echo
-        '<div class="wp-block-post-date">'
-            . get_the_date(__('F j, Y', 'irc')) .
-        '</div>';
-    }
-    echo
-    '</li>';
+        '</a>
+    </li>';
 endwhile; ?>
 </ul>
 

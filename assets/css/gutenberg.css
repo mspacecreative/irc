@@ -260,16 +260,19 @@
 .wp-admin .editor-styles-wrapper .wp-block-latest-posts.wp-block-latest-posts__list {
   padding-left: 25px;
 }
-.wp-admin .editor-styles-wrapper li:not(.wp-block-post) {
+.wp-admin .editor-styles-wrapper ul li:not(.wp-block-post) {
   text-indent: -20px;
 }
-.wp-admin .editor-styles-wrapper li:not(.wp-block-post)::before {
+.wp-admin .editor-styles-wrapper ul li:not(.wp-block-post)::before {
   font-family: fontAwesome;
   content: "\f0da";
   margin-right: 15px;
   color: #0055a5;
   top: 1px;
   position: relative;
+}
+.wp-admin .editor-styles-wrapper ol {
+  padding-left: 20px;
 }
 .wp-admin .editor-styles-wrapper a .boxed h3 {
   color: #333;

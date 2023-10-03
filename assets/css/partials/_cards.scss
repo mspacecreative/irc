@@ -3,16 +3,18 @@
   box-shadow: 0 5px 15px #cacaca;
   border-radius: 10px;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   background-color: #fff;
   overflow: hidden;
-  // border-bottom: 10px solid $teal;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+
+  >a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   .wp-block-post-date {
     margin-top: auto;

@@ -2874,15 +2874,17 @@ header:not(.white-bg) .logo--blue {
   box-shadow: 0 5px 15px #cacaca;
   border-radius: 10px;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   background-color: #fff;
   overflow: hidden;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+.wp-block-post > a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .wp-block-post .wp-block-post-date {
   margin-top: auto;

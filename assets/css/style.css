@@ -3150,3 +3150,13 @@ body:not(.home).light__theme .white-bg {
 body:not(.home).dark__theme .menu-item-has-children::after {
   color: #fff;
 }
+
+.staff-data {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.staff-data li::before {
+  display: none;
+}

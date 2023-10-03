@@ -49,11 +49,16 @@ $loop = new WP_Query( array(
             '</figure>
             <h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
 
-        $department = get_the_terms($loop->ID, 'department');
+        $departments = get_the_terms($loop->ID, 'department');
 
-        if ($department) {
+        if ($departments) {
             echo
-            '<div class="category">' . $department->name . '</div>';
+            '<div class="category">';
+            foreach ($departments as $department) { 
+                echo $department->name;
+            }
+            echo 
+            '</div>';
         }
         
         if ($job_title) {

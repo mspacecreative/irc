@@ -114,7 +114,7 @@
 }
 @media (max-width: 980px) {
   .wp-admin .editor-styles-wrapper .wp-block-post-template.is-flex-container.wp-block-cards.columns-3 > .wp-block-post {
-    width: calc(50% - 2em);
+    width: calc(50% - 1em);
   }
 }
 @media (max-width: 480px) {

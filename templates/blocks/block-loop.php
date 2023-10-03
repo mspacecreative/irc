@@ -36,6 +36,10 @@ $loop = new WP_Query( array(
     $featured_img = get_the_post_thumbnail(get_the_ID(), 'card-image');
     $title = get_the_title();
     $permalink = get_the_permalink();
+    $job_title = get_field('job_title');
+    $phone_number = get_field('phone_number');
+    $email_address = get_field('email_address');
+    $mailing_address = get_field('mailing_address');
 
     echo
     '<li class="wp-block-post">
@@ -44,6 +48,19 @@ $loop = new WP_Query( array(
                 . $featured_img .
             '</figure>
             <h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
+
+        $department = get_the_terms(get_the_ID(), $posttype);
+
+        if ($department) {
+            echo
+            '<div class="category">' . $department . '</div>';
+        }
+        
+        if ($job_title) {
+            echo
+            '<div class="job-title">' . $job_title . '</div>';
+        }
+        
         if ($posttype == 'post') {
             echo
             '<div class="wp-block-post-date">'

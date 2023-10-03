@@ -2529,8 +2529,8 @@ aside {
 
 .alignleft,
 .alignright {
-  -webkit-margin-after: 2rem;
-          margin-block-end: 2rem;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
 }
 
 .tabAnswer {

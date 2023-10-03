@@ -38,9 +38,9 @@ $loop = new WP_Query( array(
     $title = get_the_title();
     $permalink = get_the_permalink();
     $job_title = get_field('job_title', get_the_ID());
-    $phone_number = get_field('phone_number');
-    $email_address = get_field('email_address');
-    $mailing_address = get_field('mailing_address');
+    $phone_number = get_field('phone_number', get_the_ID());
+    $email_address = get_field('email_address', get_the_ID());
+    $mailing_address = get_field('mailing_address', get_the_ID());
 
     echo
     '<li class="wp-block-post">';
@@ -73,6 +73,21 @@ $loop = new WP_Query( array(
         if ($job_title) {
             echo
             '<div class="job-title">' . $job_title . '</div>';
+        }
+
+        if ($mailing_address) {
+            echo
+            '<div class="job-title">' . $mailing_address . '</div>';
+        }
+
+        if ($phone_number) {
+            echo
+            '<div class="job-title">' . $phone_number . '</div>';
+        }
+
+        if ($email_address) {
+            echo
+            '<div class="job-title">' . $email_address . '</div>';
         }
 
         if ($posttype == 'post') {

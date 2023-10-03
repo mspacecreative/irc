@@ -113,8 +113,8 @@
   }
 }
 
-.wp-block-post-template {
-  &.wp-block-cards {
+.wp-block-post-template.wp-block-cards {
+  .wp-block-post {
     gap: 2em;
 
     @media (min-width: 981px) {

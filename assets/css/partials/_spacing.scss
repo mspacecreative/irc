@@ -156,14 +156,17 @@ aside {
   @media (min-width: 780px) {
     float: right;
     margin-inline-start: 2rem;
-    margin-block-end: 2rem;
   }
 }
 
 .alignleft {
-  @media (min-width: 780px) {
+  @media (min-width: 781px) {
     float: left;
     margin-inline-end: 2rem;
-    margin-block-end: 2rem;
   }
+}
+
+.alignleft,
+.alignright {
+  margin-block-end: 2rem;
 }

@@ -2516,19 +2516,21 @@ aside {
     float: right;
     -webkit-margin-start: 2rem;
             margin-inline-start: 2rem;
-    -webkit-margin-after: 2rem;
-            margin-block-end: 2rem;
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 781px) {
   .alignleft {
     float: left;
     -webkit-margin-end: 2rem;
             margin-inline-end: 2rem;
-    -webkit-margin-after: 2rem;
-            margin-block-end: 2rem;
   }
+}
+
+.alignleft,
+.alignright {
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
 }
 
 .tabAnswer {

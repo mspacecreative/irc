@@ -1957,7 +1957,7 @@ span.at-icon-wrapper {
   font-weight: 600;
 }
 
-.menu {
+ul.menu {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }

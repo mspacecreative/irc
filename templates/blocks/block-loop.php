@@ -27,8 +27,8 @@ if( !empty($block['className']) ) {
 $loop = new WP_Query( array(
     'post_type' => $posttype,
     'posts_per_page' => $posts_per_page,
-    'orderby' => $posttype == 'post' ? 'name' : '',
-    'order' => $posttype == 'post' ? 'ASC' : '',
+    'orderby' => $posttype !== 'post' ? 'name' : '',
+    'order' => $posttype !== 'post' ? 'ASC' : '',
 ) ); ?>
 <ul class="is-flex-container columns-<?php echo $cols ?> wp-block-post-template-container wp-block-post-template wp-block-cards<?php echo esc_attr($className); ?>">
 <?php while ( $loop->have_posts() ) : $loop->the_post();

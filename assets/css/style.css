@@ -2923,21 +2923,21 @@ header:not(.white-bg) .logo--blue {
   z-index: 10;
 }
 
-.wp-block-post-template.wp-block-cards {
+.wp-block-post-template.wp-block-cards.columns-3 {
   gap: 2em;
 }
 @media (min-width: 981px) {
-  .wp-block-post-template.wp-block-cards .wp-block-post {
+  .wp-block-post-template.wp-block-cards.columns-3 > .wp-block-post {
     width: calc(33.3333% - 1.3333em);
   }
 }
 @media (max-width: 980px) {
-  .wp-block-post-template.wp-block-cards .wp-block-post {
+  .wp-block-post-template.wp-block-cards.columns-3 > .wp-block-post {
     width: calc(50% - 2em);
   }
 }
 @media (max-width: 480px) {
-  .wp-block-post-template.wp-block-cards .wp-block-post {
+  .wp-block-post-template.wp-block-cards.columns-3 > .wp-block-post {
     width: 100%;
   }
 }

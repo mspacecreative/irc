@@ -1,0 +1,8 @@
+.staff-data {
+    margin-block-start: 0;
+    padding-inline-start: 0;
+
+    li::before {
+        display: none;
+    }
+}

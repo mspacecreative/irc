@@ -3160,6 +3160,7 @@ ul.staff-data {
 ul.staff-data li {
   -webkit-margin-after: 10px;
           margin-block-end: 10px;
+  text-indent: 0;
 }
 ul.staff-data li::before {
   display: none;

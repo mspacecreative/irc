@@ -151,3 +151,15 @@ body:not(.page-template-page-sidebar, .single) main {
 aside {
   flex-basis: 33.333%;
 }
+
+.alignright {
+  @media (min-width: 780px) {
+    float: right;
+  }
+}
+
+.alignleft {
+  @media (min-width: 780px) {
+    float: left;
+  }
+}

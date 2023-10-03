@@ -2511,6 +2511,18 @@ aside {
   flex-basis: 33.333%;
 }
 
+@media (min-width: 780px) {
+  .alignright {
+    float: right;
+  }
+}
+
+@media (min-width: 780px) {
+  .alignleft {
+    float: left;
+  }
+}
+
 .tabAnswer {
   display: none;
   margin-top: 15px;

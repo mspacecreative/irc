@@ -3151,12 +3151,16 @@ body:not(.home).dark__theme .menu-item-has-children::after {
   color: #fff;
 }
 
-.staff-data {
+ul.staff-data {
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
-.staff-data li::before {
+ul.staff-data li {
+  -webkit-margin-after: 10px;
+          margin-block-end: 10px;
+}
+ul.staff-data li::before {
   display: none;
 }

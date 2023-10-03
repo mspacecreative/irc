@@ -3030,11 +3030,12 @@ header:not(.white-bg) .logo--blue {
   }
 }
 @media (max-width: 780px) {
-  .mobile-spacing {
+  body .is-layout-flex > .mobile-spacing {
     -webkit-margin-after: 2rem;
             margin-block-end: 2rem;
   }
 }
+
 footer {
   background-color: #23726d;
 }

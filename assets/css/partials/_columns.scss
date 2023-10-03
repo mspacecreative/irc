@@ -22,8 +22,10 @@
   }
 }
 
-@media (max-width: 780px) {
-  .mobile-spacing {
-    margin-block-end: 2rem;
+body .is-layout-flex> {
+  @media (max-width: 780px) {
+    .mobile-spacing {
+      margin-block-end: 2rem;
+    }
   }
 }

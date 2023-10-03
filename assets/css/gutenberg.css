@@ -24,7 +24,7 @@
   }
 }
 @media (max-width: 780px) {
-  .wp-admin .editor-styles-wrapper .mobile-spacing {
+  .wp-admin .editor-styles-wrapper body .is-layout-flex > .mobile-spacing {
     -webkit-margin-after: 2rem;
             margin-block-end: 2rem;
   }

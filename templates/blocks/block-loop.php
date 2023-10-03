@@ -1,6 +1,7 @@
 <?php
 $posttype = get_field('post_type');
 $cols = get_field('columns');
+$posts_per_page = get_field('number_of_posts');
 
 switch($cols) {
     case '1':
@@ -25,8 +26,9 @@ if( !empty($block['className']) ) {
 
 $loop = new WP_Query( array(
     'post_type' => $posttype,
-    // 'orderby' => 'name',
-    // 'order' => 'ASC',
+    'posts_per_page' => $posts_per_page,
+    'orderby' => $posttype == 'post' ? 'name' : '',
+    'order' => $posttype == 'post' ? 'ASC' : '',
 ) ); ?>
 <ul class="is-flex-container columns-<?php echo $cols ?> wp-block-post-template-container wp-block-post-template wp-block-cards<?php echo esc_attr($className); ?>">
 <?php while ( $loop->have_posts() ) : $loop->the_post();

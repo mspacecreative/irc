@@ -61,23 +61,21 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 
 					<div class="post__date col col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
-						<?php 
-						if ($featuredimg) {
-							echo 
-							'<div class="hide-on-mobile bottom-margin-2em">'
-							 . get_the_post_thumbnail(get_the_ID(), 'large') . 
-							'</div>';
-						}
-						
-						if ($post_type == 'post') : ?>	
+						<?php if ($post_type == 'post') : ?>	
 						<div class="hide-on-mobile" style="margin-block-end: 3em;">
 							<p class="text__small" style="margin-block-start: 0;">
 								<?php echo $date; ?>
 							</p>
 						</div>
-						<?php endif; ?>
+						<?php endif; 
 						
-						<?php if (have_rows('contact_information')) : ?>
+						if ($featuredimg) : ?>
+							<div class="hide-on-mobile bottom-margin-2em">
+								<?php echo get_the_post_thumbnail(get_the_ID(), 'large'); ?>
+							</div>
+						<?php endif;
+						
+						if (have_rows('contact_information')) : ?>
 						<div class="contact-information">
 							<?php while (have_rows('contact_information')) : the_row();
 							$position = get_sub_field('position__title');

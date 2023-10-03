@@ -53,7 +53,7 @@ $loop = new WP_Query( array(
 
         if ($departments) {
             echo
-            '<div class="category">';
+            '<div class="text__small">';
             foreach ($departments as $department) { 
                 echo $department->name;
             }

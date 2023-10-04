@@ -8,6 +8,6 @@ $args = array(
 );
 $loop = new WP_Term_Query($args);
 foreach($loop->get_terms() as $term) : ?>
-    <option><?php echo $term->name ?></option>
+    <option data-id=".<?php echo strtolower($term->name); ?>"><?php echo $term->name ?></option>
 <?php endif; ?>
 </select>

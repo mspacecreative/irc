@@ -3093,6 +3093,13 @@ header:not(.white-bg) .logo--blue {
   opacity: 0.25;
 }
 
+.content-is-aligned-vertically {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
 footer {
   background-color: #23726d;
 }

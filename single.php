@@ -10,6 +10,8 @@ $featuredimg = get_field('featured_image');
 function post_type_slug($post_type) {
 	if ($post_type == 'post') {
 		$post_type = 'news';
+	} elseif ($post_type == 'business') {
+		$post_type = 'inuvialuit-business-list';
 	}
 	$slug = $post_type;
 	return $slug;

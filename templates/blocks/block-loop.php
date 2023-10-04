@@ -4,6 +4,8 @@ $cols = get_field('columns');
 $posts_per_page = get_field('number_of_posts');
 $bottom_margin = $posttype == 'post' ? ' style="margin-block-end: 1rem;"' : '';
 $link_to_post = get_field('link_to_post');
+$placeholder_image = get_template_directory_uri() . '/assets/img/placeholders/irc-gyrfalcon-placeholder.svg';
+$placeholder_images = get_field('allow_placeholders');
 
 switch($cols) {
     case '1':
@@ -50,10 +52,17 @@ $loop = new WP_Query( array(
         '<a href="' . $permalink . '">';
         }
 
+        if (!empty($featured_img) && !$placeholder_images) {
         echo   
         '<figure class="wp-block-post-featured-image">'
             . $featured_img .
         '</figure>';
+        } elseif (empty($featured_img) && $placeholder_images) {
+        echo   
+        '<figure class="wp-block-post-featured-image">'
+            . $placeholder_image .
+        '</figure>';
+        }
             
         $departments = get_the_terms($loop->ID, 'department');
 

@@ -1,5 +1,5 @@
 <!-- <select> -->
-<?php
+<!-- <?php -->
 // $args = array(
 //     'taxonomy'   => 'business-category',
 //     'orderby'    => 'name',
@@ -13,12 +13,12 @@
 // endforeach; ?>
 // </select>
 
-// <?php
+<?php
 
-// $taxonomies = get_terms( array(
-// 	'taxonomy' => 'business-category',
-// 	'hide_empty' => false
-// ) );
+$taxonomies = get_terms( array(
+	'taxonomy' => 'business-category',
+	'hide_empty' => false
+) );
 
 if ( !empty($taxonomies) ) :
 	$output = '<select>';

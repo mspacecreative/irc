@@ -44,8 +44,7 @@ if ( !empty($taxonomies) ) :
 	$output = '<select>';
     $output.= '<option value="-Any-" selected>-Any-</option>';
     foreach( $taxonomies as $term ) {
-        $output.= '<option value="'. esc_attr( $term->term_id ) .'">
-            '. esc_html( $term->name ) .'</option>';
+        $output.= '<option value="'. esc_attr( $term->term_id ) .'">'. esc_html( $term->name ) .'</option>';
     }
 	$output.='</select>';
 	echo $output;

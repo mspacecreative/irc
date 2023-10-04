@@ -59,8 +59,13 @@ $loop = new WP_Query( array(
         '</figure>';
         } elseif (empty($featured_img) && $placeholder_images) {
         echo   
+        '<figure class="wp-block-post-featured-image">
+            <img src="' . $placeholder_image . '" class="card__placeholder">
+        </figure>';
+        } else {
+        echo   
         '<figure class="wp-block-post-featured-image">'
-            . $placeholder_image .
+            . $featured_img .
         '</figure>';
         }
             

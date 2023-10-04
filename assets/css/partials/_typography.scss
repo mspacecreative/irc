@@ -114,8 +114,11 @@ ul:not(.is-flex-container) {
 }
 
 li {
-  margin-bottom: .5em;
   position: relative;
+
+  &:not(:last-of-type) {
+    margin-bottom: .5em;
+  }
 }
 
 .big {

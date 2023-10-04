@@ -740,8 +740,10 @@ ul:not(.is-flex-container) {
 }
 
 li {
-  margin-bottom: 0.5em;
   position: relative;
+}
+li:not(:last-of-type) {
+  margin-bottom: 0.5em;
 }
 
 .big {

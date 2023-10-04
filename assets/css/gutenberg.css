@@ -247,8 +247,10 @@
   margin-bottom: 0;
 }
 .wp-admin .editor-styles-wrapper li {
-  margin-bottom: 0.5em;
   position: relative;
+}
+.wp-admin .editor-styles-wrapper li:not(:last-of-type) {
+  margin-bottom: 0.5em;
 }
 .wp-admin .editor-styles-wrapper .big {
   font-size: 22px;

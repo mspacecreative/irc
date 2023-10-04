@@ -15,13 +15,15 @@
     '<select>';
     // while ($loop->have_posts()) {
     //     $loop->the_post();
-        $terms = get_terms(array(
-            'taxonomy' => 'business-category',
-        )
+        $args = array(
+            'taxonomy'   => 'business-category',
+            'orderby'    => 'name',
+            'order'      => 'ASC',
+            'hide_empty' => false,
         );
-        foreach ($terms as $term) {
-        echo
-        '<option value=""' . $term->name . '">' . $term->name . '</option>';
+        $loop = new WP_Term_Query($args);
+        foreach($loop->get_terms() as $term) {
+            echo '<option>' . $term->name . '</option>';
         }
     // }
     echo

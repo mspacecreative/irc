@@ -33,22 +33,7 @@ $loop = new WP_Query( array(
     'posts_per_page' => $posts_per_page,
     'orderby' => $posttype !== 'post' ? 'name' : '',
     'order' => $posttype !== 'post' ? 'ASC' : '',
-) );
-
-$taxonomies = get_terms( array(
-	'taxonomy' => 'business-category',
-	'hide_empty' => false
-) );
-
-if ( !empty($taxonomies) ) :
-	$output = '<select>';
-    $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
-    foreach( $taxonomies as $term ) {
-        $output.= '<option value="'. esc_attr( $term->term_id ) .'">'. esc_html( $term->name ) .'</option>';
-    }
-	$output.='</select>';
-	echo $output;
-endif; ?>
+) ); ?>
 
 <ul class="is-flex-container columns-<?php echo $cols ?> wp-block-post-template-container wp-block-post-template wp-block-cards<?php echo esc_attr($className); ?>">
 <?php while ( $loop->have_posts() ) : $loop->the_post();

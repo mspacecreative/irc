@@ -3076,6 +3076,20 @@ header:not(.white-bg) .logo--blue {
   }
 }
 
+.geometric-design__bottom {
+  position: relative;
+}
+.geometric-design__bottom::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/overlays/angled-border-design.svg);
+  width: 50%;
+  height: 50%;
+  background-position: bottom left;
+  content: "";
+}
+
 footer {
   background-color: #23726d;
 }

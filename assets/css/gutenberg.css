@@ -29,6 +29,19 @@
             margin-block-end: 2rem;
   }
 }
+.wp-admin .editor-styles-wrapper .geometric-design__bottom {
+  position: relative;
+}
+.wp-admin .editor-styles-wrapper .geometric-design__bottom::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/overlays/angled-border-design.svg);
+  width: 50%;
+  height: 50%;
+  background-position: bottom left;
+  content: "";
+}
 .wp-admin .editor-styles-wrapper .wp-block-post {
   padding: 1.5rem;
   box-shadow: 0 5px 15px #cacaca;

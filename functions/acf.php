@@ -46,6 +46,23 @@ function my_acf_init() {
 			]
 		));
 
+		// register loop block
+		acf_register_block(array(
+			'name'				=> 'post-filter',
+			'title'				=> __('Select Filter Block'),
+			'description'		=> __('Displays a select dropdown with filter options'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'filter', 'dropdown', 'sort' ),
+			'supports'			=> [
+				'align' => false,
+				'anchor' => true,
+				'customClassName' => true,
+                'mode' => true,
+			]
+		));
+
 	}
 }
 add_action('acf/init', 'my_acf_init');

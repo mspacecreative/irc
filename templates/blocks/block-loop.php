@@ -50,8 +50,8 @@ if ( !empty($taxonomies) ) :
     $output.='</optgroup>';
 	$output.='</select>';
 	echo $output;
-endif; ?
->
+endif; ?>
+
 <ul class="is-flex-container columns-<?php echo $cols ?> wp-block-post-template-container wp-block-post-template wp-block-cards<?php echo esc_attr($className); ?>">
 <?php while ( $loop->have_posts() ) : $loop->the_post();
     $featured_img = get_the_post_thumbnail(get_the_ID(), 'card-image');

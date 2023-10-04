@@ -80,7 +80,7 @@ $loop = new WP_Query( array(
                     if (!empty($value) ) { 
                         $field = get_sub_field_object( $key );
                         echo
-                        '<li>' . $value . '</li>';
+                        '<li class="has-small-font-size">' . $value . '</li>';
                     }
                 }
                 foreach (array_slice($data,1) as $key => $value) {

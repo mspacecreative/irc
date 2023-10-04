@@ -42,7 +42,7 @@ $taxonomies = get_terms( array(
 
 if ( !empty($taxonomies) ) :
 	$output = '<select>';
-    $output.= '<option value="-Any-" disabled selected hidden>-Any-</option>';
+    $output.= '<option value="-Any-" disabled selected>-Any-</option>';
     foreach( $taxonomies as $term ) {
         $output.= '<option value="'. esc_attr( $term->term_id ) .'">
             '. esc_html( $term->name ) .'</option>';

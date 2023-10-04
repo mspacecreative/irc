@@ -42,10 +42,10 @@ $taxonomies = get_terms( array(
 
 if ( !empty($taxonomies) ) :
 	$output = '<select>';
-    $output.= '<optgroup label="'. esc_attr( $term->name ) .'">';
+    $output.= '<optgroup label="'. esc_html__('Select') .'">';
     foreach( $taxonomies as $term ) {
-        $output.= '<option value="'. esc_attr( $subcategory->term_id ) .'">
-            '. esc_html( $subcategory->name ) .'</option>';
+        $output.= '<option value="'. esc_attr( $term->term_id ) .'">
+            '. esc_html( $term->name ) .'</option>';
     }
     $output.='</optgroup>';
 	$output.='</select>';

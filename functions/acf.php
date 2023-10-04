@@ -52,7 +52,7 @@ function my_acf_init() {
 			'title'				=> __('Select Filter Block'),
 			'description'		=> __('Displays a select dropdown with filter options'),
 			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'formatting',
+			'category'			=> 'filter',
 			'icon'				=> 'grid-view',
 			'keywords'			=> array( 'filter', 'dropdown', 'sort' ),
 			'supports'			=> [

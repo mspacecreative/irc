@@ -59,7 +59,7 @@
         } else {
           cards[i].style.display = "none";
         }
-        if (filterSelect === "undefined") {
+        if (filterSelect === "") {
           cards[i].style.display = "block";
         }
       }

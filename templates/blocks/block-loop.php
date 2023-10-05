@@ -90,7 +90,19 @@ $loop = new WP_Query( array(
     $email_address = get_field('email_address', get_the_ID());
     $mailing_address = get_field('mailing_address', get_the_ID());
 
-    $terms = get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '');
+    $terms = array();
+
+    if ( !empty(get_the_terms($loop->ID, array($taxonomy, $taxonomy2))) ) {
+        foreach ( get_the_terms($post->ID) as $term ) {
+            $t = get_category($term);
+            array_push($terms, $t->name);
+            $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);
+            $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));
+        }
+        echo $sanitizedclasses;
+    }
+
+    // $terms = get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '');
 
     $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);
     $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));

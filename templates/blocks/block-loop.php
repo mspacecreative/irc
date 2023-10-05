@@ -58,16 +58,16 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
-    <?php $terms2 = get_terms( array(
+    <?php $terms = get_terms( array(
         'taxonomy' => $taxonomy2,
         'hide_empty' => false
     ) );
     
-    if ( !empty($terms2) ) :
+    if ( !empty($terms) ) :
     $output = '<select>';
     $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
-    foreach( $terms2 as $term2 ) {
-        $output.= '<option value=".' . sanitize_title(strtolower($term2->name)) .'">' . esc_html( $term2->name ) . '</option>';
+    foreach( $terms as $term ) {
+        $output.= '<option value=".' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
     }
     $output.='</select>';
     echo $output;

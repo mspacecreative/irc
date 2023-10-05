@@ -90,7 +90,13 @@ $loop = new WP_Query( array(
     $email_address = get_field('email_address', get_the_ID());
     $mailing_address = get_field('mailing_address', get_the_ID());
 
-    $terms = get_the_terms($loop->ID, array('business-category', 'communities'));
+    $terms = get_terms(
+        'taxonomy' => array(
+            'business-category', 
+            'communities'
+        ),
+        'hide_empty' => false
+    );
     $terms_as_classes = implode(' ', $terms);
 
     echo

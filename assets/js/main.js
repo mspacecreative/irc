@@ -62,9 +62,6 @@
         if (filterSelect === "") {
           cards[i].style.display = "block";
         }
-        if ((cards[i].style.display = "none")) {
-          ("No results");
-        }
       }
     }
 

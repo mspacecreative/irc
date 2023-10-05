@@ -480,6 +480,9 @@
 }
 .wp-admin .editor-styles-wrapper .no-results {
   display: none;
+  text-align: center;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
 }
 .wp-admin .editor-styles-wrapper .is-root-container {
   max-width: 1280px;

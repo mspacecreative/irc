@@ -3293,4 +3293,7 @@ ul.staff-data li::before {
 
 .no-results {
   display: none;
+  text-align: center;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
 }

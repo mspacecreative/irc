@@ -96,7 +96,7 @@ $loop = new WP_Query( array(
     );
 
     $taxonomies = get_object_taxonomies( get_the_ID() );
-    $terms_as_classes = sanitize_title(strtolower(the_terms( get_the_ID(), array($taxonomy, $taxonomy2), '', ' ' );));
+    $terms_as_classes = sanitize_title(strtolower(the_terms( get_the_ID(), array($taxonomy, $taxonomy2), '', ' ' )));
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

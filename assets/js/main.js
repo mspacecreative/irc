@@ -41,9 +41,7 @@
       }
     }
 
-    document
-      .querySelectorAll(".filter")
-      .addEventListener("change", showOnChange);
+    document.querySelector(".filter").addEventListener("change", showOnChange);
 
     function showOnChange() {
       const cards = document.querySelectorAll(".wp-block-post");

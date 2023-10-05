@@ -3287,3 +3287,6 @@ ul.staff-data li::before {
   flex-wrap: wrap;
   gap: 20px;
 }
+.taxonomy-filter-container p {
+  margin-block: 0;
+}

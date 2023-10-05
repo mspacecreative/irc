@@ -475,6 +475,9 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+.wp-admin .editor-styles-wrapper .taxonomy-filter-container p {
+  margin-block: 0;
+}
 .wp-admin .editor-styles-wrapper .is-root-container {
   max-width: 1280px;
   margin-left: auto;

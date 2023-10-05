@@ -3193,3 +3193,7 @@ ul.staff-data li:not(:last-of-type) {
 ul.staff-data li::before {
   display: none;
 }
+
+.taxonomy-filter-container {
+  flex-basis: 100%;
+}

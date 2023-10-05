@@ -90,14 +90,10 @@ $loop = new WP_Query( array(
     $email_address = get_field('email_address', get_the_ID());
     $mailing_address = get_field('mailing_address', get_the_ID());
 
-    $terms = get_the_terms(get_the_ID(), array($taxonomy, $taxonomy2));
-    foreach ($terms as $term) {
-        echo
-    '<li class="wp-block-post ' . $term->slug . '">';
-    }
+    $terms_as_classes = strip_tags(strtolower(get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '')));
 
-    // echo
-    // '<li class="wp-block-post ' . $terms_as_classes . '">';
+    echo
+    '<li class="wp-block-post ' . $terms_as_classes . '">';
 
         if ($link_to_post) {
         echo

@@ -96,8 +96,9 @@ $loop = new WP_Query( array(
     );
 
     $taxonomies = get_object_taxonomies( get_the_ID() );
-
-    echo the_terms( get_the_ID(), $taxonomy2, ' ' );
+    foreach ( $taxonomies as $tax ) {
+    echo the_terms( get_the_ID(), $tax, ' ' );
+    }
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

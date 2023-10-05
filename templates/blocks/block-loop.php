@@ -33,12 +33,13 @@ $loop = new WP_Query( array(
     'posts_per_page' => $posts_per_page,
     'orderby' => $posttype !== 'post' ? 'name' : '',
     'order' => $posttype !== 'post' ? 'ASC' : '',
-) );
-
-include 'includes/taxonomy-filter.php' ?>
+) ); ?>
 
 <ul class="is-flex-container columns-<?php echo $cols ?> wp-block-post-template-container wp-block-post-template wp-block-cards<?php echo esc_attr($className); ?>">
-<?php while ( $loop->have_posts() ) : $loop->the_post();
+<?php 
+    include 'includes/taxonomy-filter.php';
+    
+    while ( $loop->have_posts() ) : $loop->the_post();
     $featured_img = get_the_post_thumbnail(get_the_ID(), 'card-image');
     $title = get_the_title();
     $permalink = get_the_permalink();

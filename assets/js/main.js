@@ -60,7 +60,7 @@
         } else {
           cards[i].style.display = "none";
         }
-        if (cards[i].style.display == "none") {
+        if (cards.style.display == "none") {
           noResults.style.display = "block";
         }
       }

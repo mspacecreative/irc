@@ -1,6 +1,6 @@
 <div class="taxonomy-filter-container">
 <?php
-$taxonomy = get_field('taxonomy_select');
+$taxonomy = get_field('taxonomy_select', get_the_ID());
 $terms = get_terms( array(
 	'taxonomy' => $taxonomy,
 	'hide_empty' => false

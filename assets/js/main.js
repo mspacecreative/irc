@@ -96,14 +96,8 @@
     function filter_posts() {
       // $selections is the filter options, the select boxes
       // $post are the posts (each single post)
-      var $selections = $(".filters-group select"),
-        $post = $(".filter-card");
-
-      if (isSelectEmpty()) {
-        $(".full").addClass("large-8").removeClass("large-4");
-      } else {
-        $(".full").removeClass("large-8").addClass("large-4");
-      }
+      var $selections = $(".taxonomy-filter-container select"),
+        $post = $(".wp-block-post");
 
       var filters = $selections
         .filter(function () {

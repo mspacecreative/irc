@@ -31,7 +31,7 @@
       .addEventListener("change", showOnChange);
 
     function showOnChange(evt) {
-      const filter = evt.target;
+      let filter = evt.target;
 
       // hide all cards
       const cards = document.querySelectorAll(".wp-block-post");

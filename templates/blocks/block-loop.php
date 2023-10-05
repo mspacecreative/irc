@@ -90,13 +90,7 @@ $loop = new WP_Query( array(
     $email_address = get_field('email_address', get_the_ID());
     $mailing_address = get_field('mailing_address', get_the_ID());
 
-    $term_args = array(
-        'taxonomy' => array('business-category', 'communities'),
-        'hide_empty' => false,
-    );
-
-    $taxonomies = get_object_taxonomies( get_the_ID() );
-    $terms_as_classes = sanitize_title(strtolower(the_terms( get_the_ID(), array($taxonomy, $taxonomy2), '', ' ' )));
+    $terms_as_classes = sanitize_title(strtolower(get_the_terms( get_the_ID(), array($taxonomy, $taxonomy2), '', ' ' )));
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

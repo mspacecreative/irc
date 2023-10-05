@@ -95,8 +95,10 @@ $loop = new WP_Query( array(
     foreach ($terms_as_classes as $classname) {
         // $classes = implode(' ', $classname);
         // $classes.= implode(' ', $classes);
-        echo explode(' ', $classname->slug);
+        $classes = explode(' ', $classname->slug);
     }
+
+    print_r($classes);
 
     echo
     '<li class="wp-block-post">';

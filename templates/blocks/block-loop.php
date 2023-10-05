@@ -97,9 +97,10 @@ $loop = new WP_Query( array(
             'communities'
         )
     );
-    $terms_as_classes = implode(' ', $terms);
 
-    var_dump($terms);
+    foreach ($terms as $term) {
+        $terms_as_classes = implode(' ', $term->name);
+    }
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

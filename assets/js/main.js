@@ -59,6 +59,9 @@
         } else {
           cards[i].style.display = "none";
         }
+        if (filterSelect === "undefined") {
+          cards[i].style.display = "block";
+        }
       }
     }
 

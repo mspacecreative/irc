@@ -99,13 +99,13 @@ $loop = new WP_Query( array(
 
     $term_query = new WP_Term_Query($term_args);
 
-    $terms_as_classes = implode(',', $term_query->terms);
+    // $terms_as_classes = implode(',', $term_query->terms);
 
     // foreach ( $term_query->terms as $term ) {
     //     $terms_as_classes = explode(',', $term->slug);
     // }
 
-    print_r($terms_as_classes);
+    print_r($term_query->terms);
 
     // $terms_as_classes = ' ' . implode(' ', $terms_as_classes);
 

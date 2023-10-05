@@ -95,9 +95,9 @@ $loop = new WP_Query( array(
         'hide_empty' => false,
     );
 
-    $taxonomies = get_object_taxonomies( get_the_ID() );
+    $taxonomies = get_object_taxonomies( $loop->ID );
     foreach ( $taxonomies as $tax ) {
-    echo the_terms( get_the_ID(), $tax, ' ' );
+        echo the_terms( get_the_ID(), $tax, ' ' );
     }
 
     echo

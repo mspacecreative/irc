@@ -54,9 +54,9 @@
       let filterSelect = document.getElementsByTagName("select").value;
       for (var i = 0; i < cards.length; i++) {
         if (cards[i].classList.contains(filterSelect)) {
-          cards[i].style.display = "block";
+          this.style.display = "block";
         } else {
-          cards[i].style.display = "none";
+          this.style.display = "none";
         }
       }
     }

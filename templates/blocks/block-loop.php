@@ -91,6 +91,7 @@ $loop = new WP_Query( array(
     $mailing_address = get_field('mailing_address', get_the_ID());
 
     $terms_as_classes = strip_tags(strtolower(get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '')));
+    $terms_as_classes = preg_replace("/[^\w]+/", "-", $terms_as_classes);
 
     echo
     '<li class="wp-block-post ' . $terms_as_classes . '">';

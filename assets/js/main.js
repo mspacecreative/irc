@@ -53,10 +53,10 @@
       const cards = document.querySelectorAll(".wp-block-post");
       let filterSelect = document.getElementsByTagName("select").value;
       for (var i = 0; i < cards.length; i++) {
-        if (cards[i].classList.contains(filterSelect)) {
-          this.style.display = "block";
+        if (cards[i].classList.contains(filterSelect) || filterSelect == null) {
+          cards[i].style.display = "block";
         } else {
-          this.style.display = "none";
+          cards[i].style.display = "none";
         }
       }
     }

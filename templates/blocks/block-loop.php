@@ -55,7 +55,7 @@ $loop = new WP_Query( array(
     $output = '<select id="business-category">';
     $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
     foreach( $terms as $term ) {
-        $output.= '<option value=".' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
+        $output.= '<option data-filter=".' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
     }
     $output.='</select>';
     echo $output;
@@ -72,7 +72,7 @@ $loop = new WP_Query( array(
     $output = '<select id="communities">';
     $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
     foreach( $terms as $term ) {
-        $output.= '<option value=".' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
+        $output.= '<option data-filter=".' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
     }
     $output.='</select>';
     echo $output;

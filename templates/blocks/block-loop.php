@@ -44,7 +44,7 @@ $loop = new WP_Query( array(
     
     <div class="taxonomy-filter-container">
     
-    <?php $tax_label = $taxonomy == 'business-category' ? 'Business Category' : $taxonomy == 'communities' ? 'Communities' : ''; ?>
+    <?php $tax_label = $taxonomy === 'business-category' ? 'Business Category' : $taxonomy === 'communities' ? 'Community' : ''; ?>
     <p>Filter by <?php echo $tax_label ?></p>
     
     <?php $terms = get_terms( array(
@@ -62,7 +62,7 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
-    <?php $tax_label2 = $taxonomy2 == 'business-category' ? 'Business Category' : $taxonomy2 == 'communities' ? 'Communities' : ''; ?>
+    <?php $tax_label2 = $taxonomy2 === 'business-category' ? 'Business Category' : $taxonomy2 === 'communities' ? 'Community' : ''; ?>
     <p>Filter by <?php echo $tax_label2 ?></p>
 
     <?php $terms = get_terms( array(

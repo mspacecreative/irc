@@ -60,9 +60,9 @@
         } else {
           cards[i].style.display = "none";
         }
-        // if (cards.style.display == "none") {
-        //   noResults.style.display = "block";
-        // }
+        if (!$(".wp-block-post").is(":visible")) {
+          noResults.style.display = "block";
+        }
       }
     }
 

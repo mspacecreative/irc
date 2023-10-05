@@ -1,3 +1,4 @@
+<div class="taxonomy-filter-container">
 <?php
 $taxonomy = get_field('taxonomy_select');
 $terms = get_terms( array(
@@ -14,3 +15,4 @@ if ( !empty($terms) ) :
 	$output.='</select>';
 	echo $output;
 endif; ?>
+</div>

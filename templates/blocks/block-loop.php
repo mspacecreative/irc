@@ -90,16 +90,18 @@ $loop = new WP_Query( array(
     $email_address = get_field('email_address', get_the_ID());
     $mailing_address = get_field('mailing_address', get_the_ID());
 
-    $terms = wp_get_post_terms(
-        get_the_ID(),
-        array(
-            'business-category', 
-            'communities'
-        ),
-        array( 'fields' => 'all' )
+    $term_args = array(
+        'taxonomy' => array('business-category', 'communities'),
+        'hide_empty' => false,
+        'fields' => 'all',
+        'count' => true,
     );
 
-    print_r($terms);
+    $term_query = new WP_Term_Query($term_args);
+
+    foreach ( $term_query->terms as $term ) {
+        echo $term->name;
+    }
 
     // $terms_as_classes = implode(' ', $terms);
 

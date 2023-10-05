@@ -93,17 +93,11 @@ $loop = new WP_Query( array(
     $term_args = array(
         'taxonomy' => array('business-category', 'communities'),
         'hide_empty' => false,
-        'fields' => 'all',
-        'count' => true,
     );
 
-    $term_query = new WP_Term_Query($term_args);
+    $terms = get_the_terms(get_the_ID(), $term_args);
 
-    foreach ( $term_query->terms as $term ) {
-        echo $term->slug;
-    }
-
-    // $terms_as_classes = implode(' ', $terms);
+    $terms_as_classes = implode(' ', $terms);
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

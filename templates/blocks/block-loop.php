@@ -90,7 +90,7 @@ $loop = new WP_Query( array(
     $email_address = get_field('email_address', get_the_ID());
     $mailing_address = get_field('mailing_address', get_the_ID());
 
-    $terms_as_classes = strip_tags(sanitize_title(get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '')));
+    $terms_as_classes = strip_tags(strtolower(get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '')));
 
     echo
     '<li class="wp-block-post ' . $terms_as_classes . '">';

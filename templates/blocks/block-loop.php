@@ -93,9 +93,9 @@ $loop = new WP_Query( array(
     $terms_as_classes = get_the_terms( get_the_ID(), array($taxonomy, $taxonomy2), '', ' ' );
 
     foreach ($terms_as_classes as $classname) {
-        $classes = implode(' ', $classname);
+        // $classes = implode(' ', $classname);
         // $classes.= implode(' ', $classes);
-        echo $classes;
+        echo $classename->slug;
     }
 
     echo

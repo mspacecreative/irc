@@ -7,6 +7,7 @@ $link_to_post = get_field('link_to_post');
 $placeholder_image = get_template_directory_uri() . '/assets/img/placeholders/irc-gyrfalcon-placeholder.svg';
 $placeholder_images = get_field('allow_placeholders');
 $taxonomy = get_field('taxonomy_select');
+$filter_visibility = get_field('filter_visibility');
 
 switch($cols) {
     case '1':
@@ -37,8 +38,27 @@ $loop = new WP_Query( array(
 ) ); ?>
 
 <ul class="is-flex-container columns-<?php echo $cols ?> wp-block-post-template-container wp-block-post-template wp-block-cards<?php echo esc_attr($className); ?>">
-<?php 
-    include 'includes/taxonomy-filter.php';
+
+<?php if ($filter_visibility) : ?>
+    
+    <div class="taxonomy-filter-container">
+    <?php $terms = get_terms( array(
+        'taxonomy' => $taxonomy,
+        'hide_empty' => false
+    ) );
+    
+    if ( !empty($terms) ) :
+    $output = '<select>';
+    $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
+    foreach( $terms as $term ) {
+        $output.= '<option value=".' . esc_attr( $term->term_id ) .'">' . esc_html( $term->name ) . '</option>';
+    }
+    $output.='</select>';
+    echo $output;
+    endif; ?>
+    </div>
+
+<?php endif;
 
     while ( $loop->have_posts() ) : $loop->the_post();
     $featured_img = get_the_post_thumbnail(get_the_ID(), 'card-image');

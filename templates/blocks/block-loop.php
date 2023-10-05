@@ -107,7 +107,7 @@ $loop = new WP_Query( array(
     $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));
 
     echo
-    '<li class="wp-block-post" data-projecttype="' . $sanitizedclasses . '">';
+    '<li class="wp-block-post ' . $sanitizedclasses . '">';
 
         if ($link_to_post) {
         echo

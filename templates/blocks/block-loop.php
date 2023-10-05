@@ -100,15 +100,13 @@ $loop = new WP_Query( array(
     $term_query = new WP_Term_Query($term_args);
 
     foreach ( $term_query->terms as $term ) {
-        echo implode(' ', $term->slug);
+        $terms_as_classes = explode(',', $term->slug);
     }
 
-    foreach ( $term_query->terms as $term ) {
+    $terms_as_classes = implode(' ', $terms_as_classes);
 
     echo
-    '<li class="wp-block-post' . $term->slug . '">';
-
-    }
+    '<li class="wp-block-post' . $terms_as_classes . '">';
 
         if ($link_to_post) {
         echo

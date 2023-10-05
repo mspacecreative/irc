@@ -63,6 +63,11 @@
           cards[i].style.display = "block";
         }
       }
+      cards.forEach((card) => {
+        if ((card.style.display = "none")) {
+          ("No results");
+        }
+      });
     }
 
     // BIO MODAL FUNCTIONALITY

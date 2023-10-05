@@ -91,7 +91,7 @@ $loop = new WP_Query( array(
     $mailing_address = get_field('mailing_address', get_the_ID());
 
     $terms = wp_get_post_terms(
-        $loop->ID,
+        get_the_ID(),
         array(
             'business-category', 
             'communities'

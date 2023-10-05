@@ -16,10 +16,10 @@ function irc_styles() {
     // RANDOM NUMBER
     $rand_num = rand();
 
-    wp_register_style( 'slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null );
-	wp_enqueue_style( 'slick-css' );
+    // wp_register_style( 'slick-css', get_template_directory_uri() . '/assets/css/', array(), null );
+	// wp_enqueue_style( 'slick-css' );
 
-	wp_register_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), true );
+	wp_register_script('slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), true );
 	wp_enqueue_script('slick-js');
 	
 	wp_register_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), null );

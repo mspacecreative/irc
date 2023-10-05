@@ -93,11 +93,11 @@ $loop = new WP_Query( array(
     $terms_as_classes = get_the_terms( get_the_ID(), array($taxonomy, $taxonomy2), '', ' ' );
 
     foreach ($terms_as_classes as $class) {
-        $classes = explode(',', $class->slug);
+        $classes = $class->slug;
     }
 
     echo
-    '<li class="wp-block-post ' . implode(' ', $classes) . '">';
+    '<li class="wp-block-post ' . $classes . '">';
 
         if ($link_to_post) {
         echo

@@ -99,9 +99,11 @@ $loop = new WP_Query( array(
 
     $term_query = new WP_Term_Query($term_args);
 
-    foreach ( $term_query->terms as $term ) {
-        $terms_as_classes = explode(',', $term->slug);
-    }
+    $terms_as_classes = explode(',', $term_query->terms);
+
+    // foreach ( $term_query->terms as $term ) {
+    //     $terms_as_classes = explode(',', $term->slug);
+    // }
 
     print_r($terms_as_classes);
 

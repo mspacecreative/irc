@@ -92,7 +92,7 @@ $loop = new WP_Query( array(
 
     $terms_as_classes = get_the_terms( get_the_ID(), array($taxonomy, $taxonomy2), '', ' ' );
 
-    echo $terms_as_classes;
+    echo implode(' ', $terms_as_classes);
 
     echo
     '<li class="wp-block-post ' . $classes . '">';

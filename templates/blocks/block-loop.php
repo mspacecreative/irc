@@ -100,7 +100,7 @@ $loop = new WP_Query( array(
     $term_query = new WP_Term_Query($term_args);
 
     foreach ( $term_query->terms as $term ) {
-        echo $term->name;
+        echo $term->slug;
     }
 
     // $terms_as_classes = implode(' ', $terms);

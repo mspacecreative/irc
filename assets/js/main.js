@@ -42,7 +42,11 @@
     }
 
     document
-      .getElementsByClassName("filter")
+      .getElementById("business-category")
+      .addEventListener("change", showOnChange);
+
+    document
+      .getElementById("communities")
       .addEventListener("change", showOnChange);
 
     function showOnChange() {

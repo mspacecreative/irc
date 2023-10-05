@@ -99,7 +99,7 @@ $loop = new WP_Query( array(
 
     $term_query = new WP_Term_Query($term_args);
 
-    $terms_as_classes = explode(',', $term_query->terms);
+    $terms_as_classes = implode(',', $term_query->terms);
 
     // foreach ( $term_query->terms as $term ) {
     //     $terms_as_classes = explode(',', $term->slug);
@@ -107,7 +107,7 @@ $loop = new WP_Query( array(
 
     print_r($terms_as_classes);
 
-    $terms_as_classes = ' ' . implode(' ', $terms_as_classes);
+    // $terms_as_classes = ' ' . implode(' ', $terms_as_classes);
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

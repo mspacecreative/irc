@@ -51,7 +51,7 @@
 
     function showOnChange() {
       const cards = document.querySelectorAll(".wp-block-post");
-      let filterSelect = document.querySelectorAll(".filter").value;
+      let filterSelect = document.querySelector("select").value;
       for (var i = 0; i < cards.length; i++) {
         cards[i].style.display = "none";
         if (cards[i].classList.contains(filterSelect)) {

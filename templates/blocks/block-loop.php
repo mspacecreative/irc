@@ -95,12 +95,13 @@ $loop = new WP_Query( array(
         array(
             'business-category', 
             'communities'
-        )
+        ),
+        array( 'fields' => 'all' )
     );
 
-    $terms_as_classes = implode(' ', $terms);
+    print_r($terms);
 
-    var_dump($terms_as_classes);
+    // $terms_as_classes = implode(' ', $terms);
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

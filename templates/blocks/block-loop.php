@@ -94,12 +94,11 @@ $loop = new WP_Query( array(
 
     if ( !empty(get_the_terms($loop->ID, array($taxonomy, $taxonomy2))) ) {
         foreach ( get_the_terms($loop->ID, array($taxonomy, $taxonomy2)) as $term ) {
-            $t = get_term($term);
+            $t = get_terms($term);
             array_push($terms, $t->name);
             $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);
             $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));
         }
-        echo $sanitizedclasses;
     }
 
     // $terms = get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '');

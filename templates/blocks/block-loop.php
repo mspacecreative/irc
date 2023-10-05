@@ -52,7 +52,7 @@ $loop = new WP_Query( array(
     ) );
     
     if ( !empty($terms) ) :
-    $output = '<select id="business-category" class="filter" data-filter="projecttype">';
+    $output = '<select id="business-category" class="filter">';
     $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
     foreach( $terms as $term ) {
         $output.= '<option value="' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
@@ -69,7 +69,7 @@ $loop = new WP_Query( array(
     ) );
     
     if ( !empty($terms) ) :
-    $output = '<select id="communities" class="filter" data-filter="projecttype">';
+    $output = '<select id="communities" class="filter">';
     $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
     foreach( $terms as $term ) {
         $output.= '<option value="' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';

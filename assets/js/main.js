@@ -23,130 +23,39 @@
       }
     }
 
-    // POST FILTERS
-    // ============
-    // These are for URL filtering (for the menus)
-    // Location URL Filter
-
-    if (get_url_params("location", window.location.search)) {
-      var location_params = decodeURI(
-        get_url_params("location", window.location.search)
-      );
-      var location_filter =
-        '#filter_location option[value="' + location_params + '"]';
-      $(location_filter).prop("selected", true);
-      filter_posts();
-    } // Year URL Filter
-
-    if (get_url_params("year", window.location.search)) {
-      var year_params = decodeURI(
-        get_url_params("year", window.location.search)
-      );
-      var year_filter = '#filter_year option[value="' + year_params + '"]';
-      $(year_filter).prop("selected", true);
-      filter_posts();
-    } // Project URL Filter
-
-    if (get_url_params("project", window.location.search)) {
-      var project_params = decodeURI(
-        get_url_params("project", window.location.search)
-      );
-      var project_filter =
-        '#filter_project option[value="' + project_params + '"]';
-      $(project_filter).prop("selected", true);
-      filter_posts();
-    } // Category URL Filter
-
-    if (get_url_params("category", window.location.search)) {
-      var category_params = decodeURI(
-        get_url_params("category", window.location.search)
-      );
-      var category_filter =
-        '#filter_category option[value="' + category_params + '"]';
-      $(category_filter).prop("selected", true);
-      filter_posts();
-    } // Project Type URL Filter
-
-    if (get_url_params("projecttype", window.location.search)) {
-      var projecttype_params = decodeURI(
-        get_url_params("projecttype", window.location.search)
-      );
-      var projecttype_filter =
-        '#filter_projecttype option[value="' + projecttype_params + '"]';
-      $(projecttype_filter).prop("selected", true);
-      filter_posts();
-    } // Open Type URL Filter
-
-    if (get_url_params("open", window.location.search)) {
-      var open_params = decodeURI(
-        get_url_params("open", window.location.search)
-      );
-      var open_filter = '#filter_open option[value="' + open_params + '"]';
-      $(open_filter).prop("selected", true);
-      filter_posts();
-    } // ===============================================*
-    // When a post select filter changes, filter posts
-    // This should be triggered after page load
-
-    $("select.filter").on("change", function () {
-      filter_posts();
-    }); // The main function for the post filtering
-    // Filters products based on data attribute
-
-    function filter_posts() {
-      // $selections is the filter options, the select boxes
-      // $post are the posts (each single post)
-      var $selections = $(".taxonomy-filter-container select"),
-        $post = $(".wp-block-post");
-
-      var filters = $selections
-        .filter(function () {
-          // returns whether a value matches the filter
-          return !!this.value;
-        })
-        .map(function () {
-          // maps the filter data to see if the post has the value at the filter
-          return {
-            filter: $(this).data("filter").toString(),
-            value: this.value,
-          };
-        })
-        .get(); // hide all things then filter the ones to show
-
-      var $filteredProducts = $post
-        .hide()
-        .filter(function () {
-          var data = $(this).data(); // console.log(data);
-
-          return filters.every(function (obj) {
-            if (data[obj.filter]) {
-              return data[obj.filter].includes(obj.value);
-            }
-          });
-        })
-        .show("fast");
-    } // gets the parameters of a specific parameter in the url
-
-    function get_url_params(name, url) {
-      if (!url) url = location.href;
-      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-      var regexS = "[\\?&]" + name + "=([^&#]*)";
-      var regex = new RegExp(regexS);
-      var results = regex.exec(url);
-      return results == null ? null : results[1];
+    // FILTER FUNCTIONALITY
+    function filterFunctions() {
+      const businessCategory =
+        document.getElementById("business-category").value;
+      const community = document.getElementById("communities").value;
+      const cards = document.querySelectorAll(".wp-block-post");
+      for (i = 0; i > cards.length; i++) {
+        if (
+          businessCategory == cards[i].classList.contains(businessCategory) ||
+          community == cards[i].classList.contains(community)
+        ) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
     }
 
-    function isSelectEmpty() {
-      var emptyvalues = $(".filter").filter(function () {
-        console.log($(this).val() == 0);
-        return $(this).val() === "";
-      }).length;
+    document
+      .querySelectorAll(".filter")
+      .addEventListener("change", showOnChange);
 
-      if (emptyvalues == $(".filter").length) {
-        return true;
+    function showOnChange() {
+      const cards = document.querySelectorAll(".wp-block-post");
+      let filterSelect = document.querySelectorAll(".filter").value;
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].style.display = "none";
+        if (cards[i].classList.contains(filterSelect)) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
       }
-
-      return false;
     }
 
     // BIO MODAL FUNCTIONALITY

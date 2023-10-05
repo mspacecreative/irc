@@ -103,7 +103,7 @@ $loop = new WP_Query( array(
         $terms_as_classes = explode(',', $term->slug);
     }
 
-    print_r($term->slug);
+    print_r($terms_as_classes);
 
     $terms_as_classes = ' ' . implode(' ', $terms_as_classes);
 

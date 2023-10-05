@@ -97,10 +97,10 @@ $loop = new WP_Query( array(
 
     $terms = get_the_terms(get_the_ID(), $term_args);
 
-    $terms_as_classes = implode(' ', $terms);
+    print_r($terms);
 
     echo
-    '<li class="wp-block-post' . $terms_as_classes . '">';
+    '<li class="wp-block-post">';
 
         if ($link_to_post) {
         echo

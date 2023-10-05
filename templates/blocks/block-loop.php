@@ -7,6 +7,7 @@ $link_to_post = get_field('link_to_post');
 $placeholder_image = get_template_directory_uri() . '/assets/img/placeholders/irc-gyrfalcon-placeholder.svg';
 $placeholder_images = get_field('allow_placeholders');
 $taxonomy = get_field('taxonomy_select');
+$taxonomy2 = get_field('taxonomy2_select');
 $filter_visibility = get_field('filter_visibility');
 
 switch($cols) {
@@ -58,14 +59,14 @@ $loop = new WP_Query( array(
     endif; ?>
 
     <?php $terms2 = get_terms( array(
-        'taxonomy' => $taxonomy,
+        'taxonomy' => $taxonomy2,
         'hide_empty' => false
     ) );
     
     if ( !empty($terms2) ) :
     $output = '<select>';
     $output.= '<option value="-&nbsp;Any&nbsp;-" selected>-&nbsp;Any&nbsp;-</option>';
-    foreach( $term2 as $term2 ) {
+    foreach( $terms2 as $term2 ) {
         $output.= '<option value=".' . sanitize_title(strtolower($term2->name)) .'">' . esc_html( $term2->name ) . '</option>';
     }
     $output.='</select>';

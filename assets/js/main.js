@@ -51,15 +51,13 @@
 
     function showOnChange() {
       const cards = document.querySelectorAll(".wp-block-post");
-      const filterSelect = document.getElementsByTagName("select").value;
+      let filterSelect = document.querySelector(".filter").value;
       for (var i = 0; i < cards.length; i++) {
+        cards[i].style.display = "none";
         if (cards[i].classList.contains(filterSelect)) {
           cards[i].style.display = "block";
         } else {
           cards[i].style.display = "none";
-        }
-        if (filterSelect === "undefined") {
-          cards[i].style.display = "block";
         }
       }
     }

@@ -98,7 +98,7 @@ $loop = new WP_Query( array(
     $taxonomies = get_object_taxonomies( get_the_ID() );
 
     foreach ( $taxonomies as $taxonomy ) {
-        $terms_as_classes = the_terms( get_the_ID(), $taxonomy, ' ' );
+        $terms_as_classes = get_the_terms( get_the_ID(), $taxonomy, ' ' );
     }
 
     echo

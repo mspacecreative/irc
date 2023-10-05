@@ -6,6 +6,7 @@ $bottom_margin = $posttype == 'post' ? ' style="margin-block-end: 1rem;"' : '';
 $link_to_post = get_field('link_to_post');
 $placeholder_image = get_template_directory_uri() . '/assets/img/placeholders/irc-gyrfalcon-placeholder.svg';
 $placeholder_images = get_field('allow_placeholders');
+$taxonomy = get_field('taxonomy_select');
 
 switch($cols) {
     case '1':
@@ -38,7 +39,7 @@ $loop = new WP_Query( array(
 <ul class="is-flex-container columns-<?php echo $cols ?> wp-block-post-template-container wp-block-post-template wp-block-cards<?php echo esc_attr($className); ?>">
 <?php 
     include 'includes/taxonomy-filter.php';
-    
+
     while ( $loop->have_posts() ) : $loop->the_post();
     $featured_img = get_the_post_thumbnail(get_the_ID(), 'card-image');
     $title = get_the_title();

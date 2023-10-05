@@ -92,11 +92,12 @@ $loop = new WP_Query( array(
 
     $terms = get_the_terms(get_the_ID(), array($taxonomy, $taxonomy2));
     foreach ($terms as $term) {
-        $terms_as_classes = $term->slug;
+        echo
+    '<li class="wp-block-post ' . $term->slug . '">';
     }
 
-    echo
-    '<li class="wp-block-post ' . $terms_as_classes . '">';
+    // echo
+    // '<li class="wp-block-post ' . $terms_as_classes . '">';
 
         if ($link_to_post) {
         echo

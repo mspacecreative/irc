@@ -98,9 +98,9 @@ $loop = new WP_Query( array(
         )
     );
 
-    foreach ($terms as $term) {
-        $terms_as_classes = implode(' ', $term->name);
-    }
+    $terms_as_classes = implode(' ', $terms);
+
+    var_dump($terms_as_classes);
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

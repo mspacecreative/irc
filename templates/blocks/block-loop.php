@@ -100,6 +100,7 @@ $loop = new WP_Query( array(
     foreach ( $taxonomies as $taxonomy ) {
         $terms_as_classes = get_the_terms( get_the_ID(), $taxonomy, ' ' );
     }
+    print_r($terms_as_classes);
 
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';

@@ -23,6 +23,26 @@
       }
     }
 
+    // FILTER FUNCTIONALITY
+    function filterFunctions() {
+      const businessCategory =
+        document.getElementById("business-category").value;
+      const community = document.getElementById("communities").value;
+      const cards = document.querySelectorAll(".wp-block-post");
+      for (i = 0; i > cards.length; i++) {
+        if (
+          businessCategory == cards[i].classList.contains(businessCategory) ||
+          community == cards[i].classList.contains(community)
+        ) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+
+    filterFunctions();
+
     // BIO MODAL FUNCTIONALITY
     let bioButton = $(".bios li > a");
     const modal = $(".modal");

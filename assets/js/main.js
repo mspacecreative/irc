@@ -41,8 +41,6 @@
       }
     }
 
-    filterFunctions();
-
     // BIO MODAL FUNCTIONALITY
     let bioButton = $(".bios li > a");
     const modal = $(".modal");

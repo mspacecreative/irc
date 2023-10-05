@@ -61,7 +61,7 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
-    <p>Filter by Community></p>
+    <p>Filter by Community</p>
 
     <?php $terms = get_terms( array(
         'taxonomy' => 'communities',

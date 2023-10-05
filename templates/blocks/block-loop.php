@@ -185,6 +185,7 @@ $loop = new WP_Query( array(
         }
     echo
     '</li>';
+    echo '<p class="no-results">' . esc_html__('Your filters yielded no results.') . '</p>';
 endwhile; ?>
 </ul>
 

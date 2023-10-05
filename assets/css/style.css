@@ -3290,3 +3290,7 @@ ul.staff-data li::before {
 .taxonomy-filter-container p {
   margin-block: 0;
 }
+
+.no-results {
+  display: none;
+}

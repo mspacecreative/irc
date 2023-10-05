@@ -49,18 +49,19 @@
       .getElementById("communities")
       .addEventListener("change", showOnChange);
 
+    const noResults = document.querySelector(".no-results");
+
     function showOnChange() {
       const cards = document.querySelectorAll(".wp-block-post");
       let filterSelect = document.querySelector(".filter").value;
       for (var i = 0; i < cards.length; i++) {
-        cards[i].style.display = "none";
-        if (cards[i].classList.contains(filterSelect)) {
+        if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
           cards[i].style.display = "block";
         } else {
           cards[i].style.display = "none";
         }
-        if (filterSelect === "") {
-          cards[i].style.display = "block";
+        if (cards[i].style.display !== "block") {
+          noResults.style.display = "block";
         }
       }
     }

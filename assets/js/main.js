@@ -23,22 +23,24 @@
       }
     }
 
-    // FILTER FUNCTIONALITY
-    function filterFunctions() {
-      const businessCategory =
-        document.getElementById("business-category").value;
-      const community = document.getElementById("communities").value;
+    document
+      .getElementById("business-category")
+      .addEventListener("change", showOnChange);
+    document
+      .getElementById("communities")
+      .addEventListener("change", showOnChange);
+
+    function showOnChange(evt) {
+      const filter = evt.target;
+
+      // hide all cards
       const cards = document.querySelectorAll(".wp-block-post");
-      for (i = 0; i > cards.length; i++) {
-        if (
-          businessCategory == cards[i].classList.contains(businessCategory) ||
-          community == cards[i].classList.contains(community)
-        ) {
-          cards[i].style.display = "block";
-        } else {
-          cards[i].style.display = "none";
-        }
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].style.display = "none";
       }
+
+      // show the card whose id matches the selected value
+      document.getElementById(filter.value).style.display = "block";
     }
 
     // BIO MODAL FUNCTIONALITY

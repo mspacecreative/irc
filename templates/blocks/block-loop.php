@@ -99,6 +99,8 @@ $loop = new WP_Query( array(
     );
     $terms_as_classes = implode(' ', $terms);
 
+    var_dump($terms);
+
     echo
     '<li class="wp-block-post' . $terms_as_classes . '">';
 

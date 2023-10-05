@@ -43,6 +43,11 @@ $loop = new WP_Query( array(
 <?php if ($filter_visibility) : ?>
     
     <div class="taxonomy-filter-container">
+    <?php $tax_label = $taxonomy == 'business-category' ? 'Business Category' : $taxonomy == 'communities' ? 'Communities' : ''; ?>
+    <?php $tax_label2 = $taxonomy2 == 'business-category' ? 'Business Category' : $taxonomy2 == 'communities' ? 'Communities' : ''; ?>
+    
+    <p>Filter by <?php echo $tax_label ?></p>
+    
     <?php $terms = get_terms( array(
         'taxonomy' => $taxonomy,
         'hide_empty' => false
@@ -57,6 +62,8 @@ $loop = new WP_Query( array(
     $output.='</select>';
     echo $output;
     endif; ?>
+
+    <p>Filter by <?php echo $tax_label2 ?></p>
 
     <?php $terms = get_terms( array(
         'taxonomy' => $taxonomy2,

@@ -98,7 +98,7 @@ $loop = new WP_Query( array(
     //     $classes = explode(' ', $classname->slug);
     // }
 
-    $classes = explode(' ', $terms_as_classes);
+    $classes = implode(' ', $terms_as_classes);
 
     print_r($classes);
 

@@ -95,8 +95,10 @@
 
       var filtered = cards.filter(function () {
         var classes = cards.each(function () {
-          $(this).classList.contains(businessCategory, communities);
+          $(this).classList;
         });
+
+        console.log(classes);
 
         if (businessCategory !== "" && classes !== businessCategory) {
           return false;

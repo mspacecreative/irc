@@ -44,6 +44,8 @@ $loop = new WP_Query( array(
 <?php if ($filter_visibility) : ?>
     
     <div class="taxonomy-filter-container">
+
+    <?php if ($posttype == 'business') : ?>
     
     <p>Filter by Business Category</p>
     
@@ -78,6 +80,8 @@ $loop = new WP_Query( array(
     $output.='</select>';
     echo $output;
     endif; ?>
+
+    <?php endif; ?>
 
     <p>Filter by Department</p>
 

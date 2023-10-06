@@ -95,19 +95,13 @@
 
       var filtered = cards.filter(function () {
         var classes = cards.each(function () {
-          $(this).classList;
+          $(this).classList.contains(businessCategory, communities);
         });
-        console.log(classes);
-        if (
-          businessCategory !== "" &&
-          classes.hasClass(businessCategory) !== businessCategory
-        ) {
+
+        if (businessCategory !== "" && classes !== businessCategory) {
           return false;
         }
-        if (
-          communities !== "" &&
-          classes.hasClass(communities) !== communities
-        ) {
+        if (communities !== "" && classes !== communities) {
           return false;
         }
         return true;

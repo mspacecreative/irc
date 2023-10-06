@@ -45,6 +45,8 @@ $loop = new WP_Query( array(
     <div class="taxonomy-filter-container">
 
     <?php $filter_label = $posttype === 'business' ? ' Business Category' : $posttype === 'staff' ? ' Department' : ''; ?>
+
+    <?php print_r($posttype);
     
     <p>Filter by <?php echo $filter_label ?></p>
     

@@ -105,6 +105,11 @@
               cards[i].classList.contains(communities)
             ) {
               cards[i].style.display = "block";
+            } else if (
+              cards[i].classList.contains(businessCategory) ||
+              cards[i].classList.contains(communities)
+            ) {
+              cards[i].style.display = "block";
             }
           }
         }

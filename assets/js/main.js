@@ -59,11 +59,14 @@
 
           if (
             businessCategory !== "" &&
-            !results.classList.contains(businessCategory)
+            !Object.keys(results).classList.contains(businessCategory)
           ) {
             return false;
           }
-          if (communities !== "" && !results.classList.contains(communities)) {
+          if (
+            communities !== "" &&
+            !Object.keys(results).classList.contains(communities)
+          ) {
             return false;
           }
           return true;

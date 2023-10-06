@@ -93,39 +93,23 @@
       var cards = grid.find(".wp-block-post");
       cards.hide();
 
-      var filtered = cards.filter(function () {
-        if (businessCategory == "" && communities == "") {
-          for (var i = 0; i < cards.length; i++) {
-            cards[i].style.display = "block";
-          }
-        } else {
-          for (var i = 0; i < cards.length; i++) {
-            if (
-              cards[i].classList.contains(businessCategory) &&
-              cards[i].classList.contains(communities)
-            ) {
-              cards[i].style.display = "block";
-            } else if (
-              cards[i].classList.contains(businessCategory) ||
-              cards[i].classList.contains(communities)
-            ) {
-              cards[i].style.display = "block";
-            }
-          }
-        }
+      var filtered = cards.filter(function (elem) {
+        var results = $(elem);
 
-        if (!$(".wp-block-post").is(":visible")) {
-          noResults.style.display = "block";
-        } else {
-          noResults.style.display = "none";
+        if (businessCategory !== "" && !results.hasClass(businessCategory)) {
+          return false;
         }
+        if (communities !== "" && !results.hasClass(communities)) {
+          return false;
+        }
+        return true;
       });
 
       filtered.show();
 
-      // if (filtered.length == 0) {
-      //   noResults.style.display = "block";
-      // }
+      if (filtered.length == 0) {
+        noResults.style.display = "block";
+      }
     });
 
     // BIO MODAL FUNCTIONALITY

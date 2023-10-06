@@ -110,7 +110,7 @@
         return true;
       });
 
-      // filtered.show();
+      filtered.show();
 
       if (filtered.length == 0) {
         noResults.style.display = "block";

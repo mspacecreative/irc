@@ -44,14 +44,17 @@ $loop = new WP_Query( array(
     
     <div class="taxonomy-filter-container">
 
-    <?php $filter_label = $posttype === 'business' ? ' Business Category' : $posttype === 'staff' ? ' Department' : ''; ?>
+    <?php 
+    $filter_label = $posttype == 'business' ? ' Business Category' : $posttype == 'staff' ? ' Department' : '';
+    $taxonomy_filter = $posttype == 'business' ? 'business-category' : $posttype == 'staff' ? 'department' : '';
+    ?>
 
     <?php print_r($posttype); ?>
     
     <p>Filter by <?php echo $filter_label ?></p>
     
     <?php $terms = get_terms( array(
-        'taxonomy' => 'business-category',
+        'taxonomy' => $taxonomy_filter,
         'hide_empty' => false
     ) );
     
@@ -65,7 +68,7 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
-    <?php $filter_label2 = $posttype === 'business' ? ' Community' : '';
+    <?php $filter_label2 = $posttype == 'business' ? ' Community' : '';
     
     if ($posttype == 'business') : ?>
 

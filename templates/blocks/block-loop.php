@@ -44,7 +44,7 @@ $loop = new WP_Query( array(
     
     <div class="taxonomy-filter-container">
 
-    <?php $filter_label = $posttype == 'business' ? ' Business Category' : $posttype == 'staff' ? ' Department' : ''; ?>
+    <?php $filter_label = $posttype === 'business' ? ' Business Category' : $posttype === 'staff' ? ' Department' : ''; ?>
     
     <p>Filter by <?php echo $filter_label ?></p>
     
@@ -63,7 +63,7 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
-    <?php $filter_label2 = $posttype == 'business' ? ' Community' : '';
+    <?php $filter_label2 = $posttype === 'business' ? ' Community' : '';
     
     if ($posttype == 'business') : ?>
 

@@ -85,8 +85,8 @@ $loop = new WP_Query( array(
     endif; ?>
 
     <?php endif ?>
-    <button id="reset">Rese
-        t</button>
+    
+    <button id="reset">Reset</button>
     </div>
 
 <?php endif;

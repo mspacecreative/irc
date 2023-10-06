@@ -93,7 +93,7 @@
       var cards = grid.find(".wp-block-post");
       cards.hide();
 
-      console.log(cards[1].classList);
+      console.log(cards.classList);
 
       var filtered = cards.filter(function (index, elem) {
         var data = $(elem).hasClass(businessCategory, communities);

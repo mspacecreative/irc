@@ -97,12 +97,17 @@
         console.log(cards[i].classList);
       });
 
-      var filtered = cards.filter(function (index, elem) {
-        var data = $(elem).classList.contains(businessCategory, communities);
-        if (businessCategory !== "" && data !== businessCategory) {
+      var filtered = cards.filter(function () {
+        if (
+          businessCategory !== "" &&
+          cards.classList.contains(businessCategory) !== businessCategory
+        ) {
           return false;
         }
-        if (communities !== "" && data !== communities) {
+        if (
+          communities !== "" &&
+          cards.classList.contains(communities) !== communities
+        ) {
           return false;
         }
         return true;

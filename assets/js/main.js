@@ -98,8 +98,8 @@
       });
 
       var filtered = cards.filter(function (index, elem) {
-        var data = $(elem).hasClass(businessCategory, communities);
-        if (businessCategory !== "" && data.text() !== businessCategory) {
+        var data = $(elem).classList.contains(businessCategory, communities);
+        if (businessCategory !== "" && data !== businessCategory) {
           return false;
         }
         if (communities !== "" && data !== communities) {

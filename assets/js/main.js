@@ -51,39 +51,68 @@
 
     const noResults = document.querySelector(".no-results");
 
-    function showOnChange() {
-      const cards = document.querySelectorAll(".wp-block-post");
-      let filterSelect = document.querySelector("#business-category").value;
-      for (var i = 0; i < cards.length; i++) {
-        if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
-          cards[i].style.display = "block";
-        } else {
-          cards[i].style.display = "none";
-        }
-        if (!$(".wp-block-post").is(":visible")) {
-          noResults.style.display = "block";
-        } else {
-          noResults.style.display = "none";
-        }
-      }
-    }
+    // function showOnChange() {
+    //   const cards = document.querySelectorAll(".wp-block-post");
+    //   let filterSelect = document.querySelector("#business-category").value;
+    //   for (var i = 0; i < cards.length; i++) {
+    //     if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
+    //       cards[i].style.display = "block";
+    //     } else {
+    //       cards[i].style.display = "none";
+    //     }
+    //     if (!$(".wp-block-post").is(":visible")) {
+    //       noResults.style.display = "block";
+    //     } else {
+    //       noResults.style.display = "none";
+    //     }
+    //   }
+    // }
 
-    function showOnChange2() {
-      const cards = document.querySelectorAll(".wp-block-post");
-      let filterSelect = document.querySelector("#communities").value;
-      for (var i = 0; i < cards.length; i++) {
-        if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
-          cards[i].style.display = "block";
-        } else {
-          cards[i].style.display = "none";
+    // function showOnChange2() {
+    //   const cards = document.querySelectorAll(".wp-block-post");
+    //   let filterSelect = document.querySelector("#communities").value;
+    //   for (var i = 0; i < cards.length; i++) {
+    //     if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
+    //       cards[i].style.display = "block";
+    //     } else {
+    //       cards[i].style.display = "none";
+    //     }
+    //     if (!$(".wp-block-post").is(":visible")) {
+    //       noResults.style.display = "block";
+    //     } else {
+    //       noResults.style.display = "none";
+    //     }
+    //   }
+    // }
+
+    $(".taxonomy-filter-container").on("change", "select", function () {
+      var businessCategory = $("#business-category").val(),
+        communities = $("#communities").val();
+
+      var grid = $(".wp-block-cards");
+      var cards = grid.find(".wp-block-post");
+      cards.hide();
+
+      var filtered = card.filter(function (index, elem) {
+        var data = $(elem).classList(businessCategory, communities);
+        if (
+          businessCategory !== "all" &&
+          data.eq(1).text() !== businessCategory
+        ) {
+          return false;
         }
-        if (!$(".wp-block-post").is(":visible")) {
-          noResults.style.display = "block";
-        } else {
-          noResults.style.display = "none";
+        if (communities !== "all" && data.eq(2).text() !== communities) {
+          return false;
         }
+        return true;
+      });
+
+      filtered.show();
+
+      if (filtered.length == 0) {
+        noResults.style.display = "block";
       }
-    }
+    });
 
     // BIO MODAL FUNCTIONALITY
     let bioButton = $(".bios li > a");

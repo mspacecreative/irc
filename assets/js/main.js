@@ -121,6 +121,7 @@
 
     $("#reset").on("click", function () {
       $(".wp-block-post").css("display", "block");
+      noResults.style.display = "none";
       $(".taxonomy-filter-container select option").prop(
         "selected",
         function () {

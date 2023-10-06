@@ -119,9 +119,9 @@
 
       filtered.show();
 
-      if (filtered.length == 0) {
-        noResults.style.display = "block";
-      }
+      // if (filtered.length == 0) {
+      //   noResults.style.display = "block";
+      // }
     });
 
     // BIO MODAL FUNCTIONALITY

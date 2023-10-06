@@ -95,13 +95,10 @@
 
       var filtered = cards.filter(function (index, elem) {
         var data = $(elem).hasClass(businessCategory, communities);
-        if (
-          businessCategory !== "all" &&
-          data.eq(1).text() !== businessCategory
-        ) {
+        if (businessCategory !== "" && data !== businessCategory) {
           return false;
         }
-        if (communities !== "all" && data.eq(2).text() !== communities) {
+        if (communities !== "" && data !== communities) {
           return false;
         }
         return true;

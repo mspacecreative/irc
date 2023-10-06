@@ -94,11 +94,10 @@
       cards.hide();
 
       var filtered = cards.filter(function () {
-        var classes = cards.each(function () {
+        var classes = cards.each(function (i) {
           $(this).classList;
+          console.log(classes[i]);
         });
-
-        console.log(classes[0]);
 
         // if (businessCategory !== "" && classes !== businessCategory) {
         //   return false;

@@ -91,40 +91,30 @@
 
       var grid = $(".wp-block-cards");
       var cards = grid.find(".wp-block-post");
-      cards.hide();
+      // cards.hide();
 
-      var filtered = cards.filter(function () {
-        for (var i = 0; i < cards.length; i++) {
-          if (
-            cards[i].classList.contains(businessCategory, communities) ||
-            businessCategory == "" ||
-            communities == ""
-          ) {
-            return true;
-          } else {
-            return false;
-          }
-          // if (!$(".wp-block-post").is(":visible")) {
-          //   noResults.style.display = "block";
-          // } else {
-          //   noResults.style.display = "none";
-          // }
+      for (var i = 0; i < cards.length; i++) {
+        if (
+          cards[i].classList.contains(businessCategory, communities) ||
+          businessCategory == "" ||
+          communities == ""
+        ) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
         }
-
-        // if (businessCategory !== "" && classes !== businessCategory) {
-        //   return false;
-        // }
-        // if (communities !== "" && classes !== communities) {
-        //   return false;
-        // }
-        // return true;
-      });
-
-      filtered.show();
-
-      if (filtered.length == 0) {
-        noResults.style.display = "block";
+        if (!$(".wp-block-post").is(":visible")) {
+          noResults.style.display = "block";
+        } else {
+          noResults.style.display = "none";
+        }
       }
+
+      // filtered.show();
+
+      // if (filtered.length == 0) {
+      //   noResults.style.display = "block";
+      // }
     });
 
     // BIO MODAL FUNCTIONALITY

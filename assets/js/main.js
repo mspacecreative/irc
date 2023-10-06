@@ -102,6 +102,11 @@
         if (communities !== "" && !results.hasClass(communities)) {
           return false;
         }
+        if (!$(".wp-block-post").is(":visible")) {
+          noResults.style.display = "block";
+        } else {
+          noResults.style.display = "none";
+        }
         return true;
       });
 

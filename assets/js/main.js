@@ -49,105 +49,71 @@
     //   .getElementById("communities")
     //   .addEventListener("change", showOnChange2);
 
-    const noResults = document.querySelector(".no-results");
+    // document
+    //   .querySelector(".taxonomy-filter-container select")
+    //   .addEventListener("change", function () {
+    //     let businessCategory =
+    //       document.getElementById("#business-category").value;
+    //     let communities = document.getElementById("#communities").value;
 
-    // function showOnChange() {
-    //   const cards = document.querySelectorAll(".wp-block-post");
-    //   let filterSelect = document.querySelector("#business-category").value;
-    //   for (var i = 0; i < cards.length; i++) {
-    //     if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
-    //       cards[i].style.display = "block";
-    //     } else {
-    //       cards[i].style.display = "none";
-    //     }
-    //     if (!$(".wp-block-post").is(":visible")) {
+    //     const grid = document.querySelector(".wp-block-cards");
+    //     let cards = grid.children;
+    //     cards.style.display = "none";
+
+    //     let filtered = cards.filter(function (index, elem) {
+    //       let results = elem;
+
+    //       if (
+    //         businessCategory !== "" &&
+    //         !results.classList.contains(businessCategory)
+    //       ) {
+    //         return false;
+    //       }
+    //       if (communities !== "" && !results.classList.contains(communities)) {
+    //         return false;
+    //       }
+    //       return true;
+    //     });
+
+    //     filtered.style.display = "block";
+
+    //     if (filtered.length == 0) {
     //       noResults.style.display = "block";
     //     } else {
     //       noResults.style.display = "none";
     //     }
-    //   }
-    // }
-
-    // function showOnChange2() {
-    //   const cards = document.querySelectorAll(".wp-block-post");
-    //   let filterSelect = document.querySelector("#communities").value;
-    //   for (var i = 0; i < cards.length; i++) {
-    //     if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
-    //       cards[i].style.display = "block";
-    //     } else {
-    //       cards[i].style.display = "none";
-    //     }
-    //     if (!$(".wp-block-post").is(":visible")) {
-    //       noResults.style.display = "block";
-    //     } else {
-    //       noResults.style.display = "none";
-    //     }
-    //   }
-    // }
-
-    // $(".taxonomy-filter-container").on("change", "select", function () {
-    //   let businessCategory = $("#business-category").val();
-    //   let communities = $("#communities").val();
-
-    //   var grid = $(".wp-block-cards");
-    //   var cards = grid.find(".wp-block-post");
-    //   cards.hide();
-
-    //   var filtered = cards.filter(function (index, elem) {
-    //     var results = $(elem);
-
-    //     if (businessCategory !== "" && !results.hasClass(businessCategory)) {
-    //       return false;
-    //     }
-    //     if (communities !== "" && !results.hasClass(communities)) {
-    //       return false;
-    //     }
-    //     return true;
     //   });
 
-    //   filtered.show();
+    const noResults = document.querySelector(".no-results");
 
-    //   if (filtered.length == 0) {
-    //     noResults.style.display = "block";
-    //   } else {
-    //     noResults.style.display = "none";
-    //   }
-    // });
+    $(".taxonomy-filter-container").on("change", "select", function () {
+      let businessCategory = $("#business-category").val();
+      let communities = $("#communities").val();
 
-    document
-      .querySelector(".taxonomy-filter-container select")
-      .addEventListener("change", function () {
-        let businessCategory =
-          document.getElementById("#business-category").value;
-        let communities = document.getElementById("#communities").value;
+      var grid = $(".wp-block-cards");
+      var cards = grid.find(".wp-block-post");
+      cards.hide();
 
-        const grid = document.querySelector(".wp-block-cards");
-        let cards = grid.children;
-        cards.style.display = "none";
+      var filtered = cards.filter(function (index, elem) {
+        var results = $(elem);
 
-        let filtered = cards.filter(function (index, elem) {
-          let results = elem;
-
-          if (
-            businessCategory !== "" &&
-            !results.classList.contains(businessCategory)
-          ) {
-            return false;
-          }
-          if (communities !== "" && !results.classList.contains(communities)) {
-            return false;
-          }
-          return true;
-        });
-
-        filtered.style.display = "block";
-
-        if (filtered.length == 0) {
-          noResults.style.display = "block";
-        } else {
-          noResults.style.display = "none";
+        if (businessCategory !== "" && !results.hasClass(businessCategory)) {
+          return false;
         }
+        if (communities !== "" && !results.hasClass(communities)) {
+          return false;
+        }
+        return true;
       });
+
+      filtered.show();
+
+      if (filtered.length == 0) {
+        noResults.style.display = "block";
+      } else {
+        noResults.style.display = "none";
+      }
+    });
 
     $("#reset").on("click", function () {
       $(".wp-block-post").css("display", "block");

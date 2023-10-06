@@ -100,10 +100,12 @@
           }
         } else {
           for (var i = 0; i < cards.length; i++) {
-            if (cards[i].classList.contains(businessCategory)) {
-              cards[i].style.display = "block";
-            }
-            if (cards[i].classList.contains(communities)) {
+            if (
+              (cards[i].classList.contains(businessCategory) &&
+                cards[i].classList.contains(communities)) ||
+              cards[i].classList.contains(businessCategory) ||
+              cards[i].classList.contains(communities)
+            ) {
               cards[i].style.display = "block";
             }
           }

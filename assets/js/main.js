@@ -93,21 +93,17 @@
       var cards = grid.find(".wp-block-post");
       cards.hide();
 
-      cards.each(function (i) {
-        console.log(cards[i].classList);
-      });
-
       var filtered = cards.filter(function () {
         cards.each(function () {
           if (
             businessCategory !== "" &&
-            cards.hasClass(businessCategory) !== businessCategory
+            this.hasClass(businessCategory) !== businessCategory
           ) {
             return false;
           }
           if (
             communities !== "" &&
-            cards.hasClass(communities) !== communities
+            this.hasClass(communities) !== communities
           ) {
             return false;
           }

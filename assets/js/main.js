@@ -100,9 +100,9 @@
             businessCategory == "" ||
             communities == ""
           ) {
-            cards[i].style.display = "block";
+            return false;
           } else {
-            cards[i].style.display = "none";
+            return true;
           }
           // if (!$(".wp-block-post").is(":visible")) {
           //   noResults.style.display = "block";

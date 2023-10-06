@@ -47,13 +47,30 @@
 
     document
       .getElementById("communities")
-      .addEventListener("change", showOnChange);
+      .addEventListener("change", showOnChange2);
 
     const noResults = document.querySelector(".no-results");
 
     function showOnChange() {
       const cards = document.querySelectorAll(".wp-block-post");
-      let filterSelect = document.getElementsByClassName("filter").value;
+      let filterSelect = document.querySelector("#business-category").value;
+      for (var i = 0; i < cards.length; i++) {
+        if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
+        if (!$(".wp-block-post").is(":visible")) {
+          noResults.style.display = "block";
+        } else {
+          noResults.style.display = "none";
+        }
+      }
+    }
+
+    function showOnChange2() {
+      const cards = document.querySelectorAll(".wp-block-post");
+      let filterSelect = document.querySelector("#communities").value;
       for (var i = 0; i < cards.length; i++) {
         if (cards[i].classList.contains(filterSelect) || filterSelect === "") {
           cards[i].style.display = "block";

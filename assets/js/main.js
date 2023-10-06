@@ -98,19 +98,21 @@
       });
 
       var filtered = cards.filter(function () {
-        if (
-          businessCategory !== "" &&
-          cards.classList.contains(businessCategory) !== businessCategory
-        ) {
-          return false;
-        }
-        if (
-          communities !== "" &&
-          cards.classList.contains(communities) !== communities
-        ) {
-          return false;
-        }
-        return true;
+        cards.each(function () {
+          if (
+            businessCategory !== "" &&
+            cards.classList.contains(businessCategory) !== businessCategory
+          ) {
+            return false;
+          }
+          if (
+            communities !== "" &&
+            cards.classList.contains(communities) !== communities
+          ) {
+            return false;
+          }
+          return true;
+        });
       });
 
       filtered.show();

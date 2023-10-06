@@ -94,22 +94,21 @@
       cards.hide();
 
       var filtered = cards.filter(function () {
-        var classes = cards.each(function () {
-          $(this).classList;
+        for (var i = 0; i < cards.length; i++) {
           if (
-            businessCategory !== "" &&
-            classes.classList.contains(businessCategory) !== businessCategory
+            cards[i].classList.contains(businessCategory, communities) ||
+            filterSelect === ""
           ) {
-            return false;
+            cards[i].style.display = "block";
+          } else {
+            cards[i].style.display = "none";
           }
-          if (
-            communities !== "" &&
-            classes.classList.contains(businessCategory) !== communities
-          ) {
-            return false;
+          if (!$(".wp-block-post").is(":visible")) {
+            noResults.style.display = "block";
+          } else {
+            noResults.style.display = "none";
           }
-          return true;
-        });
+        }
 
         // if (businessCategory !== "" && classes !== businessCategory) {
         //   return false;

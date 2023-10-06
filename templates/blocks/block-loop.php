@@ -46,7 +46,7 @@ $loop = new WP_Query( array(
 
     <?php $filter_label = $posttype === 'business' ? ' Business Category' : $posttype === 'staff' ? ' Department' : ''; ?>
 
-    <?php print_r($posttype);
+    <?php print_r($posttype); ?>
     
     <p>Filter by <?php echo $filter_label ?></p>
     

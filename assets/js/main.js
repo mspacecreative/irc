@@ -102,11 +102,11 @@
           ) {
             cards[i].style.display = "block";
           }
-          // if (!$(".wp-block-post").is(":visible")) {
-          //   noResults.style.display = "block";
-          // } else {
-          //   noResults.style.display = "none";
-          // }
+          if (!cards.is(":visible")) {
+            noResults.style.display = "block";
+          } else {
+            noResults.style.display = "none";
+          }
         }
 
         // if (businessCategory !== "" && classes !== businessCategory) {
@@ -120,11 +120,11 @@
 
       filtered.show();
 
-      if (filtered.length == 0) {
-        noResults.style.display = "block";
-      } else {
-        noResults.style.display = "none";
-      }
+      // if (filtered.length == 0) {
+      //   noResults.style.display = "block";
+      // } else {
+      //   noResults.style.display = "none";
+      // }
     });
 
     // BIO MODAL FUNCTIONALITY

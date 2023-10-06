@@ -83,6 +83,7 @@
     $(".taxonomy-filter-container").on("change", "select", function () {
       let select1 = $("#select-1").val();
       let select2 = $("#select-2").val();
+      let select3 = $("#select-3").val();
 
       var grid = $(".wp-block-cards");
       var cards = grid.find(".wp-block-post");
@@ -95,6 +96,9 @@
           return false;
         }
         if (select2 !== "" && !results.hasClass(select2)) {
+          return false;
+        }
+        if (select3 !== "" && !results.hasClass(select3)) {
           return false;
         }
         return true;

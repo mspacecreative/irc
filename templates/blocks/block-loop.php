@@ -77,7 +77,26 @@ $loop = new WP_Query( array(
     $output.='</select>';
     echo $output;
     endif; ?>
+
+    <p>Filter by Department</p>
+
+    <?php $terms = get_terms( array(
+        'taxonomy' => 'department',
+        'hide_empty' => false
+    ) );
+
+    if ( !empty($terms) ) :
+    $output = '<select id="select-3" class="filter">';
+    $output.= '<option value="" selected>-&nbsp;Any&nbsp;-</option>';
+    foreach( $terms as $term ) {
+        $output.= '<option value="' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
+    }
+    $output.='</select>';
+    echo $output;
+    endif; ?>
+
     <button id="reset">Reset</button>
+
     </div>
 
 <?php endif;

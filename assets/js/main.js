@@ -48,8 +48,8 @@
           document.getElementById("business-category").value;
         let communities = document.getElementById("communities").value;
 
-        const grid = document.querySelector(".wp-block-cards");
-        let cards = grid.children;
+        // const grid = document.querySelector(".wp-block-cards");
+        let cards = document.querySelectorAll(".wp-block-post");
         for (i = 0; i < cards.length; i++) {
           cards[i].style.display = "none";
         }

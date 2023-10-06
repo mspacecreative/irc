@@ -119,6 +119,15 @@
       }
     });
 
+    $("#reset").on("click", function () {
+      $(".taxonomy-filter-container select option").prop(
+        "selected",
+        function () {
+          return this.defaultSelected;
+        }
+      );
+    });
+
     // BIO MODAL FUNCTIONALITY
     let bioButton = $(".bios li > a");
     const modal = $(".modal");

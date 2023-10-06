@@ -77,6 +77,7 @@ $loop = new WP_Query( array(
     $output.='</select>';
     echo $output;
     endif; ?>
+    <button id="reset">Reset</button>
     </div>
 
 <?php endif;

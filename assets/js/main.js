@@ -85,39 +85,69 @@
     //   }
     // }
 
-    $(".taxonomy-filter-container").on("change", "select", function () {
-      let businessCategory = $("#business-category").val();
-      let communities = $("#communities").val();
+    // $(".taxonomy-filter-container").on("change", "select", function () {
+    //   let businessCategory = $("#business-category").val();
+    //   let communities = $("#communities").val();
 
-      var grid = $(".wp-block-cards");
-      var cards = grid.find(".wp-block-post");
-      cards.hide();
+    //   var grid = $(".wp-block-cards");
+    //   var cards = grid.find(".wp-block-post");
+    //   cards.hide();
 
-      var filtered = cards.filter(function (index, elem) {
-        var results = $(elem);
+    //   var filtered = cards.filter(function (index, elem) {
+    //     var results = $(elem);
 
-        if (businessCategory !== "" && !results.hasClass(businessCategory)) {
-          return false;
+    //     if (businessCategory !== "" && !results.hasClass(businessCategory)) {
+    //       return false;
+    //     }
+    //     if (communities !== "" && !results.hasClass(communities)) {
+    //       return false;
+    //     }
+    //     return true;
+    //   });
+
+    //   filtered.show();
+
+    //   if (filtered.length == 0) {
+    //     noResults.style.display = "block";
+    //   } else {
+    //     noResults.style.display = "none";
+    //   }
+    // });
+
+    document
+      .querySelector(".taxonomy-filter-container")
+      .addEventListener("change", "select", function () {
+        let businessCategory =
+          document.getElementById("#business-category").value;
+        let communities = document.getElementById("#communities").value;
+
+        const grid = document.querySelector(".wp-block-cards");
+        let cards = grid.children;
+        cards.style.display = "none";
+
+        let filtered = cards.filter(function (index, elem) {
+          let results = elem;
+
+          if (
+            businessCategory !== "" &&
+            !results.classList.contains(businessCategory)
+          ) {
+            return false;
+          }
+          if (communities !== "" && !results.classList.contains(communities)) {
+            return false;
+          }
+          return true;
+        });
+
+        filtered.style.display = "block";
+
+        if (filtered.length == 0) {
+          noResults.style.display = "block";
+        } else {
+          noResults.style.display = "none";
         }
-        if (communities !== "" && !results.hasClass(communities)) {
-          return false;
-        }
-        // if (!$(".wp-block-post").is(":visible")) {
-        //   noResults.style.display = "block";
-        // } else {
-        //   noResults.style.display = "none";
-        // }
-        return true;
       });
-
-      filtered.show();
-
-      if (filtered.length == 0) {
-        noResults.style.display = "block";
-      } else {
-        noResults.style.display = "none";
-      }
-    });
 
     $("#reset").on("click", function () {
       $(".wp-block-post").css("display", "block");

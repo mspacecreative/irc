@@ -100,13 +100,13 @@
 
         console.log(classes);
 
-        if (businessCategory !== "" && classes !== businessCategory) {
-          return false;
-        }
-        if (communities !== "" && classes !== communities) {
-          return false;
-        }
-        return true;
+        // if (businessCategory !== "" && classes !== businessCategory) {
+        //   return false;
+        // }
+        // if (communities !== "" && classes !== communities) {
+        //   return false;
+        // }
+        // return true;
       });
 
       filtered.show();

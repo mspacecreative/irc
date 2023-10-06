@@ -95,17 +95,17 @@
 
       var filtered = cards.filter(function () {
         cards.each(function () {
-          var classes = $(this).classList;
+          // var classes = $(this).classList;
 
           if (
             businessCategory !== "" &&
-            classes.contains(businessCategory) !== businessCategory
+            $(this).classList.contains(businessCategory) !== businessCategory
           ) {
             return false;
           }
           if (
             communities !== "" &&
-            classes.contains(communities) !== communities
+            $(this).classList.contains(communities) !== communities
           ) {
             return false;
           }

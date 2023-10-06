@@ -41,13 +41,13 @@
       }
     }
 
-    document
-      .getElementById("business-category")
-      .addEventListener("change", showOnChange);
+    // document
+    //   .getElementById("business-category")
+    //   .addEventListener("change", showOnChange);
 
-    document
-      .getElementById("communities")
-      .addEventListener("change", showOnChange2);
+    // document
+    //   .getElementById("communities")
+    //   .addEventListener("change", showOnChange2);
 
     const noResults = document.querySelector(".no-results");
 

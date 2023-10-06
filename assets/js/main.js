@@ -95,18 +95,22 @@
 
       var filtered = cards.filter(function () {
         var classes = cards.each(function () {
-          $(this).className;
+          $(this).classList;
         });
 
-        console.log(classes);
-
-        // if (businessCategory !== "" && classes !== businessCategory) {
-        //   return false;
-        // }
-        // if (communities !== "" && classes !== communities) {
-        //   return false;
-        // }
-        // return true;
+        if (
+          businessCategory !== "" &&
+          classes.contains(businessCategory) !== businessCategory
+        ) {
+          return false;
+        }
+        if (
+          communities !== "" &&
+          classes.contains(communities) !== communities
+        ) {
+          return false;
+        }
+        return true;
       });
 
       filtered.show();

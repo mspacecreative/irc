@@ -43,21 +43,16 @@ $loop = new WP_Query( array(
 <?php if ($filter_visibility) : ?>
     
     <div class="taxonomy-filter-container">
-
-    <?php 
-    $filter_label = $posttype == 'business' ? ' Business Category' : $posttype == 'staff' ? ' Department' : '';
-    $taxonomy_filter = $posttype == 'business' ? 'business-category' : $posttype == 'staff' ? 'department' : '';
-    ?>
     
-    <p>Filter by <?php echo $filter_label ?></p>
+    <p>Filter by Business Category</p>
     
     <?php $terms = get_terms( array(
-        'taxonomy' => $taxonomy_filter,
+        'taxonomy' => 'business-category',
         'hide_empty' => false
     ) );
     
     if ( !empty($terms) ) :
-    $output = '<select id="select-1" class="filter">';
+    $output = '<select id="business-category" class="filter">';
     $output.= '<option value="" selected>-&nbsp;Any&nbsp;-</option>';
     foreach( $terms as $term ) {
         $output.= '<option value="' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
@@ -66,11 +61,7 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
-    <?php $filter_label2 = $posttype == 'business' ? ' Community' : '';
-    
-    if ($posttype == 'business') : ?>
-
-    <p>Filter by  <?php echo $filter_label2 ?></p>
+    <p>Filter by Community</p>
 
     <?php $terms = get_terms( array(
         'taxonomy' => 'communities',
@@ -78,7 +69,7 @@ $loop = new WP_Query( array(
     ) );
     
     if ( !empty($terms) ) :
-    $output = '<select id="select-2" class="filter">';
+    $output = '<select id="communities" class="filter">';
     $output.= '<option value="" selected>-&nbsp;Any&nbsp;-</option>';
     foreach( $terms as $term ) {
         $output.= '<option value="' . sanitize_title(strtolower($term->name)) .'">' . esc_html( $term->name ) . '</option>';
@@ -86,9 +77,6 @@ $loop = new WP_Query( array(
     $output.='</select>';
     echo $output;
     endif; ?>
-
-    <?php endif ?>
-
     <button id="reset">Reset</button>
     </div>
 
@@ -105,14 +93,16 @@ $loop = new WP_Query( array(
 
     $terms = array();
 
-    if ( !empty(wp_get_post_terms(get_the_ID(), array($taxonomy_filter))) ) {
-        foreach ( wp_get_post_terms(get_the_ID(), array($taxonomy_filter)) as $term ) {
+    if ( !empty(wp_get_post_terms(get_the_ID(), array($taxonomy, $taxonomy2))) ) {
+        foreach ( wp_get_post_terms(get_the_ID(), array($taxonomy, $taxonomy2)) as $term ) {
             $t = get_term($term);
             array_push($terms, $t->name);
             $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);
             $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));
         }
     }
+
+    // $terms = get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '');
 
     $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);
     $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));

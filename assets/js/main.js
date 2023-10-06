@@ -81,8 +81,8 @@
     const noResults = document.querySelector(".no-results");
 
     $(".taxonomy-filter-container").on("change", "select", function () {
-      let businessCategory = $("#select-1").val();
-      let communities = $("#select-2").val();
+      let select1 = $("#select-1").val();
+      let select2 = $("#select-2").val();
 
       var grid = $(".wp-block-cards");
       var cards = grid.find(".wp-block-post");
@@ -91,10 +91,10 @@
       var filtered = cards.filter(function (index, elem) {
         var results = $(elem);
 
-        if (businessCategory !== "" && !results.hasClass(businessCategory)) {
+        if (select1 !== "" && !results.hasClass(select1)) {
           return false;
         }
-        if (communities !== "" && !results.hasClass(communities)) {
+        if (select2 !== "" && !results.hasClass(select2)) {
           return false;
         }
         return true;

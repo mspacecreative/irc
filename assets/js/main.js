@@ -93,8 +93,8 @@
       var cards = grid.find(".wp-block-post");
       cards.hide();
 
-      cards.each(function () {
-        console.log(cards.classList);
+      cards.each(function (i) {
+        console.log(cards[i].classList);
       });
 
       var filtered = cards.filter(function (index, elem) {

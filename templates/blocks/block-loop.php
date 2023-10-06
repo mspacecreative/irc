@@ -43,8 +43,10 @@ $loop = new WP_Query( array(
 <?php if ($filter_visibility) : ?>
     
     <div class="taxonomy-filter-container">
+
+    <?php $filter_label = $posttype == 'business' ? ' Business Category' : $posttype == 'staff' ? ' Department' : ''; ?>
     
-    <p>Filter by Business Category</p>
+    <p>Filter by <?php echo $filter_label ?></p>
     
     <?php $terms = get_terms( array(
         'taxonomy' => 'business-category',
@@ -61,7 +63,11 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
-    <p>Filter by Community</p>
+    <?php $filter_label2 = $posttype == 'business' ? ' Community' : '';
+    
+    if ($posttype == 'business') : ?>
+
+    <p>Filter by  <?php echo $filter_label ?></p>
 
     <?php $terms = get_terms( array(
         'taxonomy' => 'communities',
@@ -77,7 +83,10 @@ $loop = new WP_Query( array(
     $output.='</select>';
     echo $output;
     endif; ?>
-    <button id="reset">Reset</button>
+
+    <?php endif ?>
+    <button id="reset">Rese
+        t</button>
     </div>
 
 <?php endif;

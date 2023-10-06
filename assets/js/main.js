@@ -96,7 +96,8 @@
       var filtered = cards.filter(function () {
         for (var i = 0; i < cards.length; i++) {
           if (
-            cards[i].classList.contains(businessCategory, communities) ||
+            cards[i].classList.contains(businessCategory) ||
+            cards[i].classList.contains(businessCategory) ||
             businessCategory == "" ||
             communities == ""
           ) {

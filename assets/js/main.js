@@ -104,11 +104,11 @@
           } else {
             cards[i].style.display = "none";
           }
-          if (!$(".wp-block-post").is(":visible")) {
-            noResults.style.display = "block";
-          } else {
-            noResults.style.display = "none";
-          }
+          // if (!$(".wp-block-post").is(":visible")) {
+          //   noResults.style.display = "block";
+          // } else {
+          //   noResults.style.display = "none";
+          // }
         }
 
         // if (businessCategory !== "" && classes !== businessCategory) {

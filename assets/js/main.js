@@ -94,7 +94,7 @@
       cards.hide();
 
       var filtered = cards.filter(function (index, elem) {
-        var data = $(elem).classList(businessCategory, communities);
+        var data = $(elem).hasClass(businessCategory, communities);
         if (
           businessCategory !== "all" &&
           data.eq(1).text() !== businessCategory

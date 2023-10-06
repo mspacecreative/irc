@@ -120,6 +120,7 @@
     });
 
     $("#reset").on("click", function () {
+      $(".wp-block-post").css("display", "block");
       $(".taxonomy-filter-container select option").prop(
         "selected",
         function () {

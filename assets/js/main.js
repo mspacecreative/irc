@@ -98,6 +98,8 @@
           $(this).classList.contains(businessCategory, communities);
         });
 
+        console.log(classes);
+
         if (businessCategory !== "" && classes !== businessCategory) {
           return false;
         }

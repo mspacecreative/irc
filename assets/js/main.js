@@ -50,7 +50,9 @@
 
         const grid = document.querySelector(".wp-block-cards");
         let cards = grid.children;
-        cards.style.display = "none";
+        for (i = 0; i < cards.length; i++) {
+          cards[i].style.display = "none";
+        }
 
         let filtered = cards.filter(function (index, elem) {
           let results = elem;

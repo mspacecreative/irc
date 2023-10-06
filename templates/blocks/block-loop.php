@@ -8,6 +8,7 @@ $placeholder_image = get_template_directory_uri() . '/assets/img/placeholders/ir
 $placeholder_images = get_field('allow_placeholders');
 $taxonomy = get_field('taxonomy_select');
 $taxonomy2 = get_field('taxonomy2_select');
+$taxonomies = $taxonomy && $taxonomy2 ? $taxonomy, $taxonomy2 : $taxonomy;
 $filter_visibility = get_field('filter_visibility');
 
 switch($cols) {
@@ -112,8 +113,8 @@ $loop = new WP_Query( array(
 
     $terms = array();
 
-    if ( !empty(wp_get_post_terms(get_the_ID(), array($taxonomy, $taxonomy2))) ) {
-        foreach ( wp_get_post_terms(get_the_ID(), array($taxonomy, $taxonomy2)) as $term ) {
+    if ( !empty(wp_get_post_terms(get_the_ID(), array($taxonomies))) ) {
+        foreach ( wp_get_post_terms(get_the_ID(), array($taxonomies)) as $term ) {
             $t = get_term($term);
             array_push($terms, $t->name);
             $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);

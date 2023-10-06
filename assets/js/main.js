@@ -101,13 +101,13 @@
         cards.each(function () {
           if (
             businessCategory !== "" &&
-            cards.classList.contains(businessCategory) !== businessCategory
+            cards.hasClass(businessCategory) !== businessCategory
           ) {
             return false;
           }
           if (
             communities !== "" &&
-            cards.classList.contains(communities) !== communities
+            cards.hasClass(communities) !== communities
           ) {
             return false;
           }

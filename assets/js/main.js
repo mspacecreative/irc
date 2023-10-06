@@ -95,17 +95,12 @@
 
       var filtered = cards.filter(function () {
         for (var i = 0; i < cards.length; i++) {
-          if (
-            cards[i].classList.contains(businessCategory) ||
-            cards[i].classList.contains(communities) ||
-            (businessCategory == "" && communities == "")
-          ) {
+          if (businessCategory == "" && communities == "") {
             cards[i].style.display = "block";
-          }
-          if (!cards.is(":visible")) {
-            noResults.style.display = "block";
-          } else {
-            noResults.style.display = "none";
+          } else if (cards[i].classList.contains(businessCategory)) {
+            cards[i].style.display = "block";
+          } else if (cards[i].classList.contains(communities)) {
+            cards[i].style.display = "block";
           }
         }
 
@@ -120,11 +115,11 @@
 
       filtered.show();
 
-      // if (filtered.length == 0) {
-      //   noResults.style.display = "block";
-      // } else {
-      //   noResults.style.display = "none";
-      // }
+      if (filtered.length == 0) {
+        noResults.style.display = "block";
+      } else {
+        noResults.style.display = "none";
+      }
     });
 
     // BIO MODAL FUNCTIONALITY

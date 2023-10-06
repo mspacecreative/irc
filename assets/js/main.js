@@ -94,9 +94,21 @@
       cards.hide();
 
       var filtered = cards.filter(function () {
-        var classes = cards.each(function (i) {
+        var classes = cards.each(function () {
           $(this).classList;
-          console.log(classes[i]);
+          if (
+            businessCategory !== "" &&
+            classes.classList.contains(businessCategory) !== businessCategory
+          ) {
+            return false;
+          }
+          if (
+            communities !== "" &&
+            classes.classList.contains(businessCategory) !== communities
+          ) {
+            return false;
+          }
+          return true;
         });
 
         // if (businessCategory !== "" && classes !== businessCategory) {

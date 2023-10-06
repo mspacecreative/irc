@@ -42,14 +42,6 @@
     }
 
     document
-      .getElementById("business-category")
-      .addEventListener("change", showOnChange);
-
-    document
-      .getElementById("communities")
-      .addEventListener("change", showOnChange2);
-
-    document
       .querySelector(".taxonomy-filter-container select")
       .addEventListener("change", function () {
         let businessCategory =

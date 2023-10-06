@@ -48,8 +48,6 @@ $loop = new WP_Query( array(
     $filter_label = $posttype == 'business' ? ' Business Category' : $posttype == 'staff' ? ' Department' : '';
     $taxonomy_filter = $posttype == 'business' ? 'business-category' : $posttype == 'staff' ? 'department' : '';
     ?>
-
-    <?php print_r($posttype); ?>
     
     <p>Filter by <?php echo $filter_label ?></p>
     
@@ -115,8 +113,6 @@ $loop = new WP_Query( array(
             $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));
         }
     }
-
-    // $terms = get_the_term_list(get_the_ID(), array($taxonomy, $taxonomy2), '', ' ', '');
 
     $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);
     $sanitizedclasses = strtolower(implode(' ', $sanitizedclasses));

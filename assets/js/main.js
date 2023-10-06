@@ -93,22 +93,21 @@
       var cards = grid.find(".wp-block-post");
       cards.hide();
 
-      var filtered = cards.filter(function () {
-        cards.each(function () {
-          if (
-            businessCategory !== "" &&
-            this.hasClass(businessCategory) !== businessCategory
-          ) {
-            return false;
-          }
-          if (
-            communities !== "" &&
-            this.hasClass(communities) !== communities
-          ) {
-            return false;
-          }
-          return true;
-        });
+      var filtered = cards.filter(function (index, elem) {
+        var classes = $(elem).classList;
+        if (
+          businessCategory !== "" &&
+          classes.includes(businessCategory) !== businessCategory
+        ) {
+          return false;
+        }
+        if (
+          communities !== "" &&
+          classes.includes(communities) !== communities
+        ) {
+          return false;
+        }
+        return true;
       });
 
       filtered.show();

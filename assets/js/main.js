@@ -85,22 +85,23 @@
     //   }
     // }
 
-    $(".taxonomy-filter-container").on("change", "select", function () {
-      var businessCategory = $("#business-category").val(),
-        communities = $("#communities").val();
+    $("#business-category").on("change", function () {
+      var businessCategory = $(this).val();
 
       var grid = $(".wp-block-cards");
       var cards = grid.find(".wp-block-post");
       cards.hide();
 
       var filtered = cards.filter(function () {
-        for (var i = 0; i < cards.length; i++) {
-          if (businessCategory == "" && communities == "") {
+        if (businessCategory == "") {
+          for (var i = 0; i < cards.length; i++) {
             cards[i].style.display = "block";
-          } else if (cards[i].classList.contains(businessCategory)) {
-            cards[i].style.display = "block";
-          } else if (cards[i].classList.contains(communities)) {
-            cards[i].style.display = "block";
+          }
+        } else {
+          for (var i = 0; i < cards.length; i++) {
+            if (cards[i].classList.contains(businessCategory)) {
+              cards[i].style.display = "block";
+            }
           }
         }
 
@@ -117,8 +118,42 @@
 
       if (filtered.length == 0) {
         noResults.style.display = "block";
-      } else {
-        noResults.style.display = "none";
+      }
+    });
+
+    $("#communities").on("change", function () {
+      var communities = $(this).val();
+
+      var grid = $(".wp-block-cards");
+      var cards = grid.find(".wp-block-post");
+      cards.hide();
+
+      var filtered = cards.filter(function () {
+        if (communities == "") {
+          for (var i = 0; i < cards.length; i++) {
+            cards[i].style.display = "block";
+          }
+        } else {
+          for (var i = 0; i < cards.length; i++) {
+            if (cards[i].classList.contains(communities)) {
+              cards[i].style.display = "block";
+            }
+          }
+        }
+
+        // if (businessCategory !== "" && classes !== businessCategory) {
+        //   return false;
+        // }
+        // if (communities !== "" && classes !== communities) {
+        //   return false;
+        // }
+        // return true;
+      });
+
+      filtered.show();
+
+      if (filtered.length == 0) {
+        noResults.style.display = "block";
       }
     });
 

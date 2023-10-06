@@ -97,7 +97,8 @@
         for (var i = 0; i < cards.length; i++) {
           if (
             cards[i].classList.contains(businessCategory, communities) ||
-            filterSelect === ""
+            businessCategory == "" ||
+            communities == ""
           ) {
             cards[i].style.display = "block";
           } else {

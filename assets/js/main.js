@@ -100,13 +100,13 @@
         console.log(classes);
         if (
           businessCategory !== "" &&
-          classes.includes(businessCategory) !== businessCategory
+          classes.hasClass(businessCategory) !== businessCategory
         ) {
           return false;
         }
         if (
           communities !== "" &&
-          classes.includes(communities) !== communities
+          classes.hasClass(communities) !== communities
         ) {
           return false;
         }

@@ -105,8 +105,8 @@ $loop = new WP_Query( array(
 
     $terms = array();
 
-    if ( !empty(wp_get_post_terms(get_the_ID(), array($taxonomy, $taxonomy2))) ) {
-        foreach ( wp_get_post_terms(get_the_ID(), array($taxonomy, $taxonomy2)) as $term ) {
+    if ( !empty(wp_get_post_terms(get_the_ID(), array($taxonomy_filter))) ) {
+        foreach ( wp_get_post_terms(get_the_ID(), array($taxonomy_filter)) as $term ) {
             $t = get_term($term);
             array_push($terms, $t->name);
             $sanitizedclasses = preg_replace('#[ -]+#', '-', $terms);

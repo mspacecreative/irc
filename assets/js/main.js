@@ -81,8 +81,8 @@
     const noResults = document.querySelector(".no-results");
 
     $(".taxonomy-filter-container").on("change", "select", function () {
-      let businessCategory = $("#business-category").val();
-      let communities = $("#communities").val();
+      let businessCategory = $("#select-1").val();
+      let communities = $("#select-2").val();
 
       var grid = $(".wp-block-cards");
       var cards = grid.find(".wp-block-post");

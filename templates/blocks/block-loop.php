@@ -67,7 +67,7 @@ $loop = new WP_Query( array(
     
     if ($posttype == 'business') : ?>
 
-    <p>Filter by  <?php echo $filter_label ?></p>
+    <p>Filter by  <?php echo $filter_label2 ?></p>
 
     <?php $terms = get_terms( array(
         'taxonomy' => 'communities',
@@ -85,7 +85,7 @@ $loop = new WP_Query( array(
     endif; ?>
 
     <?php endif ?>
-    
+
     <button id="reset">Reset</button>
     </div>
 

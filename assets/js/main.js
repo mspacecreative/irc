@@ -85,76 +85,43 @@
     //   }
     // }
 
-    $("#business-category").on("change", function () {
-      var businessCategory = $(this).val();
+    $(".taxonomy-filter-container").on("change", "select", function () {
+      let businessCategory = $("#business-category").val();
+      let communities = $("#communities").val();
 
       var grid = $(".wp-block-cards");
       var cards = grid.find(".wp-block-post");
       cards.hide();
 
       var filtered = cards.filter(function () {
-        if (businessCategory == "") {
+        if (businessCategory == "" && communities == "") {
           for (var i = 0; i < cards.length; i++) {
             cards[i].style.display = "block";
           }
         } else {
-          for (var i = 0; i < cards.length; i++) {
-            if (cards[i].classList.contains(businessCategory)) {
+          if (cards[i].classList.contains(businessCategory)) {
+            for (var i = 0; i < cards.length; i++) {
+              cards[i].style.display = "block";
+            }
+          } else if (cards[i].classList.contains(communities)) {
+            for (var i = 0; i < cards.length; i++) {
               cards[i].style.display = "block";
             }
           }
         }
 
-        // if (businessCategory !== "" && classes !== businessCategory) {
-        //   return false;
-        // }
-        // if (communities !== "" && classes !== communities) {
-        //   return false;
-        // }
-        // return true;
-      });
-
-      filtered.show();
-
-      if (filtered.length == 0) {
-        noResults.style.display = "block";
-      }
-    });
-
-    $("#communities").on("change", function () {
-      var communities = $(this).val();
-
-      var grid = $(".wp-block-cards");
-      var cards = grid.find(".wp-block-post");
-      cards.hide();
-
-      var filtered = cards.filter(function () {
-        if (communities == "") {
-          for (var i = 0; i < cards.length; i++) {
-            cards[i].style.display = "block";
-          }
+        if (!$(".wp-block-post").is(":visible")) {
+          noResults.style.display = "block";
         } else {
-          for (var i = 0; i < cards.length; i++) {
-            if (cards[i].classList.contains(communities)) {
-              cards[i].style.display = "block";
-            }
-          }
+          noResults.style.display = "none";
         }
-
-        // if (businessCategory !== "" && classes !== businessCategory) {
-        //   return false;
-        // }
-        // if (communities !== "" && classes !== communities) {
-        //   return false;
-        // }
-        // return true;
       });
 
       filtered.show();
 
-      if (filtered.length == 0) {
-        noResults.style.display = "block";
-      }
+      // if (filtered.length == 0) {
+      //   noResults.style.display = "block";
+      // }
     });
 
     // BIO MODAL FUNCTIONALITY

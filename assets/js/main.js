@@ -102,11 +102,11 @@
         if (communities !== "" && !results.hasClass(communities)) {
           return false;
         }
-        if (!$(".wp-block-post").is(":visible")) {
-          noResults.style.display = "block";
-        } else {
-          noResults.style.display = "none";
-        }
+        // if (!$(".wp-block-post").is(":visible")) {
+        //   noResults.style.display = "block";
+        // } else {
+        //   noResults.style.display = "none";
+        // }
         return true;
       });
 
@@ -114,6 +114,8 @@
 
       if (filtered.length == 0) {
         noResults.style.display = "block";
+      } else {
+        noResults.style.display = "none";
       }
     });
 

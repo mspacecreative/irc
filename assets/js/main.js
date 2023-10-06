@@ -95,7 +95,7 @@
 
       var filtered = cards.filter(function () {
         var classes = cards.each(function (i) {
-          $(this).classList[i];
+          $(this)[i].classList;
         });
 
         console.log(classes);

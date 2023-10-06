@@ -115,8 +115,8 @@
     // });
 
     document
-      .querySelector(".taxonomy-filter-container")
-      .addEventListener("change", "select", function () {
+      .querySelector(".taxonomy-filter-container select")
+      .addEventListener("change", function () {
         let businessCategory =
           document.getElementById("#business-category").value;
         let communities = document.getElementById("#communities").value;

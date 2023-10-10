@@ -78,7 +78,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 						if ($featuredimg) : ?>
 							<div class="hide-on-mobile bottom-margin-2em">
 								<?php 
-								$caption = get_post(get_post_thumbnail_id())->post_excerpt ? '<p class="text__small">' . get_post(get_post_thumbnail_id())->post_excerpt . '</p>' : '';
+								$caption = get_post(get_post_thumbnail_id())->post_excerpt ? '<p class="text__small" style="margin-block-start: 0;">' . get_post(get_post_thumbnail_id())->post_excerpt . '</p>' : '';
 								echo get_the_post_thumbnail(get_the_ID(), 'large');
 								echo $caption ?>
 							</div>

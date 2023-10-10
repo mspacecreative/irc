@@ -3134,8 +3134,8 @@ header:not(.white-bg) .logo--blue {
   box-shadow: 0 5px 10px #9c9b9b;
 }
 
-.reverse {
-  flex-direction: row-reverse;
+.row {
+  flex: auto;
 }
 
 .ek-linked-block:hover {

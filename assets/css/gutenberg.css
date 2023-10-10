@@ -6,8 +6,8 @@
   -o-transition: 0.25s ease-in-out;
 }
 
-.wp-admin .editor-styles-wrapper .reverse {
-  flex-direction: row-reverse;
+.wp-admin .editor-styles-wrapper .row {
+  flex: auto;
 }
 .wp-admin .editor-styles-wrapper .ek-linked-block:hover {
   opacity: 0.75;

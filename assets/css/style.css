@@ -2509,9 +2509,6 @@ body .has-global-padding > * {
   padding-right: 2rem;
 }
 
-body:not(.page-template-page-sidebar, .single) main {
-  flex-basis: calc(66.666% - 4rem);
-}
 @media (min-width: 1024px) {
   body:not(.page-template-page-sidebar, .single) main {
     order: 1;

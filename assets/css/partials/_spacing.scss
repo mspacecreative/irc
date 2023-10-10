@@ -147,7 +147,7 @@ body .has-global-padding {
 }
 
 body:not(.page-template-page-sidebar, .single) main {
-  flex-basis: calc(66.666% - 4rem);
+  // flex-basis: calc(66.666% - 4rem);
 
   @media (min-width: 1024px) {
     & {

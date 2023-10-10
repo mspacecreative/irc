@@ -24,25 +24,14 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		</div>
 	
 		<?php
-		if ( have_posts() ):
-		while ( have_posts() ): the_post();
-		
 		if ($boxedlayout) : ?>
 		<div class="inner_container">
 		<?php endif; ?>
+
+		<?php echo term_description(); ?>
 			
 		<?php if ($boxedlayout) : ?>
 		</div>
-		<?php endif; ?>
-			
-		<?php endwhile;
-			
-		else : ?>
-
-		<div class="inner_container">
-		<p>no posts found.</p>
-		</div>
-			
 		<?php endif; ?>
 
 	</main>

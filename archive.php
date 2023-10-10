@@ -31,13 +31,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<div class="inner_container">
 		<?php endif; ?>
 			
-		<?php 
-		$terms = get_the_terms(get_the_ID(), 'communities');
-		foreach ($terms as $term) {
-			echo $term->description;
-		}
-
-		echo the_content();
+		<?php echo the_content();
 
 		if ($boxedlayout) : ?>
 		</div>

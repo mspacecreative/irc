@@ -32,10 +32,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<?php endif; ?>
 			
 		<?php 
-		$terms = get_terms(array(
-			'taxonomy' => 'communities',
-			'hide_empty' => false
-		));
+		$terms = get_the_terms(get_the_ID(), 'communities');
 		foreach ($terms as $term) {
 			echo $term->description;
 		}

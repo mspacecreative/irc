@@ -92,10 +92,18 @@
       var filtered = cards.filter(function (index, elem) {
         var results = $(elem);
 
-        if (select1 !== "" && !results.hasClass(select1)) {
+        if (
+          $("#select-1").length &&
+          select1 !== "" &&
+          !results.hasClass(select1)
+        ) {
           return false;
         }
-        if (select2 !== "" && !results.hasClass(select2)) {
+        if (
+          $("#select-2").length &&
+          select2 !== "" &&
+          !results.hasClass(select2)
+        ) {
           return false;
         }
         if (

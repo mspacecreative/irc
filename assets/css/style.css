@@ -3138,6 +3138,10 @@ header:not(.white-bg) .logo--blue {
   flex: auto;
 }
 
+.reverse {
+  flex-direction: row-reverse;
+}
+
 .ek-linked-block:hover {
   opacity: 0.75;
 }

@@ -2,9 +2,9 @@
   flex: auto;
 }
 
-// .reverse {
-//   flex-direction: row-reverse;
-// }
+.reverse {
+  flex-direction: row-reverse;
+}
 
 .ek-linked-block {
   @extend %smooth-transition-25;

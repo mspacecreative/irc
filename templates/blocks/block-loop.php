@@ -182,10 +182,11 @@ $loop = new WP_Query( array(
 
             echo
             '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . $credentials . '</h2>';
-        }
+        } else {
 
         echo
         '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
+        }
 
         if ( have_rows('staff_data', get_the_ID()) ) {
         echo

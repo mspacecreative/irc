@@ -34,7 +34,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<?php 
 		$term = get_queried_object();
 
-		echo term_description(); echo the_content();
+		echo term_description(get_the_ID(), $term); echo the_content();
 
 		if ($boxedlayout) : ?>
 		</div>

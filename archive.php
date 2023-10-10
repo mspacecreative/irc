@@ -27,9 +27,9 @@ $boxedlayout = get_field('boxed_layout'); ?>
 
 			<?php echo term_description(); ?>
 
-			<?php if (have_rows('contact_information_term', $term_id)) : ?>
+			<?php if (have_rows('contact_information_term', get_the_ID())) : ?>
 			<div class="contact-information">
-				<?php while (have_rows('contact_information_term', $term_id)) : the_row();
+				<?php while (have_rows('contact_information_term', get_the_ID())) : the_row();
 				$position = get_sub_field('position__title');
 				$name = get_sub_field('name');
 				$emailaddress = get_sub_field('email_address');
@@ -56,10 +56,10 @@ $boxedlayout = get_field('boxed_layout'); ?>
 				<p style="margin-block-start: 1rem;"><?php echo __('Email: ') . '<a href="mailto:' . $emailaddress . '">' . $emailaddress . '</a>'; ?></p>
 				<?php endif; ?>
 
-				<?php if (have_rows('phone_numbers', $term_id)) : ?>
+				<?php if (have_rows('phone_numbers', get_the_ID())) : ?>
 				<p style="margin-block-start: 1rem;"><?php echo __('Phone:'); ?>
 				<ul class="phone-numbers">
-				<?php while (have_rows('phone_numbers', $term_id)) : the_row(); ?>
+				<?php while (have_rows('phone_numbers', get_the_ID())) : the_row(); ?>
 					<li><?php echo get_sub_field('phone_number'); ?></li>
 				<?php endwhile; ?>
 				</ul>

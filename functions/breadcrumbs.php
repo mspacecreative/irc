@@ -33,6 +33,14 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
            )
        );
       array_splice($links, -1, 0, $breadcrumb); 
+    } elseif( is_tax('communities')){
+        $breadcrumb = array(
+           array(
+           'url' => site_url( '/about/communities/community-corporations' ),
+           'text' => 'Community Corporations',
+           )
+       );
+      array_splice($links, -1, 0, $breadcrumb); 
     }
      return $links;
  }

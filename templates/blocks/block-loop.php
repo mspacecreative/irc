@@ -176,15 +176,12 @@ $loop = new WP_Query( array(
             '</div>';
         }
 
-        if (have_rows('staff-data')) {
+        while (have_rows('staff_data')) {
+            the_row();
+            $credentials = get_sub_field('credentials') ? __(', ') . get_sub_field('credentials') : '';
 
-            while (have_rows('staff-data')) {
-                the_row();
-                $credentials = get_sub_field('credentials') ? __(', ') . get_sub_field('credentials') : '';
-
-                echo
-                '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . $credentials . '</h2>';
-            }
+            echo
+            '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . $credentials . '</h2>';
         }
 
         echo

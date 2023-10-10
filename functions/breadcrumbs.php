@@ -25,6 +25,14 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
            )
        );
       array_splice($links, -1, 0, $breadcrumb); 
+    } elseif( is_singular('business')){
+        $breadcrumb = array(
+           array(
+           'url' => site_url( '/business/inuvialuit-business-list' ),
+           'text' => 'Inuvialuit Business List',
+           )
+       );
+      array_splice($links, -1, 0, $breadcrumb); 
     }
      return $links;
  }

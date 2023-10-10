@@ -31,9 +31,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<div class="inner_container">
 		<?php endif; ?>
 			
-		<?php echo the_content();
-
-		if ($boxedlayout) : ?>
+		<?php if ($boxedlayout) : ?>
 		</div>
 		<?php endif; ?>
 			

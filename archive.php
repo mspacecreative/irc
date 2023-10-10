@@ -32,7 +32,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<?php endif; ?>
 			
 		<?php 
-		$term_description = get_term($term_id)->description;
+		$term_description = get_the_archive_description();
 
 		echo $term_description; echo the_content();
 

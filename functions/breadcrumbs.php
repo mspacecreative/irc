@@ -10,7 +10,7 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
  function unbox_yoast_seo_breadcrumb_append_link( $links ) {
      
      if( is_singular('post')){
-         $breadcrumb = array(
+        $breadcrumb = array(
             array(
             'url' => site_url( '/news/' ),
             'text' => 'News',
@@ -23,25 +23,21 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
            'url' => site_url( '/services/' ),
            'text' => 'Services',
            )
-       );
+        );
       array_splice($links, -1, 0, $breadcrumb); 
     } elseif( is_singular('business')){
         $breadcrumb = array(
            array(
-           'url' => site_url( '/business/inuvialuit-business-list' ),
-           'text' => 'Inuvialuit Business List',
-           )
-       );
-      array_splice($links, -1, 0, $breadcrumb); 
-    } elseif( is_singular('business')){
-        $breadcrumb = array(
-           array(
-           'url' => site_url( '/business' ),
+           'url' => site_url( '/businesst' ),
            'text' => 'Business',
            )
-       );
-      array_splice($links, 0, 0, $breadcrumb); 
-    }  elseif( is_tax('communities')){
+           array(
+            'url' => site_url( '/business/inuvialuit-business-list' ),
+            'text' => 'Inuvialuit Business List',
+            )
+        );
+      array_splice($links, -1, 0, $breadcrumb); 
+    } elseif( is_tax('communities')){
         $breadcrumb = array(
            array(
            'url' => site_url( '/about/communities/community-corporations' ),

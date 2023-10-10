@@ -28,9 +28,9 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
     } elseif( is_singular('business')){
         $breadcrumb = array(
            array(
-           'url' => site_url( '/businesst' ),
+           'url' => site_url( '/business' ),
            'text' => 'Business',
-           )
+           ),
            array(
             'url' => site_url( '/business/inuvialuit-business-list' ),
             'text' => 'Inuvialuit Business List',

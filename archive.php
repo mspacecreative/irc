@@ -51,7 +51,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 
 	<?php if ($sidebar) : ?>
 	<aside>
-		
+		 
 	</aside>
 	<?php endif; ?>
 

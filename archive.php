@@ -31,7 +31,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<div class="inner_container">
 		<?php endif; ?>
 			
-		<?php echo get_the_archive_description(); echo the_content();
+		<?php echo the_archive_description(); echo the_content();
 
 		if ($boxedlayout) : ?>
 		</div>

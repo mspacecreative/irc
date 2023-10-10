@@ -5,9 +5,14 @@ ul.staff-data {
   li {
     text-indent: 0;
 
-    &:not(:last-of-type) {
-      margin-block-end: 10px;
+    &:first-of-type {
+      margin-block: 5px 15px;
+      line-height: 1.35em;
     }
+
+    // &:not(:last-of-type) {
+    //   margin-block-end: 10px;
+    // }
 
     &::before {
       display: none;

@@ -3273,9 +3273,9 @@ ul.staff-data {
 ul.staff-data li {
   text-indent: 0;
 }
-ul.staff-data li:not(:last-of-type) {
-  -webkit-margin-after: 10px;
-          margin-block-end: 10px;
+ul.staff-data li:first-of-type {
+  margin-block: 5px 15px;
+  line-height: 1.35em;
 }
 ul.staff-data li::before {
   display: none;

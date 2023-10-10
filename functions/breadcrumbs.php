@@ -5,7 +5,7 @@ function breadcrumbs() {
     }
 }
 
-// ADDING NEWS INDEX LINK TO BREADCRUMBS
+// ADDING CUSTOM PARENT LINKS TO BREADCRUMBS
 add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' );
  function unbox_yoast_seo_breadcrumb_append_link( $links ) {
      global $post;

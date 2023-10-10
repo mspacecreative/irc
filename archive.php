@@ -31,7 +31,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<div class="inner_container">
 		<?php endif; ?>
 			
-		<?php the_content();
+		<?php echo term_description(); echo the_content();
 
 		if ($boxedlayout) : ?>
 		</div>

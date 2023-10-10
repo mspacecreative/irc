@@ -19,7 +19,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 			'</div>';
 			} 
 			if ( !$pagetitle ) : ?>
-			<h1><?php echo single_term_title('', false) ?></h1>
+			<h1><?php echo single_term_title('', false); echo 'stuff'; ?></h1>
 			<?php endif; ?>
 		</div>
 	

@@ -32,7 +32,7 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<?php endif; ?>
 			
 		<?php 
-		$term_description = term_description();
+		$term_description = term_description($term_id, 'communities');
 
 		echo $term_description; echo the_content();
 

@@ -186,9 +186,8 @@ $loop = new WP_Query( array(
                 '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . $credentials . '</h2>';
             } 
         } else {
-
-        echo
-        '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
+            echo
+            '<h2 class="wp-block-post-title has-medium-font-size"' . $bottom_margin . '>' . esc_html__($title) . '</h2>';
         }
 
         if ( have_rows('staff_data', get_the_ID()) ) {
@@ -204,11 +203,21 @@ $loop = new WP_Query( array(
                         '<li class="has-small-font-size">' . $value . '</li>';
                     }
                 }
-                foreach (array_slice($data,1) as $key => $value) {
-                    if (!empty($value) ) { 
-                        $field = get_sub_field_object( $key );
-                        echo
-                        '<li><strong>' . $field['label'] . ':</strong> ' . $value . '</li>';
+                if (!empty(get_sub_field('credentials'))) {
+                    foreach (array_slice($data,2) as $key => $value) {
+                        if (!empty($value) ) { 
+                            $field = get_sub_field_object( $key );
+                            echo
+                            '<li><strong>' . $field['label'] . ':</strong> ' . $value . '</li>';
+                        }
+                    }
+                } else {
+                    foreach (array_slice($data,1) as $key => $value) {
+                        if (!empty($value) ) { 
+                            $field = get_sub_field_object( $key );
+                            echo
+                            '<li><strong>' . $field['label'] . ':</strong> ' . $value . '</li>';
+                        }
                     }
                 }
             }

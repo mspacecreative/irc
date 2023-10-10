@@ -40,7 +40,7 @@ add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' )
            'text' => 'Business',
            )
        );
-      array_splice($links, -1, 0, $breadcrumb); 
+      array_splice($links, 0, 0, $breadcrumb); 
     }  elseif( is_tax('communities')){
         $breadcrumb = array(
            array(

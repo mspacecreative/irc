@@ -20,7 +20,6 @@ $featuredimg = get_field('featured_image'); ?>
 				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 row end-lg end-md" style="margin-left:0; margin-right: 0;">
 					<a href="<?php echo home_url('about/communities/community-corporations'); ?>" class="text__small link__arrow-right">
 						<?php echo __('All Communities'); ?>
-						<?php endif; ?>
 					</a>
 				</div>
 			</div>

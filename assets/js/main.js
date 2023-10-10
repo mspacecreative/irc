@@ -98,7 +98,11 @@
         if (select2 !== "" && !results.hasClass(select2)) {
           return false;
         }
-        if (select3 !== "" && !results.hasClass(select3)) {
+        if (
+          $("#select-3").length &&
+          select3 !== "" &&
+          !results.hasClass(select3)
+        ) {
           return false;
         }
         return true;

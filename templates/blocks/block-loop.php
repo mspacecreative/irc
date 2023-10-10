@@ -79,6 +79,8 @@ $loop = new WP_Query( array(
     echo $output;
     endif; ?>
 
+    <?php if $posttype == 'staff' ?>
+    
     <p>Filter by Department</p>
 
     <?php $terms = get_terms( array(
@@ -95,6 +97,8 @@ $loop = new WP_Query( array(
     $output.='</select>';
     echo $output;
     endif; ?>
+
+    <?php endif; ?>
 
     <button id="reset">Reset</button>
 

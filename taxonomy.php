@@ -45,7 +45,7 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 				<div class="col col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<?php if ( !$pagetitle ) :
 					$title = $post_type == 'post' ? the_title() : single_term_title(); ?>
-					<h1 class="post__title"><?php $title ?></h1>
+					<h1 class="post__title"><?php esc_html_e($title); ?></h1>
 					<?php endif;
 					
 					if ($post_type == 'post') : ?>

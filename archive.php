@@ -23,16 +23,59 @@ $boxedlayout = get_field('boxed_layout'); ?>
 			<?php endif; ?>
 		</div>
 	
-		<?php
-		if ($boxedlayout) : ?>
 		<div class="inner_container">
-		<?php endif; ?>
 
-		<?php echo term_description(); ?>
+			<?php echo term_description(); ?>
+
+			<?php if (have_rows('contact_information')) : ?>
+			<div class="contact-information">
+				<?php while (have_rows('contact_information')) : the_row();
+				$position = get_sub_field('position__title');
+				$name = get_sub_field('name');
+				$emailaddress = get_sub_field('email_address');
+				$address = get_sub_field('address');
+				$fax = get_sub_field('fax_number');
+
+				if ($position || $name || $emailaddress || $address || $fax) : ?>
+				<h3><?php echo __('Contact Information'); ?></h3>
+				<?php endif;
+
+				if ($name) : ?>
+				<p style="font-weight: 600;"><?php echo $name ?></p>
+				<?php endif;
+
+				if ($position) : ?>
+				<p><?php echo $position ?></p>
+				<?php endif;
+
+				if ($address) : ?>
+				<p style="margin-block-start: 1rem;"><?php echo $address ?></p>
+				<?php endif; ?>
+
+				<?php if ($emailaddress) : ?>
+				<p style="margin-block-start: 1rem;"><?php echo __('Email: ') . '<a href="mailto:' . $emailaddress . '">' . $emailaddress . '</a>'; ?></p>
+				<?php endif; ?>
+
+				<?php if (have_rows('phone_numbers')) : ?>
+				<p style="margin-block-start: 1rem;"><?php echo __('Phone:'); ?>
+				<ul class="phone-numbers">
+				<?php while (have_rows('phone_numbers')) : the_row(); ?>
+					<li><?php echo get_sub_field('phone_number'); ?></li>
+				<?php endwhile; ?>
+				</ul>
+				<?php endif;
+
+				if ($fax) : ?>
+				<p style="margin-block-start: 1rem;"><?php echo __('Fax:'); ?>
+				<p><?php echo $fax ?></p>
+				<?php endif; ?>
+
+				<?php endwhile; ?>
+
+			</div>
+			<?php endif; ?>
 			
-		<?php if ($boxedlayout) : ?>
 		</div>
-		<?php endif; ?>
 
 	</main>
 

@@ -31,7 +31,11 @@ $slug = $post_type == 'post' ? 'news' : $post_type; ?>
 				</div>
 				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 row end-lg end-md" style="margin-left:0; margin-right: 0;">
 					<a href="<?php echo home_url(post_type_slug($post_type)); ?>" class="text__small link__arrow-right">
+						<?php if ($post_type == 'business'): ?>
+						<?php echo __('All Businesses'); ?>
+						<?php else : ?>
 						<?php echo __('All '), ucfirst($slug); ?> <!-- <span class="arrow__right"></span> -->
+						<?php endif; ?>
 					</a>
 				</div>
 			</div>

@@ -27,11 +27,9 @@ $boxedlayout = get_field('boxed_layout'); ?>
 
 			<?php echo term_description(); ?>
 
-			<?php global $post ?>
-
-			<?php if (have_rows('contact_information_term', $post->ID)) : ?>
+			<?php if (have_rows('contact_information_term')) : ?>
 			<div class="contact-information">
-				<?php while (have_rows('contact_information_term', $post->ID)) : the_row();
+				<?php while (have_rows('contact_information_term')) : the_row();
 				$position = get_sub_field('position__title');
 				$name = get_sub_field('name');
 				$emailaddress = get_sub_field('email_address');

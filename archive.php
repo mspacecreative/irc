@@ -32,9 +32,9 @@ $boxedlayout = get_field('boxed_layout'); ?>
 		<?php endif; ?>
 			
 		<?php 
-		$term = get_queried_object();
+		$term_description = get_term($term_id)->description;
 
-		echo term_description($term_id, $term); echo the_content();
+		echo $term_description; echo the_content();
 
 		if ($boxedlayout) : ?>
 		</div>

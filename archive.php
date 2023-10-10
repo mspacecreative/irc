@@ -30,11 +30,11 @@ $boxedlayout = get_field('boxed_layout'); ?>
 			<?php if (have_rows('contact_information', $term_id)) : ?>
 			<div class="contact-information">
 				<?php while (have_rows('contact_information', $term_id)) : the_row();
-				$position = get_sub_field('position__title', $term_id);
-				$name = get_sub_field('name', $term_id);
-				$emailaddress = get_sub_field('email_address', $term_id);
-				$address = get_sub_field('address', $term_id);
-				$fax = get_sub_field('fax_number', $term_id);
+				$position = get_sub_field('position__title');
+				$name = get_sub_field('name');
+				$emailaddress = get_sub_field('email_address');
+				$address = get_sub_field('address');
+				$fax = get_sub_field('fax_number');
 
 				if ($position || $name || $emailaddress || $address || $fax) : ?>
 				<h3><?php echo __('Contact Information'); ?></h3>
